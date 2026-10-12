@@ -1,0 +1,42 @@
+{
+  "immutable_sha256": {
+    "data/domainrag_text_corpus.jsonl": "6b08f337ee4066af05d99bcf5bc29afca56f7e05df8b0feed5030dc34bfd52d9",
+    "data/extended_qa_mapped.jsonl": "22b2397a0ccae715ce991a4cb3b4c33fcb731cff97a5dfa2441ed10ca91f36fd",
+    "app/comparison.py": "9e97405855d6e427ea5b6314ed9be2d6b4ac6d5b0bdd774f51e3217ba920f3cc",
+    "app/comparison_generation.py": "9f0165812411b5d584e64681f8ef9247102c3ee250f43bf868345fd27829f90e",
+    "app/dense.py": "e8a42c15b293f53c39a1111cde0e072b0e572f0ec0d3d38d29514b12ceca1730",
+    "app/hybrid.py": "82ecbb5c96381fb1dc09a5dd978598f901f4b25d2e84ae69543898ed6da8ac64",
+    "app/reranking.py": "122528fde3957c236589808c9fe2e559bfa955ab1af6e4450466331de175a3e9",
+    "app/embedding_api.py": "9d0223ee75ab6cb6e92873c66b07e0259e1eb7ccab529e1901ca8817bb5c12c1",
+    "app/retrieval.py": "1ea071427c9311b2e10eed61cf3b0b28293ad6b52a75bd294ba83a53b88e3647",
+    "scripts/judge_comparison.py": "d66f13f1ac8e035ec1170d6c8f8ea2e041c340f08e82d8505f056c3234173b2c",
+    "scripts/experiment_gap_recovery.py": "7240afbb004a8b543503ca43c9f09a564c2442a187dd30b2012ffbec4f378a3b",
+    "artifacts/reports/comparison_2026-10-07/answers_effective.jsonl": "8da5891ccb5157aa6a7a218e6ed9e134c4f6a44911d5d267e10e0844f354b096",
+    "artifacts/reports/comparison_2026-10-07/semantic_reviews_completed.jsonl": "7fb362269b6fed21f983a8a9d153dadffba4bf8272a3344520ead8762e95facc",
+    "artifacts/reports/comparison_2026-10-07/dev_retrieval.jsonl": "fe86bf07a05dcc13f39edb2d5ef5fca2bdd47b628939311b01c68fbed953e782",
+    "artifacts/reports/comparison_2026-10-07/evaluation_retrieval.jsonl": "4b000fdd8f856f8c2faa3aa28c2970b0cadb4c4fd8a35bbe36c3adc56070cfe6",
+    "artifacts/indexes/dense/manifest.json": "8f55fbec519d98d33c9b9bc303d5b00c2c36580c6641b86271db1bc9355b25b3",
+    "artifacts/indexes/dense/vectors.npy": "a6329210213f306fdeab8b8ba07c86d4c390a6264ba038263c80997ef2e2cdc3",
+    "artifacts/indexes/bm25/manifest.json": "1c85a703195a85c6c6d9da719c375b79d0ea9ad5ed3beb5d796f7429300c564d"
+  },
+  "arms": [
+    "no_recovery",
+    "broad_priority",
+    "targeted_priority",
+    "broad_joint",
+    "targeted_joint"
+  ],
+  "candidate_k": 30,
+  "context_chars": 16000,
+  "top_k": 5,
+  "initial_draft": "paired replay; generation_v4 unchanged",
+  "development": "five original dev questions, remove all second-entity passages before initial generation; separate controlled missing-evidence cohort",
+  "evaluation": "31 eligible historical questions, including retained failure; nine saved natural insufficiency triggers, others replay unchanged",
+  "generalization": "All historical questions exposed; diagnostic only, not unseen test accuracy",
+  "targeted_query": "one planner call per triggered question; no answers/gold/IDs given as targets; original facet and years mandatory; topics bounded",
+  "joint_policy": "joint original-query rerank; protect max one old cited passage per entity; balance final five; skip revision for identical body-hash set",
+  "ablation_limit": "query effect isolated within merge policy; joint policy bundles rerank, bounded anchor protection and content-set stop, not individually attributed",
+  "generation": "unchanged prompt/model/default temperature, at most one revision; one sample per arm",
+  "judge": "unchanged same-provider automated prompt, reference seen only by judge; reuse identical judge input hash",
+  "network": "serial execution, SiliconFlow 1.5s start pacing; retain all failures; stop after billing error"
+}

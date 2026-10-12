@@ -1,0 +1,13 @@
+{
+  "reason": "Dev 037 lacked explicit comparison although evidence was sufficient. Retrieval code, queries and budgets unchanged. Generation revised on dev only, before non-dev generation.",
+  "frozen_retrieval_policy_sha256": "b7e69c8f8f8cb728ca5c2b0949856a846b0623a3fad14882440a4e118badaddb",
+  "fingerprints": {
+    "app/comparison_generation.py": "9f0165812411b5d584e64681f8ef9247102c3ee250f43bf868345fd27829f90e",
+    "scripts/judge_comparison.py": "d66f13f1ac8e035ec1170d6c8f8ea2e041c340f08e82d8505f056c3234173b2c",
+    "scripts/evaluate_comparison.py": "661a4b8af55ebaa8cd0484e879b7935fbc7f4f13774a0330faadaec0680ec44c"
+  },
+  "judge_scope": "same-provider single-round automated review; not human accuracy",
+  "comparison_quotes": "must have literal anchors for both entities",
+  "generation_limit": "one initial draft plus at most one revision after a single supplemental retrieval batch",
+  "driver_revision": "Fresh output option, prevent overwriting old dev, recognize separately frozen generation revision; retrieval scoring/query/selection logic unchanged. After the actual 29 HTTP 402 events, added stop-on-402 guard for future runs only; all actual earlier events retained."
+}

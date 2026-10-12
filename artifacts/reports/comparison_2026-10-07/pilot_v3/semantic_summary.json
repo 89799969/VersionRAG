@@ -1,0 +1,42 @@
+{
+  "answer_file_sha256": "483a757c85ada535e9f8801640939000227c28e51c8aa65a5ee0dad128fb1e41",
+  "scope": "Same-provider automated semantic review, single generation round. No human accuracy claim.",
+  "summaries": [
+    {
+      "split": "dev",
+      "arm": "original",
+      "questions": 5,
+      "judged": 3,
+      "model_judged_success_count": 0,
+      "unsupported_claims": 0,
+      "claims": 10
+    },
+    {
+      "split": "dev",
+      "arm": "scope_dedup",
+      "questions": 5,
+      "judged": 5,
+      "model_judged_success_count": 0,
+      "unsupported_claims": 0,
+      "claims": 16
+    },
+    {
+      "split": "dev",
+      "arm": "split_balanced",
+      "questions": 5,
+      "judged": 5,
+      "model_judged_success_count": 4,
+      "unsupported_claims": 0,
+      "claims": 29
+    },
+    {
+      "split": "dev",
+      "arm": "split_recover",
+      "questions": 5,
+      "judged": 5,
+      "model_judged_success_count": 4,
+      "unsupported_claims": 0,
+      "claims": 29
+    }
+  ]
+}

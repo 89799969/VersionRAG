@@ -1,0 +1,22 @@
+{
+  "ids_fixed_before_generation": [
+    "domainrag_extractive_003",
+    "domainrag_extractive_004",
+    "domainrag_extractive_006",
+    "domainrag_extractive_015",
+    "domainrag_extractive_019",
+    "domainrag_extractive_025",
+    "domainrag_extractive_033",
+    "domainrag_extractive_034",
+    "domainrag_extractive_049"
+  ],
+  "round": 0,
+  "model": "deepseek-flash",
+  "selection_sha256": "d1505402556803aa76819debc34a19fb43ffc51ee1569ff085ec9e7693cead3e",
+  "generation_sha256": "f55a14d17a52565ac57361889898633d261526cc9149ba3933bd77690dea627f",
+  "methods": [
+    "bge_baseline",
+    "frozen_winner"
+  ],
+  "scope": "Nine selected development questions; one round replay of captured Top5. Literal coverage is not semantic answer correctness or unseen test performance."
+}

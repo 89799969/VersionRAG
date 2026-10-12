@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "main_answer_records": 180,
+  "control_answer_records": 31,
+  "old_and_measured_files_preserved": true,
+  "label_only_repairs": 20,
+  "service_calls": [
+    {
+      "host": "api.deepseek.com",
+      "path": "/chat/completions",
+      "status": 200,
+      "count": 95
+    },
+    {
+      "host": "api.siliconflow.cn",
+      "path": "/v1/embeddings",
+      "status": 200,
+      "count": 18
+    },
+    {
+      "host": "api.siliconflow.cn",
+      "path": "/v1/rerank",
+      "status": 200,
+      "count": 50
+    }
+  ],
+  "deepseek_calls_by_role": {
+    "controlled_initial": 5,
+    "gap_planner": 14,
+    "revision": 27,
+    "judge": 40,
+    "same_context": 9
+  },
+  "control_saved_valid_usage": {
+    "prompt_tokens": 33360,
+    "completion_tokens": 8728,
+    "total_tokens": 42088
+  },
+  "combined_saved_valid_model_usage": {
+    "prompt_tokens": 204294,
+    "completion_tokens": 47549,
+    "total_tokens": 251843
+  },
+  "unavailable_usage": "Control003 got HTTP200 but no valid structured result; its token usage was not retained. Combined usage is a lower bound, not an invoice total.",
+  "checks": [
+    "Primary and control audits passed",
+    "Original measurement record hashes preserved",
+    "22 related offline tests passed, one existing dependency warning",
+    "No production/index/code changes to frozen app files"
+  ],
+  "scope": "Single same-provider review; historical exposed natural cohort and masked dev kept separate"
+}

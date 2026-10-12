@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>招生资料问答 · RAG 项目演示</title>
+<style>
+body{font:16px/1.7 system-ui,sans-serif;background:#f4f6fa;color:#182431;margin:0}main{max-width:880px;margin:48px auto;padding:24px}h1{font-size:30px;margin-bottom:8px}p{color:#536171}section{background:white;border:1px solid #dde4ed;border-radius:14px;padding:24px;margin:20px 0}textarea,select,button{font:inherit;padding:12px;border:1px solid #bcc9d8;border-radius:8px}textarea{box-sizing:border-box;width:100%;min-height:110px}button{background:#235bba;color:white;cursor:pointer}button:disabled{opacity:.5}select{max-width:100%;background:white}.controls{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}pre{white-space:pre-wrap;word-break:break-word;font:inherit}.meta{font-size:13px;color:#617183}details{border-top:1px solid #e4e9ef;padding:12px 0}summary{cursor:pointer}a{color:#235bba}
+</style>
+<main><h1>招生资料问答</h1><p>用同一道问题观察：找到了什么资料，回答依据在哪里。</p>
+<p><a href="/manage">管理资料与版本 →</a></p>
+<p class="meta">资料来自历史数据快照，适合项目学习与评测。涉及现行招生政策时请查询学校官方公告。</p>
+<section><label for="question">你的问题</label><textarea id="question" maxlength="1500">中国人民大学2016年高水平艺术团招生报名截止日期是什么时候？</textarea>
+<div class="controls"><select id="method" aria-label="检索方法"><option value="bm25">词匹配 · BM25</option><option value="dense">向量检索 · Dense</option><option value="hybrid">混合检索 · RRF</option><option value="hybrid_rerank" selected>混合检索 + 重排</option></select><button id="retrieve">只看资料</button><button id="ask">生成回答</button></div><p id="status" role="status"></p></section>
+<section id="result" hidden><h2 id="result-title">回答</h2><pre id="answer"></pre><p class="meta" id="trace"></p><div id="evidence"></div></section>
+<p class="meta">“只看资料”调用检索服务；“生成回答”还会调用你配置的 DeepSeek。引用编号合法，需要结合原文判断是否支持答案。</p>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+async function run(mode){
+ const question=$('question').value.trim();if(!question){$('status').textContent='请先输入问题。';return;}
+ $('ask').disabled=$('retrieve').disabled=true;$('status').textContent=mode==='ask'?'正在检索并生成回答……':'正在查找资料……';$('result').hidden=true;
+ try{
+  const response=await fetch('/'+mode,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question,method:$('method').value,top_k:5})});
+  const data=await response.json();if(!response.ok)throw new Error(typeof data.detail==='string'?data.detail:'请求未通过校验');
+  $('result').hidden=false;$('result-title').textContent=mode==='ask'?'回答':'检索资料';
+  $('answer').textContent=mode==='ask'?data.answer:'下方按相关度展示候选片段。';
+  $('trace').textContent='资料版本 '+data.knowledge_version+' · 检索耗时 '+data.retrieval_ms.toFixed(0)+' ms · 请求编号 '+data.request_id+(mode==='ask'?' · 引用 '+data.citations.join('、'):'');
+  const container=$('evidence');container.replaceChildren();
+  for(const item of data.evidence||data.hits){
+   const box=document.createElement('details'),title=document.createElement('summary'),text=document.createElement('pre');
+   title.textContent='片段 '+(item.passage_id||item.id)+' · '+item.title;text.textContent=item.content||item.contents;box.append(title,text);
+   const url=item.url||(item.metadata||{}).url;
+   if(url&&/^https?:\/\//i.test(url)){const link=document.createElement('a');link.href=url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='查看来源页面';box.append(link);}
+   container.append(box);
+  }
+  $('status').textContent=mode==='ask'&&data.insufficient_evidence?'证据不足，查看资料和回答说明。':'已完成。';
+ }catch(error){$('status').textContent='暂时未完成：'+error.message;}
+ finally{$('ask').disabled=$('retrieve').disabled=false;}
+}
+$('retrieve').onclick=()=>run('retrieve');$('ask').onclick=()=>run('ask');
+</script></html>

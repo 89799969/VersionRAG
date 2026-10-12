@@ -1,0 +1,16 @@
+{
+  "method": "bm25-jieba",
+  "split": "dev",
+  "questions": 35,
+  "top_k": 5,
+  "split_counts": {
+    "dev": 35,
+    "holdout": 53,
+    "demo": 2
+  },
+  "evidence_group_recall_at_k": 0.42857142857142855,
+  "all_evidence_hit_rate_at_k": 0.42857142857142855,
+  "mrr_at_k": 0.3238095238095238,
+  "latency_median_ms": 0.22950000038690632,
+  "scope": "annotated passage evidence only; not answer accuracy; alternative evidence may be unannotated"
+}

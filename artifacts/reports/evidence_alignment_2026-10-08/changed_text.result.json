@@ -1,0 +1,46 @@
+{
+  "metric_version": "source-span-union-v1",
+  "label_version": "teaching-facts-v1",
+  "knowledge_version": "changed",
+  "snapshot_sha256": "ec7c0069cd8590245e8a91296ef217b71b1741318919a83f7f822b211a0dc32a",
+  "k": 5,
+  "question_count": 1,
+  "blocked_question_ids": [
+    "demo"
+  ],
+  "status": "needs_review",
+  "hit_count_among_scored": 0,
+  "all_evidence_hit_rate": null,
+  "rows": [
+    {
+      "id": "demo",
+      "metric_version": "source-span-union-v1",
+      "knowledge_version": "changed",
+      "snapshot_sha256": "ec7c0069cd8590245e8a91296ef217b71b1741318919a83f7f822b211a0dc32a",
+      "required_group_count": 2,
+      "retrieved_ids": [
+        "801",
+        "802"
+      ],
+      "mapping_issues": [
+        {
+          "evidence_id": "fee",
+          "status": "needs_review",
+          "reason": "source_text_changed",
+          "overlapping_chunk_ids": []
+        },
+        {
+          "evidence_id": "years",
+          "status": "needs_review",
+          "reason": "source_text_changed",
+          "overlapping_chunk_ids": []
+        }
+      ],
+      "status": "needs_review",
+      "group_hits": null,
+      "evidence_group_recall": null,
+      "all_evidence_hit": null
+    }
+  ],
+  "input_sha256": "d0b83f8e609acb69108276d8e3c82fdd74d42272d3163c6fbf00fa1291496ade"
+}

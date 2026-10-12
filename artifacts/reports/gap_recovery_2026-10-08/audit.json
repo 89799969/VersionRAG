@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "answers": 180,
+  "reviews": 180,
+  "cohorts": {
+    "controlled_dev": 25,
+    "natural_diagnostic": 155
+  },
+  "statuses": {
+    "ok": 175,
+    "error": 5
+  },
+  "checks": [
+    "Frozen code/corpus/labels/old reports/index hashes unchanged",
+    "No duplicate answer keys",
+    "Judge input hashes match saved exact evidence",
+    "Quote anchors/source scope validated",
+    "Failure retained in denominators",
+    "At most five evidence passages",
+    "Protected cited passages retained",
+    "Content-set stop recorded"
+  ],
+  "scope": "historical exposed diagnosis and controlled dev masking; not unbiased generalization"
+}

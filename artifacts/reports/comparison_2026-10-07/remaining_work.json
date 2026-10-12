@@ -1,0 +1,7 @@
+{
+  "status": "evaluation_completed_with_retained_generation_failure",
+  "user_choice_pending": false,
+  "completed": "41 separate retake rows; 122 valid answers judged; 180-row effective view audited; 59 offline tests passed",
+  "retained_failure": "048 split_balanced and paired split_recover: supported-aspect state validation failed; kept in denominator",
+  "next": "Optional independent human review and new development-only targeted supplement trials; no automatic tuning"
+}

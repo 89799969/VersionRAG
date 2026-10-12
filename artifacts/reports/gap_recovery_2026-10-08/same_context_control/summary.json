@@ -1,0 +1,36 @@
+[
+  {
+    "split": "dev",
+    "questions": 5,
+    "success_count": 5,
+    "success_no_partial": 5,
+    "errors": 0,
+    "gains": [],
+    "regressions": []
+  },
+  {
+    "split": "holdout",
+    "questions": 11,
+    "success_count": 8,
+    "success_no_partial": 8,
+    "errors": 0,
+    "gains": [
+      "domainrag_multi_doc_017",
+      "domainrag_multi_doc_043"
+    ],
+    "regressions": [
+      "domainrag_multi_doc_004"
+    ]
+  },
+  {
+    "split": "diagnostic",
+    "questions": 15,
+    "success_count": 5,
+    "success_no_partial": 5,
+    "errors": 2,
+    "gains": [],
+    "regressions": [
+      "domainrag_multi_doc_003"
+    ]
+  }
+]

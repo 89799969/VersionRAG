@@ -1,0 +1,86 @@
+{
+  "input_sha256": "514caa0a22661ab06f96b17f0c8b03b916b6757d2fc7dca034a57e6071f87857",
+  "cases": [
+    {
+      "id": "domainrag_extractive_033",
+      "method": "bm25",
+      "claim_phrase": "即日起至2月5日",
+      "supporting_context_ids": [],
+      "supporting_citation_ids": [],
+      "other_citation_ids": [
+        "14059"
+      ],
+      "answer": "提供的资料中没有中国人民大学2016年高水平艺术团招生报名截止日期的具体信息。片段14059仅显示《中国人民大学2016年高水平艺术团招生简章》的发布日期为2016-01-20，但未包含报名截止日期。其余片段涉及2014年校长直通车计划或2016年艺术类（美术）专业招生，与2016年高水平艺术团报名截止日期无关。",
+      "insufficient_evidence": true,
+      "conclusion": "No deadline in supplied context; refusal is appropriate."
+    },
+    {
+      "id": "domainrag_extractive_033",
+      "method": "hybrid_rerank",
+      "claim_phrase": "即日起至2月5日",
+      "supporting_context_ids": [
+        "183",
+        "13922",
+        "13923",
+        "184"
+      ],
+      "supporting_citation_ids": [
+        "183",
+        "13922",
+        "13923",
+        "184"
+      ],
+      "other_citation_ids": [],
+      "answer": "中国人民大学2016年高水平艺术团招生报名截止日期是2月5日（简章中写明报名时间为“即日起至2月5日”）。",
+      "insufficient_evidence": false,
+      "conclusion": "Answer claim supported; additional citations need separate per-claim review."
+    },
+    {
+      "id": "domainrag_extractive_034",
+      "method": "bm25",
+      "claim_phrase": "原则上应为县（县级市）及以下中学",
+      "supporting_context_ids": [
+        "258",
+        "13453",
+        "7624",
+        "7560",
+        "3742"
+      ],
+      "supporting_citation_ids": [
+        "258",
+        "13453",
+        "7624",
+        "7560",
+        "3742"
+      ],
+      "other_citation_ids": [],
+      "answer": "申请2014年“圆梦计划”中学推荐资格的中学，原则上应为县（县级市）及以下中学。",
+      "insufficient_evidence": false,
+      "conclusion": "Answer claim supported; additional citations need separate per-claim review."
+    },
+    {
+      "id": "domainrag_extractive_034",
+      "method": "hybrid_rerank",
+      "claim_phrase": "原则上应为县（县级市）及以下中学",
+      "supporting_context_ids": [
+        "7625",
+        "13453",
+        "7561",
+        "13454"
+      ],
+      "supporting_citation_ids": [
+        "13453",
+        "7625",
+        "7561",
+        "13454"
+      ],
+      "other_citation_ids": [],
+      "answer": "申请2014年“圆梦计划”中学推荐资格的中学，原则上应为县（县级市）及以下中学。",
+      "insufficient_evidence": false,
+      "conclusion": "Answer claim supported; additional citations need separate per-claim review."
+    }
+  ],
+  "scope": "two fixed development cases, manually selected claims plus phrase assertions; not batch answer accuracy",
+  "annotation_limit": "034 rerank misses annotated 258 but retrieved 13453 supports the same condition",
+  "citation_limit": "All citations in these answerable cases contain the checked phrase; ID membership alone still cannot establish semantic support in other cases"
+}

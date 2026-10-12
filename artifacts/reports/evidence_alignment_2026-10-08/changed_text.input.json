@@ -1,0 +1,65 @@
+{
+  "label_version": "teaching-facts-v1",
+  "knowledge_version": "changed",
+  "documents": {
+    "d": "示例资料：学费八千元。学制四年。"
+  },
+  "chunks": [
+    {
+      "id": "801",
+      "contents": "示例资料：学费八千元。",
+      "metadata": {
+        "document_id": "d",
+        "start": 0,
+        "end": 11
+      }
+    },
+    {
+      "id": "802",
+      "contents": "学制四年。",
+      "metadata": {
+        "document_id": "d",
+        "start": 11,
+        "end": 16
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "demo",
+      "question": "示例专业的学费和学制？",
+      "required_evidence_groups": [
+        [
+          {
+            "evidence_id": "fee",
+            "document_id": "d",
+            "document_sha256": "1ad89faf641002e9db6f615654c8635e3105b3b4f07abf0bc7c407c91ad0b947",
+            "start": 5,
+            "end": 11,
+            "quote": "学费六千元。"
+          }
+        ],
+        [
+          {
+            "evidence_id": "years",
+            "document_id": "d",
+            "document_sha256": "1ad89faf641002e9db6f615654c8635e3105b3b4f07abf0bc7c407c91ad0b947",
+            "start": 11,
+            "end": 16,
+            "quote": "学制四年。"
+          }
+        ]
+      ]
+    }
+  ],
+  "retrieval": [
+    {
+      "id": "demo",
+      "knowledge_version": "changed",
+      "retrieved_ids": [
+        "801",
+        "802"
+      ]
+    }
+  ]
+}

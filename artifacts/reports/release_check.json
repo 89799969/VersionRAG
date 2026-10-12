@@ -1,0 +1,10 @@
+{
+  "source_bundle_extracted": true,
+  "real_env_excluded": true,
+  "corpus_bytes_checked": 38396064,
+  "extracted_project_tests_passed": 26,
+  "warnings": 1,
+  "scope": "Final extracted source verified with a new Python 3.12 environment installed only from requirements.lock.txt; 26 tests, full BM25 index and API startup/retrieve pass. Remote Dense and generation not repeated in clean copy.",
+  "live_service_session": 17978,
+  "live_service_url": "http://127.0.0.1:8018/"
+}

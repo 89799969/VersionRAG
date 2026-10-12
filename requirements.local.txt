@@ -1,0 +1,4 @@
+# Optional local ONNX backend; not required for the selected API workflow.
+-r requirements.txt
+onnxruntime>=1.20,<2
+tokenizers>=0.21,<1

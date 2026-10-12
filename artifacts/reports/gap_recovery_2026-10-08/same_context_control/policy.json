@@ -1,0 +1,13 @@
+{
+  "immutable_sha256": {
+    "scripts/control_same_context_regeneration.py": "8b9d14e71ad810a9246ce9ff2b521c6732067db0fd0fd3c6147bd4af19222455",
+    "app/comparison_generation.py": "9f0165812411b5d584e64681f8ef9247102c3ee250f43bf868345fd27829f90e",
+    "data/domainrag_text_corpus.jsonl": "6b08f337ee4066af05d99bcf5bc29afca56f7e05df8b0feed5030dc34bfd52d9",
+    "data/extended_qa_mapped.jsonl": "22b2397a0ccae715ce991a4cb3b4c33fcb731cff97a5dfa2441ed10ca91f36fd",
+    "artifacts/reports/gap_recovery_2026-10-08/answers_labeled.jsonl": "5812028ef91398eff9bd4527511aeb64cfc56ab9aec6391977f22688c2bb26e3"
+  },
+  "reason": "017 changed generation while relevant evidence existed initially; distinguish retrieval from regenerate effect",
+  "scope": "exploratory control added after main results, not preplanned confirmation",
+  "policy": "same frozen initial hits/prompt/model, one new generation on nine original insufficiency triggers; replay others, retain failure",
+  "selection": "all 31 eligible natural questions, not selected by final successes"
+}

@@ -1,0 +1,225 @@
+{
+  "kind": "real HTTP lifecycle / constructed teaching document",
+  "document_id": "teaching-run-e7b3756fa36c",
+  "events": [
+    {
+      "job": {
+        "id": "5aae839564334c4d862d1db54b776849",
+        "version": "v-5aae839564334c4d862d1db54b776849",
+        "revision": 2,
+        "base_epoch": 1,
+        "state": "succeeded",
+        "auto_publish": 1,
+        "published": true,
+        "error": null,
+        "note": null,
+        "stats": {
+          "cache_hit_chunks": 14406,
+          "encoded_unique_texts": 1,
+          "total_chunks": 14407,
+          "truncated_new_texts": 0
+        },
+        "created_at": "2026-10-05 05:39:36",
+        "finished_at": "2026-10-05 05:39:49"
+      }
+    },
+    {
+      "answer": {
+        "request_id": "85f8b573-9251-4db8-9442-4ff64ee02fd7",
+        "method": "hybrid_rerank",
+        "knowledge_version": "v-5aae839564334c4d862d1db54b776849",
+        "answer": "本次项目申请的报名截止日期为2月5日。",
+        "citations": [
+          "doc-b01c16a8d6b02e39-0-d3fa124b36eab4a2"
+        ],
+        "insufficient_evidence": false,
+        "evidence": [
+          {
+            "passage_id": "doc-b01c16a8d6b02e39-0-d3fa124b36eab4a2",
+            "source_id": "teaching-run-e7b3756fa36c",
+            "title": "教学构造：项目申请通知",
+            "url": "",
+            "content": "教学构造资料：本次项目申请的报名截止日期为2月5日。",
+            "truncated": false,
+            "knowledge_version": "v-5aae839564334c4d862d1db54b776849"
+          }
+        ],
+        "model_called": true,
+        "model": "deepseek-flash",
+        "citation_check": "IDs valid; semantic support requires review",
+        "usage": {
+          "prompt_tokens": 293,
+          "completion_tokens": 55,
+          "total_tokens": 348,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 293
+        },
+        "excluded_listing_ids": [],
+        "retrieval_ms": 532.8607999981614
+      }
+    },
+    {
+      "job": {
+        "id": "2920ea84cf534b6585029415e61dfad1",
+        "version": "v-2920ea84cf534b6585029415e61dfad1",
+        "revision": 3,
+        "base_epoch": 2,
+        "state": "succeeded",
+        "auto_publish": 1,
+        "published": true,
+        "error": null,
+        "note": null,
+        "stats": {
+          "cache_hit_chunks": 14406,
+          "encoded_unique_texts": 1,
+          "total_chunks": 14407,
+          "truncated_new_texts": 0
+        },
+        "created_at": "2026-10-05 05:39:51",
+        "finished_at": "2026-10-05 05:40:03"
+      }
+    },
+    {
+      "answer": {
+        "request_id": "8daed784-e83e-4559-9885-4afb6c9b74be",
+        "method": "hybrid_rerank",
+        "knowledge_version": "v-2920ea84cf534b6585029415e61dfad1",
+        "answer": "报名截止日期为2月8日。",
+        "citations": [
+          "doc-b01c16a8d6b02e39-0-7e79547d6806d59a"
+        ],
+        "insufficient_evidence": false,
+        "evidence": [
+          {
+            "passage_id": "doc-b01c16a8d6b02e39-0-7e79547d6806d59a",
+            "source_id": "teaching-run-e7b3756fa36c",
+            "title": "教学构造：项目申请通知",
+            "url": "",
+            "content": "教学构造资料：本次项目申请的报名截止日期为2月8日。",
+            "truncated": false,
+            "knowledge_version": "v-2920ea84cf534b6585029415e61dfad1"
+          }
+        ],
+        "model_called": true,
+        "model": "deepseek-flash",
+        "citation_check": "IDs valid; semantic support requires review",
+        "usage": {
+          "prompt_tokens": 293,
+          "completion_tokens": 52,
+          "total_tokens": 345,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "prompt_cache_hit_tokens": 0,
+          "prompt_cache_miss_tokens": 293
+        },
+        "excluded_listing_ids": [],
+        "retrieval_ms": 585.9811999980593
+      }
+    },
+    {
+      "answer": {
+        "request_id": "d4761b34-b4e8-4df6-abfc-97a8ff9d6518",
+        "method": "hybrid_rerank",
+        "knowledge_version": "v-5aae839564334c4d862d1db54b776849",
+        "answer": "本次项目申请的报名截止日期为2月5日。",
+        "citations": [
+          "doc-b01c16a8d6b02e39-0-d3fa124b36eab4a2"
+        ],
+        "insufficient_evidence": false,
+        "evidence": [
+          {
+            "passage_id": "doc-b01c16a8d6b02e39-0-d3fa124b36eab4a2",
+            "source_id": "teaching-run-e7b3756fa36c",
+            "title": "教学构造：项目申请通知",
+            "url": "",
+            "content": "教学构造资料：本次项目申请的报名截止日期为2月5日。",
+            "truncated": false,
+            "knowledge_version": "v-5aae839564334c4d862d1db54b776849"
+          }
+        ],
+        "model_called": true,
+        "model": "deepseek-flash",
+        "citation_check": "IDs valid; semantic support requires review",
+        "usage": {
+          "prompt_tokens": 293,
+          "completion_tokens": 55,
+          "total_tokens": 348,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 165
+        },
+        "excluded_listing_ids": [],
+        "retrieval_ms": 559.4067000020004
+      }
+    },
+    {
+      "job": {
+        "id": "4419ed955c44459ca673e2cabbc12746",
+        "version": "v-4419ed955c44459ca673e2cabbc12746",
+        "revision": 4,
+        "base_epoch": 4,
+        "state": "succeeded",
+        "auto_publish": 1,
+        "published": true,
+        "error": null,
+        "note": null,
+        "stats": {
+          "cache_hit_chunks": 14406,
+          "encoded_unique_texts": 0,
+          "total_chunks": 14406,
+          "truncated_new_texts": 0
+        },
+        "created_at": "2026-10-05 05:40:07",
+        "finished_at": "2026-10-05 05:40:18"
+      }
+    },
+    {
+      "deleted_answer": {
+        "request_id": "7ca8cce2-7b3a-420a-9328-b45456cd9774",
+        "method": "hybrid_rerank",
+        "knowledge_version": "v-4419ed955c44459ca673e2cabbc12746",
+        "answer": "未检索到可用证据，暂时无法回答。",
+        "citations": [],
+        "insufficient_evidence": true,
+        "evidence": [],
+        "model_called": false,
+        "model": null,
+        "citation_check": null,
+        "usage": {},
+        "excluded_listing_ids": [],
+        "retrieval_ms": 307.5979000022926
+      }
+    }
+  ],
+  "checks": {
+    "one_changed_text_encoded": true,
+    "original_chunks_reused": true,
+    "rejected_activation_keeps_active": true,
+    "rollback_answer_and_citations": true,
+    "delete_requires_no_new_embedding": true,
+    "deleted_absent_bm25": true,
+    "deleted_absent_dense": true,
+    "deleted_absent_hybrid": true,
+    "deleted_absent_hybrid_rerank": true,
+    "deleted_refuses_without_generation": true
+  },
+  "code_sha256": {
+    "app/knowledge.py": "4d01faa281a5c1830092b5db9fe4af52c838004865efbb9ae4640a4d50b56948",
+    "app/knowledge_routes.py": "bebe630f5492f38c380da6e37508d97f0596e25ad6eb55527a64caa2f533d7bc",
+    "app/api.py": "64fbe26f13690b0907c3c72a53e9412807a039fbca672fa4ce8c08c3cf0f860e"
+  },
+  "initial_version": "seed-eab441b86dee414d9009647d55520a0f",
+  "passed": true,
+  "final_status": {
+    "active_version": "seed-eab441b86dee414d9009647d55520a0f",
+    "draft_revision": 4,
+    "pending_jobs": 0,
+    "worker_alive": true
+  }
+}

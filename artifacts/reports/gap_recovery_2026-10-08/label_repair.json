@@ -1,0 +1,134 @@
+{
+  "status": "passed",
+  "changes": [
+    {
+      "source_line": 58,
+      "id": "domainrag_multi_doc_003",
+      "old_arm": "split_balanced",
+      "correct_arm": "targeted_priority"
+    },
+    {
+      "source_line": 59,
+      "id": "domainrag_multi_doc_003",
+      "old_arm": "split_balanced",
+      "correct_arm": "broad_joint"
+    },
+    {
+      "source_line": 60,
+      "id": "domainrag_multi_doc_003",
+      "old_arm": "split_balanced",
+      "correct_arm": "targeted_joint"
+    },
+    {
+      "source_line": 63,
+      "id": "domainrag_multi_doc_004",
+      "old_arm": "split_balanced",
+      "correct_arm": "targeted_priority"
+    },
+    {
+      "source_line": 64,
+      "id": "domainrag_multi_doc_004",
+      "old_arm": "split_balanced",
+      "correct_arm": "broad_joint"
+    },
+    {
+      "source_line": 65,
+      "id": "domainrag_multi_doc_004",
+      "old_arm": "split_balanced",
+      "correct_arm": "targeted_joint"
+    },
+    {
+      "source_line": 84,
+      "id": "domainrag_multi_doc_010",
+      "old_arm": "split_balanced",
+      "correct_arm": "broad_joint"
+    },
+    {
+      "source_line": 85,
+      "id": "domainrag_multi_doc_010",
+      "old_arm": "split_balanced",
+      "correct_arm": "targeted_joint"
+    },
+    {
+      "source_line": 99,
+      "id": "domainrag_multi_doc_017",
+      "old_arm": "split_balanced",
+      "correct_arm": "broad_joint"
+    },
+    {
+      "source_line": 100,
+      "id": "domainrag_multi_doc_017",
+      "old_arm": "split_balanced",
+      "correct_arm": "targeted_joint"
+    },
+    {
+      "source_line": 113,
+      "id": "domainrag_multi_doc_019",
+      "old_arm": "split_balanced",
+      "correct_arm": "targeted_priority"
+    },
+    {
+      "source_line": 114,
+      "id": "domainrag_multi_doc_019",
+      "old_arm": "split_balanced",
+      "correct_arm": "broad_joint"
+    },
+    {
+      "source_line": 115,
+      "id": "domainrag_multi_doc_019",
+      "old_arm": "split_balanced",
+      "correct_arm": "targeted_joint"
+    },
+    {
+      "source_line": 123,
+      "id": "domainrag_multi_doc_021",
+      "old_arm": "split_balanced",
+      "correct_arm": "targeted_priority"
+    },
+    {
+      "source_line": 133,
+      "id": "domainrag_multi_doc_027",
+      "old_arm": "split_balanced",
+      "correct_arm": "targeted_priority"
+    },
+    {
+      "source_line": 134,
+      "id": "domainrag_multi_doc_027",
+      "old_arm": "split_balanced",
+      "correct_arm": "broad_joint"
+    },
+    {
+      "source_line": 135,
+      "id": "domainrag_multi_doc_027",
+      "old_arm": "split_balanced",
+      "correct_arm": "targeted_joint"
+    },
+    {
+      "source_line": 158,
+      "id": "domainrag_multi_doc_043",
+      "old_arm": "split_balanced",
+      "correct_arm": "targeted_priority"
+    },
+    {
+      "source_line": 159,
+      "id": "domainrag_multi_doc_043",
+      "old_arm": "split_balanced",
+      "correct_arm": "broad_joint"
+    },
+    {
+      "source_line": 160,
+      "id": "domainrag_multi_doc_043",
+      "old_arm": "split_balanced",
+      "correct_arm": "targeted_joint"
+    }
+  ],
+  "original_answers_sha256": "9c47ea284d6ae038bd7fab8a210a65a6a2fb145e150e7b0c099c7a6ba3f3f703",
+  "original_reviews_sha256": "73dd4c8d6e794f5ddc6001818553502927e411c89fbb3ef7f6203e709a591876",
+  "checks": [
+    "Only replayed arm labels changed",
+    "Serial five-arm append order checked against merge traces",
+    "Every semantic judge input hash unchanged",
+    "Original measurement files preserved"
+  ],
+  "note": "Joint skipped-revision selected_ids can differ in order/aliases from actual context; evidence array is authoritative"
+}

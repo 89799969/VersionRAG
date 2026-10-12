@@ -1,0 +1,107 @@
+{
+  "retrieval_summary": [
+    {
+      "name": "baseline30",
+      "channel_k": 30,
+      "pool_k": 30,
+      "bm25_weight": 1.0,
+      "candidate_recall": 0.8,
+      "hit5": 0.45714285714285713,
+      "mrr5": 0.3119047619047619
+    },
+    {
+      "name": "expand60",
+      "channel_k": 60,
+      "pool_k": 60,
+      "bm25_weight": 1.0,
+      "candidate_recall": 0.8857142857142857,
+      "hit5": 0.45714285714285713,
+      "mrr5": 0.3119047619047619
+    },
+    {
+      "name": "expand100",
+      "channel_k": 100,
+      "pool_k": 100,
+      "bm25_weight": 1.0,
+      "candidate_recall": 0.9714285714285714,
+      "hit5": 0.45714285714285713,
+      "mrr5": 0.28904761904761905
+    },
+    {
+      "name": "keyword60",
+      "channel_k": 60,
+      "pool_k": 60,
+      "bm25_weight": 2.0,
+      "candidate_recall": 0.8857142857142857,
+      "hit5": 0.4857142857142857,
+      "mrr5": 0.32476190476190475
+    },
+    {
+      "name": "dense60",
+      "channel_k": 60,
+      "pool_k": 60,
+      "bm25_weight": 0.5,
+      "candidate_recall": 0.7714285714285715,
+      "hit5": 0.42857142857142855,
+      "mrr5": 0.2595238095238095
+    },
+    {
+      "name": "keyword30",
+      "channel_k": 30,
+      "pool_k": 30,
+      "bm25_weight": 2.0,
+      "candidate_recall": 0.8,
+      "hit5": 0.4857142857142857,
+      "mrr5": 0.32476190476190475
+    }
+  ],
+  "shortlist": [
+    {
+      "name": "expand100",
+      "channel_k": 100,
+      "pool_k": 100,
+      "bm25_weight": 1.0,
+      "candidate_recall": 0.9714285714285714,
+      "hit5": 0.45714285714285713,
+      "mrr5": 0.28904761904761905
+    },
+    {
+      "name": "keyword60",
+      "channel_k": 60,
+      "pool_k": 60,
+      "bm25_weight": 2.0,
+      "candidate_recall": 0.8857142857142857,
+      "hit5": 0.4857142857142857,
+      "mrr5": 0.32476190476190475
+    }
+  ],
+  "variants": {
+    "bge_baseline": {
+      "pool": "baseline30",
+      "model": "BAAI/bge-reranker-v2-m3",
+      "instruction": null
+    },
+    "bge_expand100": {
+      "pool": "expand100",
+      "model": "BAAI/bge-reranker-v2-m3",
+      "instruction": null
+    },
+    "bge_keyword60": {
+      "pool": "keyword60",
+      "model": "BAAI/bge-reranker-v2-m3",
+      "instruction": null
+    },
+    "qwen_unspecified": {
+      "pool": "baseline30",
+      "model": "Qwen/Qwen3-Reranker-0.6B",
+      "instruction": null
+    },
+    "qwen_broad": {
+      "pool": "baseline30",
+      "model": "Qwen/Qwen3-Reranker-0.6B",
+      "instruction": "Retrieve passages that directly answer the user's question about Renmin University of China. The question may concern admissions, college introductions, programs, tuition, history, partnerships, or graduate outcomes. Match any explicitly specified year, college, program, and category. Prioritize passages containing the requested fact; do not assume constraints that the question does not state."
+    }
+  },
+  "selected_post_alpha": 0.25,
+  "selection_data": "Only 35 development labels. No holdout result calculated for this optimization."
+}

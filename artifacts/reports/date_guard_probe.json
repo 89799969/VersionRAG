@@ -1,0 +1,97 @@
+{
+  "generation_code_sha256": "f55a14d17a52565ac57361889898633d261526cc9149ba3933bd77690dea627f",
+  "cases": [
+    {
+      "id": "domainrag_extractive_015",
+      "method": "bm25",
+      "before_answer": "中国人民大学首次举办本科生招生录取现场开放日是在2014年，相关文章发布于2014年7月16日。",
+      "before_insufficient_evidence": false,
+      "answer": "提供的资料中没有关于中国人民大学首次举办本科生招生录取现场开放日的时间信息，无法回答。资料仅涉及信息学院学科开放日、学校其他活动及“创新杯”竞赛，均与本科生招生录取现场开放日无关。",
+      "citations": [],
+      "insufficient_evidence": true,
+      "evidence": [
+        {
+          "passage_id": "3123",
+          "source_id": "2099",
+          "title": "欢迎参加2015年信息学院开放日",
+          "url": "http://rdzs.ruc.edu.cn/cms/view/ztlm/1216/",
+          "content": "欢迎参加2015年信息学院开放日\n信息学院学科开放日活动，旨在提供一个向全校同学开放的平台，让全体在校学生甚至是其他学校的学生，增加对中国人民大学信息学院的实验室和研究情况的了解。以此指导本院学生在本科专业选择、研究生专业方向选择，增进院际交流和合作，指导外校学生报考攻读中国人民大学信息学院硕士生或博士生。\n2015年信息学院开放日活动将分学系进行，于4月份举办。具体安排如下：\n一、活动时间及地点\n1、计算机系开放日：2015年4月8日(周三)，13:30--17:00，信息楼四层会议室\n2、数学系开放日：2015年4月15日（周三），14:00--17:00，信息楼四层会议室\n3、经济信息管理系开放日：2015年4月22日（周三），14:00--17:00，理工配楼四层会议室\n二、报名方式\n发送姓名+单位+考生/家长/校友/在校生+联系方式+参观场次至：wangxiaotong_ruc@126.com\n三、联系方式\n电话：010-62513057\n邮箱：wangxiaotong_ruc@126.com",
+          "truncated": false
+        },
+        {
+          "passage_id": "7170",
+          "source_id": "331",
+          "title": "祝我们的人大，生日快乐！",
+          "url": "https://rdzs.ruc.edu.cn/cms/item/1988.html",
+          "content": "祝我们的人大，生日快乐！\n”。）\n（中国人民大学发布大力推进新时代人才工作高质量发展20条。）\n（中国人民大学联合打造的大中小学思政课一体化共同体建设暨“北京中轴线上的大思政课”正式启动。）\n（中国人民大学联合兄弟高校召开了首场中国自主的知识体系成果发布会。）\n（中国高校教师发展论坛暨首届高校教师发展工作研讨会在中国人民大学举办。）\n（中国人民大学与中央广播电视总台合作共建的“新时代国际传播研究院”正式成立。）\n（中国人民大学新时代科级干部大会召开，这是学校首次面向全体基层管理干部召开的大会。）\n（中国人民大学“追寻领袖初心路”实践导师聘任暨2023年暑期社会实践出征仪式举办。）\n（中国人民大学主编《“一带一路”十年答卷》丛书（8本9大语种）及合编本发布。）\n「新时代的新校园」\n上好红色育人第一课。开学时，崭新的录取通知书里，一册《共产党宣言》为青春的心灵埋下了信仰的种子。\n凝结了成仿吾老校长五次翻译的心血，这是中国共产党人、是人大人追求真理、永葆本色的生动写照，也是人大新生党史学习、校史学习第一课。\n还有首次与人大人见面的立德树人·",
+          "truncated": false
+        },
+        {
+          "passage_id": "7013",
+          "source_id": "3285",
+          "title": "新闻动态",
+          "url": "https://alumni.ruc.edu.cn/archives/12170?flag=jzmx",
+          "content": "新闻动态\n优秀组织奖”。\n“创新杯”：\n孵化引导，构筑完善的校内阵地\n中国人民大学“创新杯”学生课外学术科技作品竞赛由校团委承办，是国家和首都“挑战杯”的校内初赛。自1998年首次办赛以来，即成为学校最具影响力的学术竞赛之一，无数“学术新人”从“创新杯”开始了最初的学术试炼，孵化出一大批回应“时代之问”的优秀学术作品，至今已经举办了二十五届。\n1998年首届“创新杯”作品\n近年来，赛事举办呈现出以下三个鲜明特点。\n01扎根中国大地\n感应时代脉搏\n▲第二十四、二十五届\n“创新杯”研究热点\n第二十四、二十五届“创新杯”作品传承优良学风，彰显“感应时代脉搏”的敏锐与担当。关切北京冬奥、教育“双减”、土地制度等时政热点前沿，凸显“中国式现代化”主题，探究和诠释数字治理、“双碳”“双减”、共同富裕等前沿领域的“中国方案”“中国实践”。\n▲第二十四、二十五届“创新杯”\n社会实践专项赛词云图\n“带着问题做实践，带着成果回学校”，第二十四届“创新杯”首次设置社会实践专项赛道",
+          "truncated": false
+        }
+      ],
+      "model_called": true,
+      "model": "deepseek-flash",
+      "citation_check": "IDs valid; semantic support requires review",
+      "excluded_listing_ids": [
+        "6132",
+        "4575"
+      ],
+      "usage": {
+        "prompt_tokens": 1041,
+        "completion_tokens": 65,
+        "total_tokens": 1106,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 1041
+      }
+    },
+    {
+      "id": "domainrag_extractive_015",
+      "method": "hybrid_rerank",
+      "before_answer": "根据提供的资料，中国人民大学于2014年7月16日首次举办本科生招生录取现场开放日。",
+      "before_insufficient_evidence": false,
+      "answer": "提供的资料中没有任何关于中国人民大学首次举办本科生招生录取现场开放日的时间信息，因此无法回答。",
+      "citations": [],
+      "insufficient_evidence": true,
+      "evidence": [
+        {
+          "passage_id": "13038",
+          "source_id": "650",
+          "title": "中国人民大学2016年“圆梦计划”招生简章",
+          "url": "https://rdzs.ruc.edu.cn/cms/item/1226.html",
+          "content": "中国人民大学2016年“圆梦计划”招生简章\n：即日起至2016年4月25日\n2.有关省（区、市）完成考生户籍、学籍资格初审并进行公示：2016年5月15日\n3.报名材料审核：2016年5月30日前\n4.公示资格生名单和招生计划：2016年6月22日前\n5.考生填报志愿：按各省级招生考试机构规定时间进行\n6.录取：2016年7月\n九、联系方式\n阳光招生信息平台：\nwww.rdzs.com\n电子信箱：\nzsb@ruc.edu.cn\n咨询电话：4000123517\n通讯地址：北京市海淀区中关村大街59号中国人民大学本科生招生办公室 邮政编码：100872\n十、“圆梦计划”考生资助\n被录取的考生中，家庭经济困难的，可申请免除全部或部分学费；在读期间未申请免学费的学生，完成本科学业后回生源所在地就业的，返还全部或部分学费。\n十一、若遇教育部相关政策调整，则按最新政策执行\n十二、本招生简章的最终解释权属于中国人民大学本科生招生办公室\n中国人民大学本科生招生办公室\n2016年4月",
+          "truncated": false
+        }
+      ],
+      "model_called": true,
+      "model": "deepseek-flash",
+      "citation_check": "IDs valid; semantic support requires review",
+      "excluded_listing_ids": [
+        "6132",
+        "7754",
+        "7752",
+        "7753"
+      ],
+      "usage": {
+        "prompt_tokens": 500,
+        "completion_tokens": 38,
+        "total_tokens": 538,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 500
+      }
+    }
+  ],
+  "input_source": "unchanged captured Top5 from answer_replay_dev8.json; no external article or gold injected",
+  "scope": "one development question, two real model requests after prompt clarification; not a deterministic prevention guarantee or full task accuracy"
+}

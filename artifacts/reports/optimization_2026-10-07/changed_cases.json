@@ -1,0 +1,1668 @@
+[
+  {
+    "id": "domainrag_extractive_002",
+    "split": "holdout",
+    "question": "中国人民大学2018年高水平艺术团招生计划甲类的降分政策是降多少？",
+    "annotated_ids": [
+      [
+        "1157"
+      ]
+    ],
+    "mean_hit_difference": 0.0,
+    "mean_mrr_difference": 0.3333333333333333,
+    "pairs": [
+      {
+        "round": 0,
+        "baseline_top5": [
+          "1156",
+          "1157",
+          "3405",
+          "3404",
+          "1167"
+        ],
+        "optimized_top5": [
+          "1157",
+          "1156",
+          "3405",
+          "3404",
+          "1167"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.5,
+          "mrr_at_30": 0.5,
+          "ndcg_at_5_binary_annotations": 0.6309297535714575
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 1.0,
+          "mrr_at_30": 1.0,
+          "ndcg_at_5_binary_annotations": 1.0
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 1,
+        "baseline_top5": [
+          "1156",
+          "1157",
+          "3405",
+          "3404",
+          "1167"
+        ],
+        "optimized_top5": [
+          "1157",
+          "1156",
+          "3405",
+          "3404",
+          "1167"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.5,
+          "mrr_at_30": 0.5,
+          "ndcg_at_5_binary_annotations": 0.6309297535714575
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 1.0,
+          "mrr_at_30": 1.0,
+          "ndcg_at_5_binary_annotations": 1.0
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 2,
+        "baseline_top5": [
+          "1157",
+          "1156",
+          "3405",
+          "3404",
+          "1167"
+        ],
+        "optimized_top5": [
+          "1157",
+          "3405",
+          "1156",
+          "3404",
+          "1167"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 1.0,
+          "mrr_at_30": 1.0,
+          "ndcg_at_5_binary_annotations": 1.0
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 1.0,
+          "mrr_at_30": 1.0,
+          "ndcg_at_5_binary_annotations": 1.0
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      }
+    ]
+  },
+  {
+    "id": "domainrag_extractive_004",
+    "split": "dev",
+    "question": "人大文学院的“古典学实验班”创办于哪一年？",
+    "annotated_ids": [
+      [
+        "1099"
+      ]
+    ],
+    "mean_hit_difference": 1.0,
+    "mean_mrr_difference": 0.20000000000000004,
+    "pairs": [
+      {
+        "round": 0,
+        "baseline_top5": [
+          "8490",
+          "1640",
+          "7839",
+          "1098",
+          "8489"
+        ],
+        "optimized_top5": [
+          "8490",
+          "1640",
+          "7839",
+          "1098",
+          "1099"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 0.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": false,
+          "mrr_at_5": 0.0,
+          "mrr_at_30": 0.16666666666666666,
+          "ndcg_at_5_binary_annotations": 0.0
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.2,
+          "mrr_at_30": 0.2,
+          "ndcg_at_5_binary_annotations": 0.38685280723454163
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 1,
+        "baseline_top5": [
+          "8490",
+          "1640",
+          "7839",
+          "1098",
+          "8489"
+        ],
+        "optimized_top5": [
+          "8490",
+          "1640",
+          "7839",
+          "1098",
+          "1099"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 0.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": false,
+          "mrr_at_5": 0.0,
+          "mrr_at_30": 0.16666666666666666,
+          "ndcg_at_5_binary_annotations": 0.0
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.2,
+          "mrr_at_30": 0.2,
+          "ndcg_at_5_binary_annotations": 0.38685280723454163
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 2,
+        "baseline_top5": [
+          "8490",
+          "1640",
+          "7839",
+          "1098",
+          "8489"
+        ],
+        "optimized_top5": [
+          "8490",
+          "1640",
+          "7839",
+          "1098",
+          "1099"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 0.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": false,
+          "mrr_at_5": 0.0,
+          "mrr_at_30": 0.16666666666666666,
+          "ndcg_at_5_binary_annotations": 0.0
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.2,
+          "mrr_at_30": 0.2,
+          "ndcg_at_5_binary_annotations": 0.38685280723454163
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      }
+    ]
+  },
+  {
+    "id": "domainrag_extractive_006",
+    "split": "dev",
+    "question": "人大文学院举办的五届“世界汉学大会”开始时间是？",
+    "annotated_ids": [
+      [
+        "1102"
+      ]
+    ],
+    "mean_hit_difference": 0.3333333333333333,
+    "mean_mrr_difference": 0.06666666666666667,
+    "pairs": [
+      {
+        "round": 0,
+        "baseline_top5": [
+          "1642",
+          "7843",
+          "1643",
+          "7842",
+          "8492"
+        ],
+        "optimized_top5": [
+          "1642",
+          "7843",
+          "1643",
+          "7842",
+          "1339"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 0.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": false,
+          "mrr_at_5": 0.0,
+          "mrr_at_30": 0.16666666666666666,
+          "ndcg_at_5_binary_annotations": 0.0
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 0.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": false,
+          "mrr_at_5": 0.0,
+          "mrr_at_30": 0.125,
+          "ndcg_at_5_binary_annotations": 0.0
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 1,
+        "baseline_top5": [
+          "1642",
+          "7843",
+          "1643",
+          "7842",
+          "8492"
+        ],
+        "optimized_top5": [
+          "1642",
+          "7843",
+          "1643",
+          "7842",
+          "1102"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 0.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": false,
+          "mrr_at_5": 0.0,
+          "mrr_at_30": 0.16666666666666666,
+          "ndcg_at_5_binary_annotations": 0.0
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.2,
+          "mrr_at_30": 0.2,
+          "ndcg_at_5_binary_annotations": 0.38685280723454163
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 2,
+        "baseline_top5": [
+          "1642",
+          "7843",
+          "1643",
+          "7842",
+          "1102"
+        ],
+        "optimized_top5": [
+          "1642",
+          "7843",
+          "1643",
+          "7842",
+          "1102"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.2,
+          "mrr_at_30": 0.2,
+          "ndcg_at_5_binary_annotations": 0.38685280723454163
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.2,
+          "mrr_at_30": 0.2,
+          "ndcg_at_5_binary_annotations": 0.38685280723454163
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      }
+    ]
+  },
+  {
+    "id": "domainrag_extractive_023",
+    "split": "holdout",
+    "question": "哲学院有哪些专业？",
+    "annotated_ids": [
+      [
+        "8864"
+      ]
+    ],
+    "mean_hit_difference": -1.0,
+    "mean_mrr_difference": -0.20000000000000004,
+    "pairs": [
+      {
+        "round": 0,
+        "baseline_top5": [
+          "13912",
+          "8861",
+          "13911",
+          "13915",
+          "8864"
+        ],
+        "optimized_top5": [
+          "13912",
+          "13911",
+          "8861",
+          "13915",
+          "8860"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.2,
+          "mrr_at_30": 0.2,
+          "ndcg_at_5_binary_annotations": 0.38685280723454163
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 0.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": false,
+          "mrr_at_5": 0.0,
+          "mrr_at_30": 0.16666666666666666,
+          "ndcg_at_5_binary_annotations": 0.0
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 1,
+        "baseline_top5": [
+          "13912",
+          "8861",
+          "13915",
+          "13911",
+          "8864"
+        ],
+        "optimized_top5": [
+          "13912",
+          "13911",
+          "8861",
+          "13915",
+          "8860"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.2,
+          "mrr_at_30": 0.2,
+          "ndcg_at_5_binary_annotations": 0.38685280723454163
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 0.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": false,
+          "mrr_at_5": 0.0,
+          "mrr_at_30": 0.16666666666666666,
+          "ndcg_at_5_binary_annotations": 0.0
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 2,
+        "baseline_top5": [
+          "13912",
+          "8861",
+          "13911",
+          "13915",
+          "8864"
+        ],
+        "optimized_top5": [
+          "13912",
+          "13911",
+          "8861",
+          "13915",
+          "8860"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.2,
+          "mrr_at_30": 0.2,
+          "ndcg_at_5_binary_annotations": 0.38685280723454163
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 0.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": false,
+          "mrr_at_5": 0.0,
+          "mrr_at_30": 0.16666666666666666,
+          "ndcg_at_5_binary_annotations": 0.0
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      }
+    ]
+  },
+  {
+    "id": "domainrag_extractive_024",
+    "split": "holdout",
+    "question": "哲学院的国际交流有哪些合作大学？",
+    "annotated_ids": [
+      [
+        "8865"
+      ]
+    ],
+    "mean_hit_difference": 0.0,
+    "mean_mrr_difference": -0.16666666666666666,
+    "pairs": [
+      {
+        "round": 0,
+        "baseline_top5": [
+          "13916",
+          "8865",
+          "8866",
+          "13917",
+          "3810"
+        ],
+        "optimized_top5": [
+          "13916",
+          "8866",
+          "8865",
+          "13917",
+          "3810"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.5,
+          "mrr_at_30": 0.5,
+          "ndcg_at_5_binary_annotations": 0.6309297535714575
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.3333333333333333,
+          "mrr_at_30": 0.3333333333333333,
+          "ndcg_at_5_binary_annotations": 0.5
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 1,
+        "baseline_top5": [
+          "13916",
+          "8865",
+          "8866",
+          "13917",
+          "3810"
+        ],
+        "optimized_top5": [
+          "13916",
+          "8866",
+          "8865",
+          "13917",
+          "3810"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.5,
+          "mrr_at_30": 0.5,
+          "ndcg_at_5_binary_annotations": 0.6309297535714575
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.3333333333333333,
+          "mrr_at_30": 0.3333333333333333,
+          "ndcg_at_5_binary_annotations": 0.5
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 2,
+        "baseline_top5": [
+          "13916",
+          "8865",
+          "8866",
+          "13917",
+          "3810"
+        ],
+        "optimized_top5": [
+          "13916",
+          "8866",
+          "8865",
+          "13917",
+          "3810"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.5,
+          "mrr_at_30": 0.5,
+          "ndcg_at_5_binary_annotations": 0.6309297535714575
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.3333333333333333,
+          "mrr_at_30": 0.3333333333333333,
+          "ndcg_at_5_binary_annotations": 0.5
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      }
+    ]
+  },
+  {
+    "id": "domainrag_extractive_033",
+    "split": "dev",
+    "question": "中国人民大学2016年高水平艺术团招生报名截止日期是什么时候？",
+    "annotated_ids": [
+      [
+        "183"
+      ]
+    ],
+    "mean_hit_difference": 0.0,
+    "mean_mrr_difference": -0.5,
+    "pairs": [
+      {
+        "round": 0,
+        "baseline_top5": [
+          "183",
+          "13922",
+          "13923",
+          "184",
+          "185"
+        ],
+        "optimized_top5": [
+          "13922",
+          "183",
+          "13923",
+          "184",
+          "185"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 1.0,
+          "mrr_at_30": 1.0,
+          "ndcg_at_5_binary_annotations": 1.0
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.5,
+          "mrr_at_30": 0.5,
+          "ndcg_at_5_binary_annotations": 0.6309297535714575
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 1,
+        "baseline_top5": [
+          "183",
+          "13922",
+          "13923",
+          "184",
+          "185"
+        ],
+        "optimized_top5": [
+          "13922",
+          "183",
+          "13923",
+          "184",
+          "185"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 1.0,
+          "mrr_at_30": 1.0,
+          "ndcg_at_5_binary_annotations": 1.0
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.5,
+          "mrr_at_30": 0.5,
+          "ndcg_at_5_binary_annotations": 0.6309297535714575
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 2,
+        "baseline_top5": [
+          "183",
+          "13922",
+          "13923",
+          "184",
+          "185"
+        ],
+        "optimized_top5": [
+          "13922",
+          "183",
+          "13923",
+          "184",
+          "185"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 1.0,
+          "mrr_at_30": 1.0,
+          "ndcg_at_5_binary_annotations": 1.0
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.5,
+          "mrr_at_30": 0.5,
+          "ndcg_at_5_binary_annotations": 0.6309297535714575
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      }
+    ]
+  },
+  {
+    "id": "domainrag_extractive_037",
+    "split": "holdout",
+    "question": "人大文学院的古典学实验班是从那些专业进行学生选拔的？",
+    "annotated_ids": [
+      [
+        "7840"
+      ]
+    ],
+    "mean_hit_difference": -0.6666666666666666,
+    "mean_mrr_difference": -0.13333333333333333,
+    "pairs": [
+      {
+        "round": 0,
+        "baseline_top5": [
+          "7839",
+          "1640",
+          "8489",
+          "1099",
+          "7840"
+        ],
+        "optimized_top5": [
+          "7839",
+          "1640",
+          "1099",
+          "8489",
+          "8490"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.2,
+          "mrr_at_30": 0.2,
+          "ndcg_at_5_binary_annotations": 0.38685280723454163
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 0.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": false,
+          "mrr_at_5": 0.0,
+          "mrr_at_30": 0.16666666666666666,
+          "ndcg_at_5_binary_annotations": 0.0
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 1,
+        "baseline_top5": [
+          "7839",
+          "1640",
+          "8489",
+          "1099",
+          "8490"
+        ],
+        "optimized_top5": [
+          "7839",
+          "1640",
+          "1099",
+          "8489",
+          "8490"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 0.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": false,
+          "mrr_at_5": 0.0,
+          "mrr_at_30": 0.16666666666666666,
+          "ndcg_at_5_binary_annotations": 0.0
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 0.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": false,
+          "mrr_at_5": 0.0,
+          "mrr_at_30": 0.16666666666666666,
+          "ndcg_at_5_binary_annotations": 0.0
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 2,
+        "baseline_top5": [
+          "7839",
+          "1640",
+          "8489",
+          "1099",
+          "7840"
+        ],
+        "optimized_top5": [
+          "7839",
+          "1640",
+          "1099",
+          "8489",
+          "8490"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.2,
+          "mrr_at_30": 0.2,
+          "ndcg_at_5_binary_annotations": 0.38685280723454163
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 0.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": false,
+          "mrr_at_5": 0.0,
+          "mrr_at_30": 0.16666666666666666,
+          "ndcg_at_5_binary_annotations": 0.0
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      }
+    ]
+  },
+  {
+    "id": "domainrag_extractive_039",
+    "split": "holdout",
+    "question": "人大文学院本科毕业生就业情况主要集中在哪些领域？",
+    "annotated_ids": [
+      [
+        "7842"
+      ]
+    ],
+    "mean_hit_difference": 0.0,
+    "mean_mrr_difference": -0.1333333333333333,
+    "pairs": [
+      {
+        "round": 0,
+        "baseline_top5": [
+          "1643",
+          "1102",
+          "7842",
+          "1644",
+          "1103"
+        ],
+        "optimized_top5": [
+          "1643",
+          "1102",
+          "1644",
+          "1103",
+          "7842"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.3333333333333333,
+          "mrr_at_30": 0.3333333333333333,
+          "ndcg_at_5_binary_annotations": 0.5
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.2,
+          "mrr_at_30": 0.2,
+          "ndcg_at_5_binary_annotations": 0.38685280723454163
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 1,
+        "baseline_top5": [
+          "1643",
+          "1102",
+          "7842",
+          "1644",
+          "1103"
+        ],
+        "optimized_top5": [
+          "1643",
+          "1102",
+          "1644",
+          "1103",
+          "7842"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.3333333333333333,
+          "mrr_at_30": 0.3333333333333333,
+          "ndcg_at_5_binary_annotations": 0.5
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.2,
+          "mrr_at_30": 0.2,
+          "ndcg_at_5_binary_annotations": 0.38685280723454163
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 2,
+        "baseline_top5": [
+          "1643",
+          "1102",
+          "7842",
+          "1644",
+          "1103"
+        ],
+        "optimized_top5": [
+          "1643",
+          "1102",
+          "1644",
+          "1103",
+          "7842"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.3333333333333333,
+          "mrr_at_30": 0.3333333333333333,
+          "ndcg_at_5_binary_annotations": 0.5
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.2,
+          "mrr_at_30": 0.2,
+          "ndcg_at_5_binary_annotations": 0.38685280723454163
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      }
+    ]
+  },
+  {
+    "id": "domainrag_extractive_041",
+    "split": "holdout",
+    "question": "中国人民大学艺术类招生专业测试报名费是多少？",
+    "annotated_ids": [
+      [
+        "323"
+      ]
+    ],
+    "mean_hit_difference": 0.0,
+    "mean_mrr_difference": 0.05555555555555556,
+    "pairs": [
+      {
+        "round": 0,
+        "baseline_top5": [
+          "1751",
+          "9680",
+          "323",
+          "7208",
+          "3069"
+        ],
+        "optimized_top5": [
+          "1751",
+          "9680",
+          "323",
+          "7208",
+          "1600"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.3333333333333333,
+          "mrr_at_30": 0.3333333333333333,
+          "ndcg_at_5_binary_annotations": 0.5
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.3333333333333333,
+          "mrr_at_30": 0.3333333333333333,
+          "ndcg_at_5_binary_annotations": 0.5
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 1,
+        "baseline_top5": [
+          "1751",
+          "9680",
+          "323",
+          "7208",
+          "3069"
+        ],
+        "optimized_top5": [
+          "1751",
+          "9680",
+          "323",
+          "7208",
+          "1600"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.3333333333333333,
+          "mrr_at_30": 0.3333333333333333,
+          "ndcg_at_5_binary_annotations": 0.5
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.3333333333333333,
+          "mrr_at_30": 0.3333333333333333,
+          "ndcg_at_5_binary_annotations": 0.5
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 2,
+        "baseline_top5": [
+          "1751",
+          "9680",
+          "323",
+          "7208",
+          "3069"
+        ],
+        "optimized_top5": [
+          "1751",
+          "323",
+          "7208",
+          "9680",
+          "1600"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.3333333333333333,
+          "mrr_at_30": 0.3333333333333333,
+          "ndcg_at_5_binary_annotations": 0.5
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.5,
+          "mrr_at_30": 0.5,
+          "ndcg_at_5_binary_annotations": 0.6309297535714575
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      }
+    ]
+  },
+  {
+    "id": "domainrag_extractive_042",
+    "split": "holdout",
+    "question": "中国人民大学2023年艺术类（音乐表演）专业招生报名截止时间是？",
+    "annotated_ids": [
+      [
+        "328"
+      ]
+    ],
+    "mean_hit_difference": 0.0,
+    "mean_mrr_difference": 0.061111111111111095,
+    "pairs": [
+      {
+        "round": 0,
+        "baseline_top5": [
+          "327",
+          "7212",
+          "9684",
+          "328",
+          "7213"
+        ],
+        "optimized_top5": [
+          "327",
+          "7212",
+          "9684",
+          "328",
+          "9685"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.25,
+          "mrr_at_30": 0.25,
+          "ndcg_at_5_binary_annotations": 0.43067655807339306
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.25,
+          "mrr_at_30": 0.25,
+          "ndcg_at_5_binary_annotations": 0.43067655807339306
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 1,
+        "baseline_top5": [
+          "327",
+          "7212",
+          "9684",
+          "9685",
+          "328"
+        ],
+        "optimized_top5": [
+          "327",
+          "7212",
+          "9684",
+          "328",
+          "9685"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.2,
+          "mrr_at_30": 0.2,
+          "ndcg_at_5_binary_annotations": 0.38685280723454163
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.25,
+          "mrr_at_30": 0.25,
+          "ndcg_at_5_binary_annotations": 0.43067655807339306
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 2,
+        "baseline_top5": [
+          "327",
+          "7212",
+          "9684",
+          "9685",
+          "328"
+        ],
+        "optimized_top5": [
+          "327",
+          "7212",
+          "328",
+          "9684",
+          "7213"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.2,
+          "mrr_at_30": 0.2,
+          "ndcg_at_5_binary_annotations": 0.38685280723454163
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.3333333333333333,
+          "mrr_at_30": 0.3333333333333333,
+          "ndcg_at_5_binary_annotations": 0.5
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      }
+    ]
+  },
+  {
+    "id": "domainrag_extractive_066",
+    "split": "holdout",
+    "question": "中法学院所在的中国人民大学苏州校区位于哪里？",
+    "annotated_ids": [
+      [
+        "686"
+      ]
+    ],
+    "mean_hit_difference": -0.3333333333333333,
+    "mean_mrr_difference": -0.06666666666666667,
+    "pairs": [
+      {
+        "round": 0,
+        "baseline_top5": [
+          "5671",
+          "10059",
+          "10160",
+          "14079",
+          "3967"
+        ],
+        "optimized_top5": [
+          "10059",
+          "5671",
+          "10160",
+          "14079",
+          "10221"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 0.0,
+          "evidence_recall_at_10": 0.0,
+          "all_evidence_hit_at_5": false,
+          "mrr_at_5": 0.0,
+          "mrr_at_30": 0.08333333333333333,
+          "ndcg_at_5_binary_annotations": 0.0
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 0.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": false,
+          "mrr_at_5": 0.0,
+          "mrr_at_30": 0.1111111111111111,
+          "ndcg_at_5_binary_annotations": 0.0
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 1,
+        "baseline_top5": [
+          "5671",
+          "10059",
+          "10160",
+          "10221",
+          "12646"
+        ],
+        "optimized_top5": [
+          "10059",
+          "5671",
+          "10221",
+          "10120",
+          "10434"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 0.0,
+          "evidence_recall_at_10": 0.0,
+          "all_evidence_hit_at_5": false,
+          "mrr_at_5": 0.0,
+          "mrr_at_30": 0.03333333333333333,
+          "ndcg_at_5_binary_annotations": 0.0
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 0.0,
+          "evidence_recall_at_10": 0.0,
+          "all_evidence_hit_at_5": false,
+          "mrr_at_5": 0.0,
+          "mrr_at_30": 0.043478260869565216,
+          "ndcg_at_5_binary_annotations": 0.0
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 2,
+        "baseline_top5": [
+          "5671",
+          "11567",
+          "12646",
+          "6630",
+          "686"
+        ],
+        "optimized_top5": [
+          "10059",
+          "5671",
+          "10160",
+          "14079",
+          "3967"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.2,
+          "mrr_at_30": 0.2,
+          "ndcg_at_5_binary_annotations": 0.38685280723454163
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 0.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": false,
+          "mrr_at_5": 0.0,
+          "mrr_at_30": 0.125,
+          "ndcg_at_5_binary_annotations": 0.0
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      }
+    ]
+  },
+  {
+    "id": "domainrag_extractive_067",
+    "split": "dev",
+    "question": "汪建熙是哪个系的毕业生？",
+    "annotated_ids": [
+      [
+        "979"
+      ]
+    ],
+    "mean_hit_difference": 0.0,
+    "mean_mrr_difference": -0.08333333333333331,
+    "pairs": [
+      {
+        "round": 0,
+        "baseline_top5": [
+          "9484",
+          "4845",
+          "979",
+          "993",
+          "980"
+        ],
+        "optimized_top5": [
+          "9484",
+          "4845",
+          "983",
+          "979",
+          "993"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.3333333333333333,
+          "mrr_at_30": 0.3333333333333333,
+          "ndcg_at_5_binary_annotations": 0.5
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.25,
+          "mrr_at_30": 0.25,
+          "ndcg_at_5_binary_annotations": 0.43067655807339306
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 1,
+        "baseline_top5": [
+          "9484",
+          "4845",
+          "979",
+          "993",
+          "980"
+        ],
+        "optimized_top5": [
+          "9484",
+          "4845",
+          "983",
+          "979",
+          "993"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.3333333333333333,
+          "mrr_at_30": 0.3333333333333333,
+          "ndcg_at_5_binary_annotations": 0.5
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.25,
+          "mrr_at_30": 0.25,
+          "ndcg_at_5_binary_annotations": 0.43067655807339306
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 2,
+        "baseline_top5": [
+          "9484",
+          "4845",
+          "979",
+          "993",
+          "980"
+        ],
+        "optimized_top5": [
+          "9484",
+          "4845",
+          "983",
+          "979",
+          "993"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.3333333333333333,
+          "mrr_at_30": 0.3333333333333333,
+          "ndcg_at_5_binary_annotations": 0.5
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.25,
+          "mrr_at_30": 0.25,
+          "ndcg_at_5_binary_annotations": 0.43067655807339306
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      }
+    ]
+  },
+  {
+    "id": "domainrag_extractive_069",
+    "split": "dev",
+    "question": "中国人民大学的知名校友王永昌是哪年加入中国共产党的？",
+    "annotated_ids": [
+      [
+        "984"
+      ]
+    ],
+    "mean_hit_difference": 0.0,
+    "mean_mrr_difference": -0.16666666666666666,
+    "pairs": [
+      {
+        "round": 0,
+        "baseline_top5": [
+          "990",
+          "984",
+          "981",
+          "989",
+          "994"
+        ],
+        "optimized_top5": [
+          "990",
+          "981",
+          "984",
+          "989",
+          "994"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.5,
+          "mrr_at_30": 0.5,
+          "ndcg_at_5_binary_annotations": 0.6309297535714575
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.3333333333333333,
+          "mrr_at_30": 0.3333333333333333,
+          "ndcg_at_5_binary_annotations": 0.5
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 1,
+        "baseline_top5": [
+          "990",
+          "984",
+          "981",
+          "989",
+          "994"
+        ],
+        "optimized_top5": [
+          "990",
+          "981",
+          "984",
+          "989",
+          "994"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.5,
+          "mrr_at_30": 0.5,
+          "ndcg_at_5_binary_annotations": 0.6309297535714575
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.3333333333333333,
+          "mrr_at_30": 0.3333333333333333,
+          "ndcg_at_5_binary_annotations": 0.5
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 2,
+        "baseline_top5": [
+          "990",
+          "984",
+          "981",
+          "989",
+          "994"
+        ],
+        "optimized_top5": [
+          "990",
+          "981",
+          "984",
+          "989",
+          "994"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.5,
+          "mrr_at_30": 0.5,
+          "ndcg_at_5_binary_annotations": 0.6309297535714575
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.3333333333333333,
+          "mrr_at_30": 0.3333333333333333,
+          "ndcg_at_5_binary_annotations": 0.5
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      }
+    ]
+  },
+  {
+    "id": "domainrag_extractive_081",
+    "split": "holdout",
+    "question": "谁是中国人民大学历史上的新中国新型高等教育的开拓者？",
+    "annotated_ids": [
+      [
+        "7178"
+      ]
+    ],
+    "mean_hit_difference": 0.0,
+    "mean_mrr_difference": 0.5,
+    "pairs": [
+      {
+        "round": 0,
+        "baseline_top5": [
+          "7177",
+          "7178",
+          "5853",
+          "5852",
+          "9055"
+        ],
+        "optimized_top5": [
+          "7178",
+          "7177",
+          "5853",
+          "5852",
+          "9055"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.5,
+          "mrr_at_30": 0.5,
+          "ndcg_at_5_binary_annotations": 0.6309297535714575
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 1.0,
+          "mrr_at_30": 1.0,
+          "ndcg_at_5_binary_annotations": 1.0
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 1,
+        "baseline_top5": [
+          "7177",
+          "7178",
+          "5853",
+          "5852",
+          "9055"
+        ],
+        "optimized_top5": [
+          "7178",
+          "7177",
+          "5853",
+          "5852",
+          "9055"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.5,
+          "mrr_at_30": 0.5,
+          "ndcg_at_5_binary_annotations": 0.6309297535714575
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 1.0,
+          "mrr_at_30": 1.0,
+          "ndcg_at_5_binary_annotations": 1.0
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      },
+      {
+        "round": 2,
+        "baseline_top5": [
+          "7177",
+          "7178",
+          "5853",
+          "5852",
+          "9055"
+        ],
+        "optimized_top5": [
+          "7178",
+          "7177",
+          "5853",
+          "5852",
+          "9055"
+        ],
+        "baseline_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 0.5,
+          "mrr_at_30": 0.5,
+          "ndcg_at_5_binary_annotations": 0.6309297535714575
+        },
+        "optimized_metrics": {
+          "evidence_recall_at_5": 1.0,
+          "evidence_recall_at_10": 1.0,
+          "all_evidence_hit_at_5": true,
+          "mrr_at_5": 1.0,
+          "mrr_at_30": 1.0,
+          "ndcg_at_5_binary_annotations": 1.0
+        },
+        "baseline_candidate_hit": true,
+        "optimized_candidate_hit": true
+      }
+    ]
+  }
+]

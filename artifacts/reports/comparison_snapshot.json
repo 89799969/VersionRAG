@@ -1,0 +1,48 @@
+{
+  "corpus_sha256": "6b08f337ee4066af05d99bcf5bc29afca56f7e05df8b0feed5030dc34bfd52d9",
+  "qa_sha256": "7e8cca569448885ddba55716ba22a73d9ebcfd239cb4132354fc31b079c1c81e",
+  "dense_index": {
+    "corpus_sha256": "6b08f337ee4066af05d99bcf5bc29afca56f7e05df8b0feed5030dc34bfd52d9",
+    "documents": 14406,
+    "encoder": {
+      "provider": "SiliconFlow API",
+      "base_url": "https://api.siliconflow.cn/v1",
+      "model": "BAAI/bge-m3",
+      "model_revision": "not exposed by API",
+      "dimension": 1024,
+      "normalization": "L2",
+      "query_instruction": "",
+      "max_input_utf8_bytes": 8000,
+      "document_preprocessing": "join-whitespace-between-Chinese-characters-v1"
+    },
+    "vectors_sha256": "a6329210213f306fdeab8b8ba07c86d4c390a6264ba038263c80997ef2e2cdc3",
+    "truncated_documents": 0,
+    "search": "exact cosine over normalized float32 vectors",
+    "build_run_seconds": 810.4048050000001
+  },
+  "bm25_index": {
+    "corpus_sha256": "6b08f337ee4066af05d99bcf5bc29afca56f7e05df8b0feed5030dc34bfd52d9",
+    "documents": 14406,
+    "tokenization": "jieba-0.42.1/chinese-whitespace-v1",
+    "bm25s": "0.2.1",
+    "k1": 1.5,
+    "b": 0.75,
+    "method": "lucene"
+  },
+  "parameters": {
+    "top_k": 5,
+    "candidate_k_per_channel": 30,
+    "rrf_constant": 60,
+    "rerank_candidate_k": 30,
+    "rerank_model": "BAAI/bge-reranker-v2-m3"
+  },
+  "code_sha256": {
+    "app\\retrieval.py": "46bb4435c15caf1558a017acb18f092fd55027a9a4c107022772b83343ec79aa",
+    "app\\dense.py": "57390010042ca0ec6f05ea000240169ce0f983e26c87a8f32e4a57f9d1e6f6c8",
+    "app\\embedding_api.py": "9d0223ee75ab6cb6e92873c66b07e0259e1eb7ccab529e1901ca8817bb5c12c1",
+    "app\\hybrid.py": "bc8a0a6e7533b2b99b34d19b7f8af98ac78cbdf6d231c7660bd26c362b05e634",
+    "app\\reranking.py": "122528fde3957c236589808c9fe2e559bfa955ab1af6e4450466331de175a3e9",
+    "app\\evaluation.py": "934b3b8ddc3fbd61ae060adceb0b3628ef1cafd20e702775954650342d35a612"
+  },
+  "note": "Captured after this development run, before any parameter tuning; provider weight revisions are not exposed."
+}

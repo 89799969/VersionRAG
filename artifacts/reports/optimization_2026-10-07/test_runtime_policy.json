@@ -1,0 +1,7 @@
+{
+  "minimum_start_interval_seconds": 1.35,
+  "scope": "All three test variants, including warmups. Pacing before the HTTP timer; wait saved per measured row.",
+  "reason": "88 recorded development HTTP 429 events; keep the frozen metric configuration and slow scheduling.",
+  "launcher_sha256": "e9e43e58ecc576771850e9fce2bfce5c003cd0b1722ce0099b57a04682403d72",
+  "selection_sha256": "d1505402556803aa76819debc34a19fb43ffc51ee1569ff085ec9e7693cead3e"
+}

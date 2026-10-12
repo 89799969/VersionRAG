@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "answer_records": 180,
+  "answer_statuses": {
+    "ok": 122,
+    "not_generated": 56,
+    "error": 2
+  },
+  "resumed_records": 41,
+  "original_statuses": {
+    "ok": 83,
+    "not_generated": 56,
+    "error": 41
+  },
+  "semantic_reviews": 180,
+  "checks": [
+    "First-run files and frozen code/data unchanged",
+    "Retakes only replace failed calls in a separate view",
+    "Quote anchors and exact supplied corpus prefixes",
+    "Judge input hashes and success definition recomputed",
+    "Bounded recovery"
+  ],
+  "scope": "Single same-provider model evaluation, eligible two-profession subset; not human accuracy or unbiased production latency",
+  "orchestration_sha256_at_audit": "c1fd543bc12846a1fca60198f4ae95ecaad6cfc2eb7af1bd7991a30d3aeb1eb2",
+  "orchestration_revision": "Audit now accepts explicitly retained generation failures as scored failures; added separately named conservative no-partial-warning diagnostic. Measured generation/retrieval/judge code unchanged.",
+  "effective_answers_sha256": "8da5891ccb5157aa6a7a218e6ed9e134c4f6a44911d5d267e10e0844f354b096"
+}

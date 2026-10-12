@@ -1,0 +1,22 @@
+{
+  "immutable_sha256": {
+    "artifacts/reports/comparison_2026-10-07/answers.jsonl": "8ba0f487dc507ecdc5092a0c6c9df176ac1819c579852d6637bb4f5413d79add",
+    "artifacts/reports/comparison_2026-10-07/dev_retrieval.jsonl": "fe86bf07a05dcc13f39edb2d5ef5fca2bdd47b628939311b01c68fbed953e782",
+    "artifacts/reports/comparison_2026-10-07/evaluation_retrieval.jsonl": "4b000fdd8f856f8c2faa3aa28c2970b0cadb4c4fd8a35bbe36c3adc56070cfe6",
+    "artifacts/reports/comparison_2026-10-07/semantic_reviews.jsonl": "769432f66249a33d1306018be4b54ee91b23b338f78181c96ef85c1a2ab663c1",
+    "artifacts/reports/comparison_2026-10-07/generation_v4_policy.json": "b34c04784b84dd7e7f4d0270ba9788027a33cde81a8d1b28bf779bdd1cf4e59d",
+    "data/domainrag_text_corpus.jsonl": "6b08f337ee4066af05d99bcf5bc29afca56f7e05df8b0feed5030dc34bfd52d9",
+    "data/extended_qa_mapped.jsonl": "22b2397a0ccae715ce991a4cb3b4c33fcb731cff97a5dfa2441ed10ca91f36fd",
+    "app/comparison.py": "9e97405855d6e427ea5b6314ed9be2d6b4ac6d5b0bdd774f51e3217ba920f3cc",
+    "app/comparison_generation.py": "9f0165812411b5d584e64681f8ef9247102c3ee250f43bf868345fd27829f90e",
+    "scripts/judge_comparison.py": "d66f13f1ac8e035ec1170d6c8f8ea2e041c340f08e82d8505f056c3234173b2c",
+    "scripts/evaluate_comparison.py": "661a4b8af55ebaa8cd0484e879b7935fbc7f4f13774a0330faadaec0680ec44c",
+    "app/retrieval.py": "1ea071427c9311b2e10eed61cf3b0b28293ad6b52a75bd294ba83a53b88e3647",
+    "app/dense.py": "e8a42c15b293f53c39a1111cde0e072b0e572f0ec0d3d38d29514b12ceca1730",
+    "app/hybrid.py": "82ecbb5c96381fb1dc09a5dd978598f901f4b25d2e84ae69543898ed6da8ac64"
+  },
+  "policy": "Retry original failed generation calls once; keep input hits, model, prompt and budgets unchanged. Paired arms reuse the initial draft. No tuning on evaluation questions.",
+  "judge_policy": "Original judge prompt/settings unchanged; reuse judgments only by full input hash.",
+  "generation_temperature": "provider default, same as first run; stochastic retries are not algorithm gains",
+  "orchestration_sha256": "8695ac99511fe9eb4ad195bd1fa1dff2c9d517b3e19d46eba75fed9c54067c28"
+}

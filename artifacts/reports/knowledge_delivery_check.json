@@ -1,0 +1,52 @@
+{
+  "checked_at": "2026-10-05T05:48:14.841386+00:00",
+  "checks": {
+    "real_lifecycle_report_passed": true,
+    "sqlite_integrity": true,
+    "teaching_draft_removed": true,
+    "initial_version_restored_after_restart": true,
+    "worker_alive": true,
+    "management_page": true,
+    "invalid_document_id_422": true,
+    "baseline_retrieval_version_and_trace": true
+  },
+  "remote_model_calls": 0,
+  "test_summary": "33 passed, 1 warning in 2.51s",
+  "frozen_baseline_unchanged": {
+    "app\\retrieval.py": true,
+    "app\\dense.py": true,
+    "app\\embedding_api.py": true,
+    "app\\hybrid.py": true,
+    "app\\reranking.py": true,
+    "app\\evaluation.py": true,
+    "corpus": true,
+    "qa": true,
+    "vectors": true
+  },
+  "lifecycle_code_note": "Recorded real-run hashes retained; later document-ID validation tightening covered by tests and HTTP below.",
+  "code_sha256": {
+    "app/knowledge.py": "4d01faa281a5c1830092b5db9fe4af52c838004865efbb9ae4640a4d50b56948",
+    "app/knowledge_routes.py": "a76bc770ed728e431ef9b027e5fd5c05d4bf0f59ad24fa0aafc43bba717b0f10",
+    "app/api.py": "64fbe26f13690b0907c3c72a53e9412807a039fbca672fa4ce8c08c3cf0f860e",
+    "tests/test_knowledge.py": "5f4dc3db6b334a944cc44aa59efdc07e23fdf6631407ad6c6cccacb78e4a08c0"
+  },
+  "draft_chunks": 14406,
+  "source_records": 1686,
+  "health": {
+    "status": "ok",
+    "retrieval_methods": [
+      "bm25",
+      "dense",
+      "hybrid",
+      "hybrid_rerank"
+    ],
+    "knowledge_version": "seed-eab441b86dee414d9009647d55520a0f",
+    "knowledge": {
+      "active_version": "seed-eab441b86dee414d9009647d55520a0f",
+      "draft_revision": 4,
+      "pending_jobs": 0,
+      "worker_alive": true
+    }
+  },
+  "passed": true
+}

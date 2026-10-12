@@ -1,0 +1,14 @@
+{
+  "tests_passed": 56,
+  "warnings": 1,
+  "warning": "Starlette TestClient dependency deprecation",
+  "commands": [
+    ".venv/Scripts/python.exe -m pytest -q",
+    ".venv/Scripts/python.exe scripts/audit_comparison.py",
+    ".venv/Scripts/python.exe scripts/replay_comparison_case.py --case 038"
+  ],
+  "audit_status": "passed",
+  "saved_real_case_replay": "038",
+  "network_called_by_these_checks": false,
+  "scope": "Actual completed local checks; no production or complete answer-quality acceptance"
+}

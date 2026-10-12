@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>知识库资料与版本</title>
+<style>
+body{font:16px/1.7 system-ui,sans-serif;background:#f4f6fa;color:#182431;margin:0}main{max-width:900px;margin:40px auto;padding:24px}section{background:#fff;border:1px solid #dde4ed;border-radius:14px;padding:24px;margin:20px 0}h1{margin-bottom:8px}p,.meta{color:#536171}.meta{font-size:13px}input,textarea,button{font:inherit;padding:10px;border:1px solid #bcc9d8;border-radius:8px;box-sizing:border-box}input,textarea{width:100%;margin:6px 0 16px}textarea{min-height:140px}button{background:#235bba;color:#fff;cursor:pointer}button:disabled{opacity:.5}.controls{display:flex;gap:10px;flex-wrap:wrap}.secondary{background:white;color:#235bba}pre{white-space:pre-wrap;word-break:break-word}a{color:#235bba}article{border-top:1px solid #e4e9ef;padding:14px 0}code{word-break:break-all}
+</style>
+<main><a href="/">← 返回问答</a><h1>知识库资料与版本</h1><p>先保存资料草稿，再构建并发布。构建期间继续查询当前版本。</p>
+<section><h2>当前状态</h2><p id="current">正在读取……</p><p id="message" role="status"></p></section>
+<section><h2>编辑资料草稿</h2><p class="meta">下面是教学构造的通知，用于观察更新与回滚，不是学校官方招生政策。原有历史资料另行保留。</p>
+<label for="document">文档编号</label><input id="document" maxlength="100" value="teaching-demo-application">
+<label for="title">标题</label><input id="title" maxlength="300" value="教学构造：申请通知">
+<label for="text">正文</label><textarea id="text" maxlength="200000">教学构造资料：本次项目申请的报名截止日期为2月5日。</textarea>
+<div class="controls"><button id="save">保存草稿</button><button id="delete" class="secondary">删除草稿中的文档</button><button id="build">构建并发布</button></div>
+<p class="meta">保存和删除暂不影响问答，发布成功后生效。可将日期改为2月8日后再次发布。</p><pre id="job"></pre>
+</section>
+<section><h2>验证当前回答</h2><p>限定查询上方文档，观察当前版本的截止日期和引用。</p><button id="verify">查询截止日期</button><pre id="answer"></pre></section>
+<section><h2>已构建版本</h2><p class="meta">切换旧版即可回滚问答。回滚不会修改资料草稿，之后发布仍以草稿为准。</p><div id="versions"></div></section>
+</main>
+<script>
+const $=id=>document.getElementById(id);let polling=null;
+async function api(path,method='GET',body){const r=await fetch('/knowledge'+path,{method,headers:{'Content-Type':'application/json'},...(body===undefined?{}:{body:JSON.stringify(body)})});const data=await r.json();if(!r.ok)throw new Error(typeof data.detail==='string'?data.detail:'输入未通过校验');return data;}
+async function refresh(){const status=await api('/status');$('current').textContent='当前版本：'+(status.active_version||'固定历史资料')+' · 草稿修订 '+status.draft_revision+' · 待完成任务 '+status.pending_jobs;
+const versions=await api('/versions');$('versions').replaceChildren();for(const v of versions){const box=document.createElement('article'),label=document.createElement('p'),button=document.createElement('button');label.textContent=(v.active?'正在使用 · ':'')+v.id+' · '+v.stats.total_chunks+' 个片段';button.textContent=v.active?'当前版本':'切换到此版本';button.disabled=v.active;button.onclick=()=>action(async()=>{await api('/activate','POST',{version:v.id});await refresh();return '版本已切换，资料草稿保持原样。';});box.append(label,button);$('versions').append(box);}}
+async function action(work){try{$('message').textContent=await work();}catch(e){$('message').textContent='未完成：'+e.message;}}
+function showJob(job){$('job').textContent='任务：'+job.id+'\n状态：'+job.state+(job.error?'\n原因：'+job.error:'')+(job.state==='succeeded'?'\n'+(job.published?'已发布':'已构建，尚未发布')+'\n复用片段：'+job.stats.cache_hit_chunks+'\n新编码文本：'+job.stats.encoded_unique_texts:'')+(job.note?'\n说明：'+job.note:'');}
+async function poll(id){try{const job=await api('/jobs/'+id);showJob(job);await refresh();if(job.state==='queued'||job.state==='running'){polling=setTimeout(()=>poll(id),1000);}else{$('build').disabled=false;polling=null;}}catch(e){$('message').textContent='任务状态暂时无法读取：'+e.message;polling=setTimeout(()=>poll(id),3000);}}
+$('save').onclick=()=>action(async()=>{const r=await api('/documents','PUT',{document_id:$('document').value,title:$('title').value,text:$('text').value});await refresh();return r.changed?'草稿已保存，构建发布后生效。':'内容未变化。';});
+$('delete').onclick=()=>action(async()=>{const r=await api('/documents/'+encodeURIComponent($('document').value),'DELETE');await refresh();return r.changed?'已从草稿删除，发布后不再召回。':'草稿中没有这份文档。';});
+$('build').onclick=()=>action(async()=>{const job=await api('/jobs','POST',{});$('build').disabled=true;showJob(job);poll(job.id);return '后台构建已提交。';});
+$('verify').onclick=()=>action(async()=>{const r=await fetch('/ask',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:'这份教学申请通知的报名截止日期是什么时候？',source_id:$('document').value,method:'hybrid_rerank',top_k:5})});const data=await r.json();if(!r.ok)throw new Error(typeof data.detail==='string'?data.detail:'问答未完成');$('answer').textContent=data.answer+'\n版本：'+data.knowledge_version+'\n引用：'+data.citations.join('、')+'\n请求：'+data.request_id;return '问答已完成。';});
+refresh().catch(e=>$('message').textContent=e.message);
+</script></html>

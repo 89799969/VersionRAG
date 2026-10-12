@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "records": 31,
+  "checks": [
+    "Frozen experiment script/input hashes unchanged",
+    "Identical initial hits and actual evidence",
+    "Judge payload hashes and success recomputed",
+    "Original failure without hits retained",
+    "Original label-only input snapshot hash recovered"
+  ],
+  "audit_note": "Original control audit assumed every row has hits; separate audit accepts explicitly retained baseline failure",
+  "scope": "post hoc same-context control; stochastic single generation, not independent confirmation"
+}

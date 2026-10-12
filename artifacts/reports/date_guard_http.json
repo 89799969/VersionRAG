@@ -1,0 +1,37 @@
+{
+  "request_id": "824d3f35-ac12-4b63-8919-014fdcfe6df2",
+  "method": "hybrid_rerank",
+  "answer": "根据提供的检索资料，无法确定中国人民大学首次举办本科生招生录取现场开放日的时间。资料中仅包含2016年“圆梦计划”招生简章的相关内容，未提及招生录取现场开放日的信息。",
+  "citations": [],
+  "insufficient_evidence": true,
+  "evidence": [
+    {
+      "passage_id": "13038",
+      "source_id": "650",
+      "title": "中国人民大学2016年“圆梦计划”招生简章",
+      "url": "https://rdzs.ruc.edu.cn/cms/item/1226.html",
+      "content": "中国人民大学2016年“圆梦计划”招生简章\n：即日起至2016年4月25日\n2.有关省（区、市）完成考生户籍、学籍资格初审并进行公示：2016年5月15日\n3.报名材料审核：2016年5月30日前\n4.公示资格生名单和招生计划：2016年6月22日前\n5.考生填报志愿：按各省级招生考试机构规定时间进行\n6.录取：2016年7月\n九、联系方式\n阳光招生信息平台：\nwww.rdzs.com\n电子信箱：\nzsb@ruc.edu.cn\n咨询电话：4000123517\n通讯地址：北京市海淀区中关村大街59号中国人民大学本科生招生办公室 邮政编码：100872\n十、“圆梦计划”考生资助\n被录取的考生中，家庭经济困难的，可申请免除全部或部分学费；在读期间未申请免学费的学生，完成本科学业后回生源所在地就业的，返还全部或部分学费。\n十一、若遇教育部相关政策调整，则按最新政策执行\n十二、本招生简章的最终解释权属于中国人民大学本科生招生办公室\n中国人民大学本科生招生办公室\n2016年4月",
+      "truncated": false
+    }
+  ],
+  "model_called": true,
+  "model": "deepseek-flash",
+  "citation_check": "IDs valid; semantic support requires review",
+  "usage": {
+    "prompt_tokens": 500,
+    "completion_tokens": 62,
+    "total_tokens": 562,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 244
+  },
+  "excluded_listing_ids": [
+    "6132",
+    "7752",
+    "7754",
+    "7753"
+  ],
+  "retrieval_ms": 941.7792000003828
+}

@@ -1,0 +1,360 @@
+{
+  "state": "finished",
+  "completed": 525,
+  "expected": 525,
+  "requests": 618,
+  "failures": [
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "metric_version": "source-span-union-v1",
+  "label_version": "teaching-facts-v1",
+  "knowledge_version": "new",
+  "snapshot_sha256": "e9c17e08aa9045e378ded7dd17ef04ebc4f923e03870a00d1ce4201e0b4d8e13",
+  "k": 5,
+  "question_count": 1,
+  "blocked_question_ids": [],
+  "status": "ok",
+  "hit_count_among_scored": 1,
+  "all_evidence_hit_rate": 1.0,
+  "rows": [
+    {
+      "id": "demo",
+      "metric_version": "source-span-union-v1",
+      "knowledge_version": "new",
+      "snapshot_sha256": "e9c17e08aa9045e378ded7dd17ef04ebc4f923e03870a00d1ce4201e0b4d8e13",
+      "required_group_count": 2,
+      "retrieved_ids": [
+        "801",
+        "802"
+      ],
+      "mapping_issues": [],
+      "status": "ok",
+      "group_hits": [
+        true,
+        true
+      ],
+      "evidence_group_recall": 1.0,
+      "all_evidence_hit": true
+    }
+  ],
+  "input_sha256": "e2797e01f0a3e194d0493e3c011e6bd4e35238226eb75ede1eb975169c1dbef4"
+}

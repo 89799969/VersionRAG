@@ -1,0 +1,474 @@
+{
+  "split": "dev",
+  "qa_sha256": "22b2397a0ccae715ce991a4cb3b4c33fcb731cff97a5dfa2441ed10ca91f36fd",
+  "summaries": [
+    {
+      "task": "multi_doc",
+      "method": "bm25",
+      "questions": 5,
+      "evidence_group_recall_at_5": 0.1,
+      "all_evidence_hit_count": 0,
+      "mrr_at_5": 0.1
+    },
+    {
+      "task": "multi_doc",
+      "method": "hybrid_rerank",
+      "questions": 5,
+      "evidence_group_recall_at_5": 0.3,
+      "all_evidence_hit_count": 0,
+      "mrr_at_5": 0.30666666666666664
+    },
+    {
+      "task": "time_sensitive",
+      "method": "bm25",
+      "questions": 7,
+      "evidence_group_recall_at_5": 0.0,
+      "all_evidence_hit_count": 0,
+      "mrr_at_5": 0.0
+    },
+    {
+      "task": "time_sensitive",
+      "method": "hybrid_rerank",
+      "questions": 7,
+      "evidence_group_recall_at_5": 0.0,
+      "all_evidence_hit_count": 0,
+      "mrr_at_5": 0.0
+    }
+  ],
+  "cases": [
+    {
+      "id": "domainrag_multi_doc_007",
+      "task": "multi_doc",
+      "method": "bm25",
+      "question_sent": "政治学与行政学专业与外交学专业在研究重点和教育培养方面有哪些区别？",
+      "retrieved_ids": [
+        "3659",
+        "13225",
+        "13226",
+        "3660",
+        "12992"
+      ],
+      "required_groups": 2,
+      "latency_ms": 431.4612999996825,
+      "evidence_group_recall": 0.0,
+      "all_evidence_hit": false,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "id": "domainrag_multi_doc_007",
+      "task": "multi_doc",
+      "method": "hybrid_rerank",
+      "question_sent": "政治学与行政学专业与外交学专业在研究重点和教育培养方面有哪些区别？",
+      "retrieved_ids": [
+        "13226",
+        "3660",
+        "1061",
+        "13225",
+        "12994"
+      ],
+      "required_groups": 2,
+      "latency_ms": 1031.545300000289,
+      "evidence_group_recall": 0.5,
+      "all_evidence_hit": false,
+      "reciprocal_rank": 0.2
+    },
+    {
+      "id": "domainrag_multi_doc_008",
+      "task": "multi_doc",
+      "method": "bm25",
+      "question_sent": "中国人民大学政治学与行政学专业和外交学专业在满足国家战略需求方面各专注于哪些领域？",
+      "retrieved_ids": [
+        "13225",
+        "3659",
+        "1060",
+        "12993",
+        "3660"
+      ],
+      "required_groups": 2,
+      "latency_ms": 2.0317999997132574,
+      "evidence_group_recall": 0.0,
+      "all_evidence_hit": false,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "id": "domainrag_multi_doc_008",
+      "task": "multi_doc",
+      "method": "hybrid_rerank",
+      "question_sent": "中国人民大学政治学与行政学专业和外交学专业在满足国家战略需求方面各专注于哪些领域？",
+      "retrieved_ids": [
+        "12993",
+        "1060",
+        "1059",
+        "3659",
+        "1061"
+      ],
+      "required_groups": 2,
+      "latency_ms": 954.4168000002173,
+      "evidence_group_recall": 0.0,
+      "all_evidence_hit": false,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "id": "domainrag_multi_doc_036",
+      "task": "multi_doc",
+      "method": "bm25",
+      "question_sent": "中国人民大学的政治学与行政学专业和外交学专业在各自的领域中有哪些独特的研究方向或重点?",
+      "retrieved_ids": [
+        "3659",
+        "13225",
+        "13226",
+        "3660",
+        "12992"
+      ],
+      "required_groups": 2,
+      "latency_ms": 2.1450000003824243,
+      "evidence_group_recall": 0.0,
+      "all_evidence_hit": false,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "id": "domainrag_multi_doc_036",
+      "task": "multi_doc",
+      "method": "hybrid_rerank",
+      "question_sent": "中国人民大学的政治学与行政学专业和外交学专业在各自的领域中有哪些独特的研究方向或重点?",
+      "retrieved_ids": [
+        "12993",
+        "1060",
+        "12992",
+        "1059",
+        "13225"
+      ],
+      "required_groups": 2,
+      "latency_ms": 962.2578999997131,
+      "evidence_group_recall": 0.5,
+      "all_evidence_hit": false,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "domainrag_multi_doc_037",
+      "task": "multi_doc",
+      "method": "bm25",
+      "question_sent": "政治学与行政学专业与外交学专业在人才培养规划及特点方面有哪些异同?",
+      "retrieved_ids": [
+        "1062",
+        "12995",
+        "12994",
+        "1061",
+        "3659"
+      ],
+      "required_groups": 2,
+      "latency_ms": 1.8127000003005378,
+      "evidence_group_recall": 0.5,
+      "all_evidence_hit": false,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "domainrag_multi_doc_037",
+      "task": "multi_doc",
+      "method": "hybrid_rerank",
+      "question_sent": "政治学与行政学专业与外交学专业在人才培养规划及特点方面有哪些异同?",
+      "retrieved_ids": [
+        "1061",
+        "13226",
+        "12995",
+        "12994",
+        "3660"
+      ],
+      "required_groups": 2,
+      "latency_ms": 899.9511000001803,
+      "evidence_group_recall": 0.5,
+      "all_evidence_hit": false,
+      "reciprocal_rank": 0.3333333333333333
+    },
+    {
+      "id": "domainrag_multi_doc_038",
+      "task": "multi_doc",
+      "method": "bm25",
+      "question_sent": "政治学与行政学专业和外交学专业在课程设置方面有哪些不同?",
+      "retrieved_ids": [
+        "3659",
+        "13225",
+        "2799",
+        "4173",
+        "14005"
+      ],
+      "required_groups": 2,
+      "latency_ms": 1.9408999996812781,
+      "evidence_group_recall": 0.0,
+      "all_evidence_hit": false,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "id": "domainrag_multi_doc_038",
+      "task": "multi_doc",
+      "method": "hybrid_rerank",
+      "question_sent": "政治学与行政学专业和外交学专业在课程设置方面有哪些不同?",
+      "retrieved_ids": [
+        "13226",
+        "3660",
+        "3659",
+        "13225",
+        "12993"
+      ],
+      "required_groups": 2,
+      "latency_ms": 903.7496000000829,
+      "evidence_group_recall": 0.0,
+      "all_evidence_hit": false,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "id": "domainrag_time_sensitive_002",
+      "task": "time_sensitive",
+      "method": "bm25",
+      "question_sent": "截至1994年，中国人民大学校长是谁？",
+      "retrieved_ids": [
+        "12221",
+        "4365",
+        "12251",
+        "4395",
+        "12222"
+      ],
+      "required_groups": 1,
+      "latency_ms": 1.3682999997399747,
+      "evidence_group_recall": 0.0,
+      "all_evidence_hit": false,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "id": "domainrag_time_sensitive_002",
+      "task": "time_sensitive",
+      "method": "hybrid_rerank",
+      "question_sent": "截至1994年，中国人民大学校长是谁？",
+      "retrieved_ids": [
+        "12251",
+        "4396",
+        "12252",
+        "4395",
+        "12220"
+      ],
+      "required_groups": 1,
+      "latency_ms": 974.7164999998859,
+      "evidence_group_recall": 0.0,
+      "all_evidence_hit": false,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "id": "domainrag_time_sensitive_047",
+      "task": "time_sensitive",
+      "method": "bm25",
+      "question_sent": "截至2023年，中国人民大学法学院党委书记是谁？",
+      "retrieved_ids": [
+        "4365",
+        "12221",
+        "12222",
+        "1177",
+        "5961"
+      ],
+      "required_groups": 1,
+      "latency_ms": 1.3680000001841108,
+      "evidence_group_recall": 0.0,
+      "all_evidence_hit": false,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "id": "domainrag_time_sensitive_047",
+      "task": "time_sensitive",
+      "method": "hybrid_rerank",
+      "question_sent": "截至2023年，中国人民大学法学院党委书记是谁？",
+      "retrieved_ids": [
+        "1176",
+        "5960",
+        "1177",
+        "5961",
+        "5959"
+      ],
+      "required_groups": 1,
+      "latency_ms": 978.8517999995747,
+      "evidence_group_recall": 0.0,
+      "all_evidence_hit": false,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "id": "domainrag_time_sensitive_050",
+      "task": "time_sensitive",
+      "method": "bm25",
+      "question_sent": "截至2014年，中国人民大学法学院的院长是谁？",
+      "retrieved_ids": [
+        "1316",
+        "12927",
+        "1475",
+        "11006",
+        "12582"
+      ],
+      "required_groups": 1,
+      "latency_ms": 0.9244999992006342,
+      "evidence_group_recall": 0.0,
+      "all_evidence_hit": false,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "id": "domainrag_time_sensitive_050",
+      "task": "time_sensitive",
+      "method": "hybrid_rerank",
+      "question_sent": "截至2014年，中国人民大学法学院的院长是谁？",
+      "retrieved_ids": [
+        "3234",
+        "7470",
+        "1316",
+        "11006",
+        "12582"
+      ],
+      "required_groups": 1,
+      "latency_ms": 1005.2527999996528,
+      "evidence_group_recall": 0.0,
+      "all_evidence_hit": false,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "id": "domainrag_time_sensitive_060",
+      "task": "time_sensitive",
+      "method": "bm25",
+      "question_sent": "截至2022年，人大有多少个校际交换项目？",
+      "retrieved_ids": [
+        "248",
+        "8309",
+        "8770",
+        "1256",
+        "8849"
+      ],
+      "required_groups": 1,
+      "latency_ms": 0.7759999998597777,
+      "evidence_group_recall": 0.0,
+      "all_evidence_hit": false,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "id": "domainrag_time_sensitive_060",
+      "task": "time_sensitive",
+      "method": "hybrid_rerank",
+      "question_sent": "截至2022年，人大有多少个校际交换项目？",
+      "retrieved_ids": [
+        "247",
+        "248",
+        "6923",
+        "9345",
+        "1256"
+      ],
+      "required_groups": 1,
+      "latency_ms": 962.4759999996968,
+      "evidence_group_recall": 0.0,
+      "all_evidence_hit": false,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "id": "domainrag_time_sensitive_061",
+      "task": "time_sensitive",
+      "method": "bm25",
+      "question_sent": "截至2022年，人大有多少类国家公派项目？",
+      "retrieved_ids": [
+        "248",
+        "7989",
+        "9215",
+        "8254",
+        "12301"
+      ],
+      "required_groups": 1,
+      "latency_ms": 1.4004999993630918,
+      "evidence_group_recall": 0.0,
+      "all_evidence_hit": false,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "id": "domainrag_time_sensitive_061",
+      "task": "time_sensitive",
+      "method": "hybrid_rerank",
+      "question_sent": "截至2022年，人大有多少类国家公派项目？",
+      "retrieved_ids": [
+        "248",
+        "10625",
+        "12424",
+        "9284",
+        "12301"
+      ],
+      "required_groups": 1,
+      "latency_ms": 986.0198999995191,
+      "evidence_group_recall": 0.0,
+      "all_evidence_hit": false,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "id": "domainrag_time_sensitive_062",
+      "task": "time_sensitive",
+      "method": "bm25",
+      "question_sent": "截至2022年，人大有多少个院际学生交换项目？",
+      "retrieved_ids": [
+        "248",
+        "9754",
+        "9896",
+        "9629",
+        "9565"
+      ],
+      "required_groups": 1,
+      "latency_ms": 1.5530000000580912,
+      "evidence_group_recall": 0.0,
+      "all_evidence_hit": false,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "id": "domainrag_time_sensitive_062",
+      "task": "time_sensitive",
+      "method": "hybrid_rerank",
+      "question_sent": "截至2022年，人大有多少个院际学生交换项目？",
+      "retrieved_ids": [
+        "248",
+        "10816",
+        "11551",
+        "11670",
+        "7890"
+      ],
+      "required_groups": 1,
+      "latency_ms": 943.9021000007415,
+      "evidence_group_recall": 0.0,
+      "all_evidence_hit": false,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "id": "domainrag_time_sensitive_065",
+      "task": "time_sensitive",
+      "method": "bm25",
+      "question_sent": "截至2022年，中国人民大学外语类专业一学年的学费是多少？",
+      "retrieved_ids": [
+        "7738",
+        "578",
+        "2097",
+        "2098",
+        "8457"
+      ],
+      "required_groups": 1,
+      "latency_ms": 1.6200000000026193,
+      "evidence_group_recall": 0.0,
+      "all_evidence_hit": false,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "id": "domainrag_time_sensitive_065",
+      "task": "time_sensitive",
+      "method": "hybrid_rerank",
+      "question_sent": "截至2022年，中国人民大学外语类专业一学年的学费是多少？",
+      "retrieved_ids": [
+        "4586",
+        "1744",
+        "2097",
+        "11982",
+        "2098"
+      ],
+      "required_groups": 1,
+      "latency_ms": 929.8187999993388,
+      "evidence_group_recall": 0.0,
+      "all_evidence_hit": false,
+      "reciprocal_rank": 0.0
+    }
+  ],
+  "scope": "small development diagnostics; not independent answer accuracy or exhaustive time reasoning",
+  "date_rule": "prefix official as_of year to question; no date metadata inferred from gold for retrieval"
+}

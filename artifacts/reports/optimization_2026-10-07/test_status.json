@@ -1,0 +1,324 @@
+{
+  "state": "finished",
+  "completed": 495,
+  "expected": 495,
+  "requests": 577,
+  "failures": [
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    }
+  ]
+}

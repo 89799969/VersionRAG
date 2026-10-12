@@ -1,0 +1,19 @@
+{
+  "kind": "controlled_constructed_answer_not_real_model_failure",
+  "id": "domainrag_extractive_019",
+  "actual_model_answer": "中法学院的办学理念是：高水平、有特色、国际性。",
+  "constructed_answer": "中法学院的办学理念是高水平、国际性。",
+  "required_points": [
+    "高水平",
+    "有特色",
+    "国际性"
+  ],
+  "missing_points": [
+    "有特色"
+  ],
+  "complete_evidence_id": "6443",
+  "evidence_content": "2020中法学院热点问题解答\n、宽口径发展提供了广阔的平台。\n2、问：中法学院的办学理念、办学愿景、发展定位和人才培养目标是什么？\n答：办学理念：高水平、有特色、国际性；\n办学愿景：创立世界一流、独具特色的人文社科精英学院；\n发展定位：培养高水平人才的基地、中法文化交流的重要平台、国家教育改革的实验基地、我国高等教育领域对外教育合作的“排头兵”和“示范区”、人文社会科学领域国际交流和教育合作的一面旗帜。\n人才培养目标：以培养能够在东西方两个文化平台自由往来的“国民表率、社会精英”为目标，打造具有国际视野、多元文化素养、跨文化沟通能力的全球领袖精英和复合型、实用型高端人才。\n3、问：中法学院办学地点在哪里？\n答：中法学院位于江苏省苏州市工业园区独墅湖科教创新区的中国人民大学苏州校区，立足历史名城苏州。苏州是中国最典型的美丽城市，既有深厚的中国传统历史文化底蕴，又兼具包容开放的国际化元素，既接法国-上海-苏州的交通便利，又承长江三角洲地区经济发展成果，同时怀抱苏州工业园区众多国际知名企业，享有优越的自然环境和可持续发展的经济环境。\n",
+  "evidence_truncated": false,
+  "literal_coverage": 0.6666666666666666,
+  "scope": "actual model answered all points; intentionally constructed omission shows the diagnosis only and is excluded from real metrics"
+}

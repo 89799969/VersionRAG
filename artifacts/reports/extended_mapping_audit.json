@@ -1,0 +1,49 @@
+{
+  "corpus_sha256": "6b08f337ee4066af05d99bcf5bc29afca56f7e05df8b0feed5030dc34bfd52d9",
+  "inputs_sha256": {
+    "multi_doc": "e5fca94795cfa89fd12a9a3bdde211acc235d2956d4677693f8ca8528f191ab7",
+    "time_sensitive": "0574add6f6da8578049753456d6669c5849fcbe9d5a47ddd12bc9cb3f1ebd374",
+    "noise": "896ed2cdc8f3d2ebc8a43d59a30bc0d9d3110ef35a8b8a064ccd5098953ebc8c"
+  },
+  "matching_normalization": "decode literal newline escapes and remove whitespace; preserve semantic characters",
+  "output_sha256": "22b2397a0ccae715ce991a4cb3b4c33fcb731cff97a5dfa2441ed10ca91f36fd",
+  "tasks": {
+    "multi_doc": {
+      "records": 48,
+      "complete_evidence_mapping": 45,
+      "split_counts": {
+        "holdout": 20,
+        "diagnostic": 23,
+        "dev": 5
+      },
+      "unmapped_ids": [
+        "domainrag_multi_doc_031",
+        "domainrag_multi_doc_040",
+        "domainrag_multi_doc_046"
+      ]
+    },
+    "time_sensitive": {
+      "records": 65,
+      "complete_evidence_mapping": 65,
+      "split_counts": {
+        "holdout": 27,
+        "dev": 7,
+        "diagnostic": 30,
+        "demo": 1
+      },
+      "unmapped_ids": []
+    },
+    "noise": {
+      "records": 90,
+      "complete_evidence_mapping": 90,
+      "split_counts": {
+        "demo": 2,
+        "holdout": 53,
+        "dev": 35
+      },
+      "unmapped_ids": []
+    }
+  },
+  "split_rule": "preserve frozen base source split; mixed source or question families are diagnostic only",
+  "scope": "text containment alignment, not semantic label audit"
+}

@@ -1,0 +1,58 @@
+{
+  "batch_generation_code_sha256": "2e9b8071b19f38131d78f8b74506547021829c2ef8eaee710880870f6fb4ed05",
+  "literal_scores_before_date_guard": [
+    {
+      "method": "bm25",
+      "questions": 8,
+      "literal_complete_nonrefusal_count": 5,
+      "mean_literal_keypoint_coverage": 0.625,
+      "refusal_count": 2,
+      "generation_rejection_count": 0
+    },
+    {
+      "method": "hybrid_rerank",
+      "questions": 8,
+      "literal_complete_nonrefusal_count": 7,
+      "mean_literal_keypoint_coverage": 0.875,
+      "refusal_count": 0,
+      "generation_rejection_count": 0
+    }
+  ],
+  "refusal_cases": {
+    "bm25": [
+      "domainrag_extractive_019",
+      "domainrag_extractive_033"
+    ],
+    "hybrid_rerank": []
+  },
+  "supported_core_keypoint_cases": {
+    "bm25": [
+      "003",
+      "006",
+      "025",
+      "034",
+      "049"
+    ],
+    "hybrid_rerank": [
+      "003",
+      "006",
+      "019",
+      "025",
+      "033",
+      "034",
+      "049"
+    ]
+  },
+  "review_scope": "assistant reviewed source excerpts for requested core keypoints; not all extra claims or every citation, no learner mastery or independent human annotator claim",
+  "date_case_015": {
+    "official_answer": "2014-07-17",
+    "listing_date_adjacent_to_title": "2014-07-16",
+    "problem": "retrieved reference is an article listing, not a statement of the first event date",
+    "external_contemporaneous_report": "https://edu.people.com.cn/n/2014/0715/c367001-25285439.html",
+    "external_report_first_event": "2014-07-15",
+    "external_report_later_public_event": "2014-07-17",
+    "conclusion": "original label and source need correction review; treating the listing date as event date is also unsupported",
+    "policy": "original QA labels and retrieval results unchanged; external article used for audit only, not injected into generation"
+  },
+  "scope": "8 selected dev questions; one replay round before date policy fix; literal 5/8 and 7/8 are not general answer accuracy"
+}

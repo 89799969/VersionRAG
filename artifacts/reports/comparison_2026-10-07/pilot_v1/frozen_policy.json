@@ -1,0 +1,25 @@
+{
+  "fingerprints": {
+    "data\\domainrag_text_corpus.jsonl": "6b08f337ee4066af05d99bcf5bc29afca56f7e05df8b0feed5030dc34bfd52d9",
+    "data\\extended_qa_mapped.jsonl": "22b2397a0ccae715ce991a4cb3b4c33fcb731cff97a5dfa2441ed10ca91f36fd",
+    "app\\comparison.py": "4c35a2c7c053cf5dc9fc43dcdbdc8110d1d4317ba10c4b2303a9f046525f088a",
+    "app\\comparison_generation.py": "0cf815f11bee6045df34de176d0d06f48e0a63e7f360eb16e6e1d274e80bd74d",
+    "app\\retrieval.py": "1ea071427c9311b2e10eed61cf3b0b28293ad6b52a75bd294ba83a53b88e3647",
+    "app\\dense.py": "e8a42c15b293f53c39a1111cde0e072b0e572f0ec0d3d38d29514b12ceca1730",
+    "app\\hybrid.py": "82ecbb5c96381fb1dc09a5dd978598f901f4b25d2e84ae69543898ed6da8ac64",
+    "scripts\\evaluate_comparison.py": "ff032029ccfa5527b183d42c2a7e79541f2d7ebbf037233d1a24c086fd62386a"
+  },
+  "arms": [
+    "original",
+    "scope_dedup",
+    "split_balanced"
+  ],
+  "candidate_k": 30,
+  "top_k": 5,
+  "rrf_constant": 60,
+  "model": "BAAI/bge-reranker-v2-m3",
+  "context_chars": 16000,
+  "rounds": 1,
+  "selection": "No parameter scan; validate fixed scoped two-entity policy on dev first",
+  "scope": "Original split preserved. Diagnostic/source overlaps reported separately. Not an untouched new benchmark."
+}

@@ -1,0 +1,102 @@
+{
+  "split": "dev",
+  "questions": 35,
+  "candidate_missing": [
+    {
+      "id": "domainrag_extractive_019",
+      "question": "中法学院的办学理念是什么？"
+    },
+    {
+      "id": "domainrag_extractive_020",
+      "question": "中法学院的办学愿景是什么？"
+    },
+    {
+      "id": "domainrag_extractive_058",
+      "question": "中国人民大学哪些学科在2017年被评为A+？"
+    },
+    {
+      "id": "domainrag_extractive_075",
+      "question": "中国人民大学中法学院是由哪些大学共建的中外合作办学机构？"
+    },
+    {
+      "id": "domainrag_extractive_080",
+      "question": "中国人民大学外语类专业2022年学年的学费是多少？"
+    },
+    {
+      "id": "domainrag_extractive_088",
+      "question": "2022年人大有多少个校际交换项目？"
+    },
+    {
+      "id": "domainrag_extractive_089",
+      "question": "2021年中国人民大学中法学院TFS4的测试平均分是多少？"
+    }
+  ],
+  "post_rank_trials": [
+    {
+      "variant": "bge_control",
+      "alpha": 0.0,
+      "measurements": 105,
+      "questions": 35,
+      "evidence_recall_at_5": 0.5523809523809524,
+      "evidence_recall_at_10": 0.7428571428571429,
+      "all_evidence_hit_at_5": 0.5523809523809524,
+      "mrr_at_5": 0.3685714285714286,
+      "mrr_at_30": 0.40007762079190645,
+      "ndcg_at_5_binary_annotations": 0.41446588388273453,
+      "candidate_recall": 0.8,
+      "candidate_count": 30.0,
+      "rerank_p50_ms": 447.8831000014907,
+      "rerank_p95_ms": 542.7126199996565
+    },
+    {
+      "variant": "bge_control",
+      "alpha": 0.25,
+      "measurements": 105,
+      "questions": 35,
+      "evidence_recall_at_5": 0.580952380952381,
+      "evidence_recall_at_10": 0.7714285714285715,
+      "all_evidence_hit_at_5": 0.580952380952381,
+      "mrr_at_5": 0.3552380952380952,
+      "mrr_at_30": 0.381885865457294,
+      "ndcg_at_5_binary_annotations": 0.4112331069465785,
+      "candidate_recall": 0.8,
+      "candidate_count": 30.0,
+      "rerank_p50_ms": 447.8831000014907,
+      "rerank_p95_ms": 542.7126199996565
+    },
+    {
+      "variant": "bge_control",
+      "alpha": 0.5,
+      "measurements": 105,
+      "questions": 35,
+      "evidence_recall_at_5": 0.5714285714285714,
+      "evidence_recall_at_10": 0.7714285714285715,
+      "all_evidence_hit_at_5": 0.5714285714285714,
+      "mrr_at_5": 0.32,
+      "mrr_at_30": 0.34760770975056693,
+      "ndcg_at_5_binary_annotations": 0.38271821602733885,
+      "candidate_recall": 0.8,
+      "candidate_count": 30.0,
+      "rerank_p50_ms": 447.8831000014907,
+      "rerank_p95_ms": 542.7126199996565
+    },
+    {
+      "variant": "bge_control",
+      "alpha": 1.0,
+      "measurements": 105,
+      "questions": 35,
+      "evidence_recall_at_5": 0.5428571428571428,
+      "evidence_recall_at_10": 0.7238095238095238,
+      "all_evidence_hit_at_5": 0.5428571428571428,
+      "mrr_at_5": 0.3414285714285714,
+      "mrr_at_30": 0.3704882154882154,
+      "ndcg_at_5_binary_annotations": 0.3915028998783015,
+      "candidate_recall": 0.8,
+      "candidate_count": 30.0,
+      "rerank_p50_ms": 447.8831000014907,
+      "rerank_p95_ms": 542.7126199996565
+    }
+  ],
+  "selected_alpha": 0.25,
+  "selection": "Max mean development Hit@5, then MRR@5, then smaller alpha; no holdout metrics accessed."
+}

@@ -1,0 +1,2767 @@
+{
+  "passed": true,
+  "project": "rag-domain-study/admissions",
+  "verified_rows": 1080,
+  "verified_questions": 90,
+  "split_counts": {
+    "dev": 35,
+    "holdout": 53,
+    "demo": 2
+  },
+  "original_corpus_indexes_labels_and_production_adapters_unchanged": true,
+  "identical_question_and_30_candidate_texts_for_all_variants": true,
+  "candidate_texts_match_this_project_corpus_after_production_clipping": true,
+  "custom_instruction_in_separate_field_and_payload_fingerprint_verified": true,
+  "all_metrics_recomputed": true,
+  "generation_evaluated": false,
+  "paired_holdout_comparisons": [
+    {
+      "left": "qwen_general",
+      "right": "qwen_unspecified",
+      "metric": "all_evidence_hit_at_5",
+      "unique_questions": 53,
+      "mean_difference": -0.031446540880503145,
+      "query_paired_bootstrap_95_interval": [
+        -0.06918238993710693,
+        -0.006289308176100628
+      ],
+      "improved_questions": 0,
+      "worse_questions": 4,
+      "unchanged_questions": 49,
+      "per_query": [
+        {
+          "id": "domainrag_extractive_002",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_007",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_008",
+          "difference": -0.6666666666666667
+        },
+        {
+          "id": "domainrag_extractive_009",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_010",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_011",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_013",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_014",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_016",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_017",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_018",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_022",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_023",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_024",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_026",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_027",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_028",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_035",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_036",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_037",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_038",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_039",
+          "difference": -0.33333333333333337
+        },
+        {
+          "id": "domainrag_extractive_040",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_041",
+          "difference": -0.3333333333333333
+        },
+        {
+          "id": "domainrag_extractive_042",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_043",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_044",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_045",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_046",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_047",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_050",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_051",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_052",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_053",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_054",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_055",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_057",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_060",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_061",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_062",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_063",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_064",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_065",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_066",
+          "difference": -0.3333333333333333
+        },
+        {
+          "id": "domainrag_extractive_071",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_078",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_079",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_081",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_083",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_084",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_085",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_087",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_090",
+          "difference": 0.0
+        }
+      ],
+      "scope": "Descriptive only. Three measurements per query are averaged first; questions are not independently human-adjudicated and original holdout was already exposed."
+    },
+    {
+      "left": "qwen_general",
+      "right": "qwen_unspecified",
+      "metric": "mrr_at_5",
+      "unique_questions": 53,
+      "mean_difference": -4.1895208476421e-18,
+      "query_paired_bootstrap_95_interval": [
+        -0.009538784067085958,
+        0.011530398322851148
+      ],
+      "improved_questions": 3,
+      "worse_questions": 6,
+      "unchanged_questions": 44,
+      "per_query": [
+        {
+          "id": "domainrag_extractive_002",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_007",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_008",
+          "difference": -0.11666666666666671
+        },
+        {
+          "id": "domainrag_extractive_009",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_010",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_011",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_013",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_014",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_016",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_017",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_018",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_022",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_023",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_024",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_026",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_027",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_028",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_035",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_036",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_037",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_038",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_039",
+          "difference": -0.06666666666666671
+        },
+        {
+          "id": "domainrag_extractive_040",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_041",
+          "difference": -0.06666666666666667
+        },
+        {
+          "id": "domainrag_extractive_042",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_043",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_044",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_045",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_046",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_047",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_050",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_051",
+          "difference": 0.027777777777777735
+        },
+        {
+          "id": "domainrag_extractive_052",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_053",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_054",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_055",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_057",
+          "difference": -0.02777777777777779
+        },
+        {
+          "id": "domainrag_extractive_060",
+          "difference": 0.16666666666666663
+        },
+        {
+          "id": "domainrag_extractive_061",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_062",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_063",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_064",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_065",
+          "difference": -0.01666666666666669
+        },
+        {
+          "id": "domainrag_extractive_066",
+          "difference": -0.06666666666666667
+        },
+        {
+          "id": "domainrag_extractive_071",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_078",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_079",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_081",
+          "difference": 0.16666666666666663
+        },
+        {
+          "id": "domainrag_extractive_083",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_084",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_085",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_087",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_090",
+          "difference": 0.0
+        }
+      ],
+      "scope": "Descriptive only. Three measurements per query are averaged first; questions are not independently human-adjudicated and original holdout was already exposed."
+    },
+    {
+      "left": "qwen_general",
+      "right": "qwen_unspecified",
+      "metric": "ndcg_at_5_binary_annotations",
+      "unique_questions": 53,
+      "mean_difference": -0.007522789580601401,
+      "query_paired_bootstrap_95_interval": [
+        -0.02184983640338935,
+        0.005268703180452126
+      ],
+      "improved_questions": 3,
+      "worse_questions": 6,
+      "unchanged_questions": 44,
+      "per_query": [
+        {
+          "id": "domainrag_extractive_002",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_007",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_008",
+          "difference": -0.2432939545434106
+        },
+        {
+          "id": "domainrag_extractive_009",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_010",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_011",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_013",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_014",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_016",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_017",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_018",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_022",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_023",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_024",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_026",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_027",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_028",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_035",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_036",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_037",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_038",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_039",
+          "difference": -0.12895093574484723
+        },
+        {
+          "id": "domainrag_extractive_040",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_041",
+          "difference": -0.1289509357448472
+        },
+        {
+          "id": "domainrag_extractive_042",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_043",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_044",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_045",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_046",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_047",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_050",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_051",
+          "difference": 0.023107813975535685
+        },
+        {
+          "id": "domainrag_extractive_052",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_053",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_054",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_055",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_057",
+          "difference": -0.02310781397553563
+        },
+        {
+          "id": "domainrag_extractive_060",
+          "difference": 0.12302341547618079
+        },
+        {
+          "id": "domainrag_extractive_061",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_062",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_063",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_064",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_065",
+          "difference": -0.014607916946283772
+        },
+        {
+          "id": "domainrag_extractive_066",
+          "difference": -0.1289509357448472
+        },
+        {
+          "id": "domainrag_extractive_071",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_078",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_079",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_081",
+          "difference": 0.12302341547618079
+        },
+        {
+          "id": "domainrag_extractive_083",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_084",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_085",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_087",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_090",
+          "difference": 0.0
+        }
+      ],
+      "scope": "Descriptive only. Three measurements per query are averaged first; questions are not independently human-adjudicated and original holdout was already exposed."
+    },
+    {
+      "left": "qwen_admissions",
+      "right": "qwen_unspecified",
+      "metric": "all_evidence_hit_at_5",
+      "unique_questions": 53,
+      "mean_difference": -0.06289308176100629,
+      "query_paired_bootstrap_95_interval": [
+        -0.1320754716981132,
+        -0.0062893081761006275
+      ],
+      "improved_questions": 1,
+      "worse_questions": 5,
+      "unchanged_questions": 47,
+      "per_query": [
+        {
+          "id": "domainrag_extractive_002",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_007",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_008",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_009",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_010",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_011",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_013",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_014",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_016",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_017",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_018",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_022",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_023",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_024",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_026",
+          "difference": -1.0
+        },
+        {
+          "id": "domainrag_extractive_027",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_028",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_035",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_036",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_037",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_038",
+          "difference": -0.33333333333333337
+        },
+        {
+          "id": "domainrag_extractive_039",
+          "difference": -1.0
+        },
+        {
+          "id": "domainrag_extractive_040",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_041",
+          "difference": 0.33333333333333337
+        },
+        {
+          "id": "domainrag_extractive_042",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_043",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_044",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_045",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_046",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_047",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_050",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_051",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_052",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_053",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_054",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_055",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_057",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_060",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_061",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_062",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_063",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_064",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_065",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_066",
+          "difference": -0.3333333333333333
+        },
+        {
+          "id": "domainrag_extractive_071",
+          "difference": -1.0
+        },
+        {
+          "id": "domainrag_extractive_078",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_079",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_081",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_083",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_084",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_085",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_087",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_090",
+          "difference": 0.0
+        }
+      ],
+      "scope": "Descriptive only. Three measurements per query are averaged first; questions are not independently human-adjudicated and original holdout was already exposed."
+    },
+    {
+      "left": "qwen_admissions",
+      "right": "qwen_unspecified",
+      "metric": "mrr_at_5",
+      "unique_questions": 53,
+      "mean_difference": -0.021802935010482187,
+      "query_paired_bootstrap_95_interval": [
+        -0.10471960167714886,
+        0.06153039832285114
+      ],
+      "improved_questions": 10,
+      "worse_questions": 13,
+      "unchanged_questions": 30,
+      "per_query": [
+        {
+          "id": "domainrag_extractive_002",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_007",
+          "difference": -0.5
+        },
+        {
+          "id": "domainrag_extractive_008",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_009",
+          "difference": -0.25
+        },
+        {
+          "id": "domainrag_extractive_010",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_011",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_013",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_014",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_016",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_017",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_018",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_022",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_023",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_024",
+          "difference": 0.7999999999999999
+        },
+        {
+          "id": "domainrag_extractive_026",
+          "difference": -0.5
+        },
+        {
+          "id": "domainrag_extractive_027",
+          "difference": -0.5
+        },
+        {
+          "id": "domainrag_extractive_028",
+          "difference": 0.33333333333333337
+        },
+        {
+          "id": "domainrag_extractive_035",
+          "difference": -0.05555555555555558
+        },
+        {
+          "id": "domainrag_extractive_036",
+          "difference": 0.16666666666666669
+        },
+        {
+          "id": "domainrag_extractive_037",
+          "difference": -0.7999999999999999
+        },
+        {
+          "id": "domainrag_extractive_038",
+          "difference": -0.3666666666666667
+        },
+        {
+          "id": "domainrag_extractive_039",
+          "difference": -0.20000000000000004
+        },
+        {
+          "id": "domainrag_extractive_040",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_041",
+          "difference": 0.8666666666666667
+        },
+        {
+          "id": "domainrag_extractive_042",
+          "difference": 0.16666666666666669
+        },
+        {
+          "id": "domainrag_extractive_043",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_044",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_045",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_046",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_047",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_050",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_051",
+          "difference": 0.055555555555555525
+        },
+        {
+          "id": "domainrag_extractive_052",
+          "difference": 0.16666666666666669
+        },
+        {
+          "id": "domainrag_extractive_053",
+          "difference": -0.16666666666666669
+        },
+        {
+          "id": "domainrag_extractive_054",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_055",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_057",
+          "difference": 0.6944444444444444
+        },
+        {
+          "id": "domainrag_extractive_060",
+          "difference": -0.33333333333333337
+        },
+        {
+          "id": "domainrag_extractive_061",
+          "difference": 0.08333333333333331
+        },
+        {
+          "id": "domainrag_extractive_062",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_063",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_064",
+          "difference": -0.16666666666666669
+        },
+        {
+          "id": "domainrag_extractive_065",
+          "difference": 0.41666666666666663
+        },
+        {
+          "id": "domainrag_extractive_066",
+          "difference": -0.06666666666666667
+        },
+        {
+          "id": "domainrag_extractive_071",
+          "difference": -1.0
+        },
+        {
+          "id": "domainrag_extractive_078",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_079",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_081",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_083",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_084",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_085",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_087",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_090",
+          "difference": 0.0
+        }
+      ],
+      "scope": "Descriptive only. Three measurements per query are averaged first; questions are not independently human-adjudicated and original holdout was already exposed."
+    },
+    {
+      "left": "qwen_admissions",
+      "right": "qwen_unspecified",
+      "metric": "ndcg_at_5_binary_annotations",
+      "unique_questions": 53,
+      "mean_difference": -0.031498477698671846,
+      "query_paired_bootstrap_95_interval": [
+        -0.1045493672602142,
+        0.0398579229042836
+      ],
+      "improved_questions": 10,
+      "worse_questions": 13,
+      "unchanged_questions": 30,
+      "per_query": [
+        {
+          "id": "domainrag_extractive_002",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_007",
+          "difference": -0.36907024642854247
+        },
+        {
+          "id": "domainrag_extractive_008",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_009",
+          "difference": -0.20025319549806447
+        },
+        {
+          "id": "domainrag_extractive_010",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_011",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_013",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_014",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_016",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_017",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_018",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_022",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_023",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_024",
+          "difference": 0.6131471927654584
+        },
+        {
+          "id": "domainrag_extractive_026",
+          "difference": -0.6309297535714575
+        },
+        {
+          "id": "domainrag_extractive_027",
+          "difference": -0.36907024642854247
+        },
+        {
+          "id": "domainrag_extractive_028",
+          "difference": 0.24604683095236168
+        },
+        {
+          "id": "domainrag_extractive_035",
+          "difference": -0.04621562795107126
+        },
+        {
+          "id": "domainrag_extractive_036",
+          "difference": 0.13092975357145753
+        },
+        {
+          "id": "domainrag_extractive_037",
+          "difference": -0.6131471927654584
+        },
+        {
+          "id": "domainrag_extractive_038",
+          "difference": -0.37302788208176313
+        },
+        {
+          "id": "domainrag_extractive_039",
+          "difference": -0.38685280723454163
+        },
+        {
+          "id": "domainrag_extractive_040",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_041",
+          "difference": 0.7420981285103057
+        },
+        {
+          "id": "domainrag_extractive_042",
+          "difference": 0.13092975357145753
+        },
+        {
+          "id": "domainrag_extractive_043",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_044",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_045",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_046",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_047",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_050",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_051",
+          "difference": 0.046215627951071314
+        },
+        {
+          "id": "domainrag_extractive_052",
+          "difference": 0.13092975357145753
+        },
+        {
+          "id": "domainrag_extractive_053",
+          "difference": -0.13092975357145753
+        },
+        {
+          "id": "domainrag_extractive_054",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_055",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_057",
+          "difference": 0.5231078139755356
+        },
+        {
+          "id": "domainrag_extractive_060",
+          "difference": -0.24604683095236168
+        },
+        {
+          "id": "domainrag_extractive_061",
+          "difference": 0.06932344192660694
+        },
+        {
+          "id": "domainrag_extractive_062",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_063",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_064",
+          "difference": -0.13092975357145753
+        },
+        {
+          "id": "domainrag_extractive_065",
+          "difference": 0.32327661097424526
+        },
+        {
+          "id": "domainrag_extractive_066",
+          "difference": -0.1289509357448472
+        },
+        {
+          "id": "domainrag_extractive_071",
+          "difference": -1.0
+        },
+        {
+          "id": "domainrag_extractive_078",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_079",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_081",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_083",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_084",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_085",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_087",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_090",
+          "difference": 0.0
+        }
+      ],
+      "scope": "Descriptive only. Three measurements per query are averaged first; questions are not independently human-adjudicated and original holdout was already exposed."
+    },
+    {
+      "left": "qwen_admissions",
+      "right": "qwen_general",
+      "metric": "all_evidence_hit_at_5",
+      "unique_questions": 53,
+      "mean_difference": -0.03144654088050314,
+      "query_paired_bootstrap_95_interval": [
+        -0.10062893081761005,
+        0.03144654088050315
+      ],
+      "improved_questions": 2,
+      "worse_questions": 4,
+      "unchanged_questions": 47,
+      "per_query": [
+        {
+          "id": "domainrag_extractive_002",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_007",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_008",
+          "difference": 0.6666666666666667
+        },
+        {
+          "id": "domainrag_extractive_009",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_010",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_011",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_013",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_014",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_016",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_017",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_018",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_022",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_023",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_024",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_026",
+          "difference": -1.0
+        },
+        {
+          "id": "domainrag_extractive_027",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_028",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_035",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_036",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_037",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_038",
+          "difference": -0.33333333333333337
+        },
+        {
+          "id": "domainrag_extractive_039",
+          "difference": -0.6666666666666666
+        },
+        {
+          "id": "domainrag_extractive_040",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_041",
+          "difference": 0.6666666666666667
+        },
+        {
+          "id": "domainrag_extractive_042",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_043",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_044",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_045",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_046",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_047",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_050",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_051",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_052",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_053",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_054",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_055",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_057",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_060",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_061",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_062",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_063",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_064",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_065",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_066",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_071",
+          "difference": -1.0
+        },
+        {
+          "id": "domainrag_extractive_078",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_079",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_081",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_083",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_084",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_085",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_087",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_090",
+          "difference": 0.0
+        }
+      ],
+      "scope": "Descriptive only. Three measurements per query are averaged first; questions are not independently human-adjudicated and original holdout was already exposed."
+    },
+    {
+      "left": "qwen_admissions",
+      "right": "qwen_general",
+      "metric": "mrr_at_5",
+      "unique_questions": 53,
+      "mean_difference": -0.021802935010482173,
+      "query_paired_bootstrap_95_interval": [
+        -0.1079664570230608,
+        0.06478249475890982
+      ],
+      "improved_questions": 11,
+      "worse_questions": 13,
+      "unchanged_questions": 29,
+      "per_query": [
+        {
+          "id": "domainrag_extractive_002",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_007",
+          "difference": -0.5
+        },
+        {
+          "id": "domainrag_extractive_008",
+          "difference": 0.11666666666666671
+        },
+        {
+          "id": "domainrag_extractive_009",
+          "difference": -0.25
+        },
+        {
+          "id": "domainrag_extractive_010",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_011",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_013",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_014",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_016",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_017",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_018",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_022",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_023",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_024",
+          "difference": 0.7999999999999999
+        },
+        {
+          "id": "domainrag_extractive_026",
+          "difference": -0.5
+        },
+        {
+          "id": "domainrag_extractive_027",
+          "difference": -0.5
+        },
+        {
+          "id": "domainrag_extractive_028",
+          "difference": 0.33333333333333337
+        },
+        {
+          "id": "domainrag_extractive_035",
+          "difference": -0.05555555555555558
+        },
+        {
+          "id": "domainrag_extractive_036",
+          "difference": 0.16666666666666669
+        },
+        {
+          "id": "domainrag_extractive_037",
+          "difference": -0.7999999999999999
+        },
+        {
+          "id": "domainrag_extractive_038",
+          "difference": -0.3666666666666667
+        },
+        {
+          "id": "domainrag_extractive_039",
+          "difference": -0.13333333333333333
+        },
+        {
+          "id": "domainrag_extractive_040",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_041",
+          "difference": 0.9333333333333333
+        },
+        {
+          "id": "domainrag_extractive_042",
+          "difference": 0.16666666666666669
+        },
+        {
+          "id": "domainrag_extractive_043",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_044",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_045",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_046",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_047",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_050",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_051",
+          "difference": 0.02777777777777779
+        },
+        {
+          "id": "domainrag_extractive_052",
+          "difference": 0.16666666666666669
+        },
+        {
+          "id": "domainrag_extractive_053",
+          "difference": -0.16666666666666669
+        },
+        {
+          "id": "domainrag_extractive_054",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_055",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_057",
+          "difference": 0.7222222222222223
+        },
+        {
+          "id": "domainrag_extractive_060",
+          "difference": -0.5
+        },
+        {
+          "id": "domainrag_extractive_061",
+          "difference": 0.08333333333333331
+        },
+        {
+          "id": "domainrag_extractive_062",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_063",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_064",
+          "difference": -0.16666666666666669
+        },
+        {
+          "id": "domainrag_extractive_065",
+          "difference": 0.43333333333333335
+        },
+        {
+          "id": "domainrag_extractive_066",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_071",
+          "difference": -1.0
+        },
+        {
+          "id": "domainrag_extractive_078",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_079",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_081",
+          "difference": -0.16666666666666663
+        },
+        {
+          "id": "domainrag_extractive_083",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_084",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_085",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_087",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_090",
+          "difference": 0.0
+        }
+      ],
+      "scope": "Descriptive only. Three measurements per query are averaged first; questions are not independently human-adjudicated and original holdout was already exposed."
+    },
+    {
+      "left": "qwen_admissions",
+      "right": "qwen_general",
+      "metric": "ndcg_at_5_binary_annotations",
+      "unique_questions": 53,
+      "mean_difference": -0.023975688118070444,
+      "query_paired_bootstrap_95_interval": [
+        -0.09937171477295499,
+        0.05119730589921595
+      ],
+      "improved_questions": 11,
+      "worse_questions": 13,
+      "unchanged_questions": 29,
+      "per_query": [
+        {
+          "id": "domainrag_extractive_002",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_007",
+          "difference": -0.36907024642854247
+        },
+        {
+          "id": "domainrag_extractive_008",
+          "difference": 0.2432939545434106
+        },
+        {
+          "id": "domainrag_extractive_009",
+          "difference": -0.20025319549806447
+        },
+        {
+          "id": "domainrag_extractive_010",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_011",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_013",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_014",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_016",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_017",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_018",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_022",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_023",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_024",
+          "difference": 0.6131471927654584
+        },
+        {
+          "id": "domainrag_extractive_026",
+          "difference": -0.6309297535714575
+        },
+        {
+          "id": "domainrag_extractive_027",
+          "difference": -0.36907024642854247
+        },
+        {
+          "id": "domainrag_extractive_028",
+          "difference": 0.24604683095236168
+        },
+        {
+          "id": "domainrag_extractive_035",
+          "difference": -0.04621562795107126
+        },
+        {
+          "id": "domainrag_extractive_036",
+          "difference": 0.13092975357145753
+        },
+        {
+          "id": "domainrag_extractive_037",
+          "difference": -0.6131471927654584
+        },
+        {
+          "id": "domainrag_extractive_038",
+          "difference": -0.37302788208176313
+        },
+        {
+          "id": "domainrag_extractive_039",
+          "difference": -0.2579018714896944
+        },
+        {
+          "id": "domainrag_extractive_040",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_041",
+          "difference": 0.8710490642551528
+        },
+        {
+          "id": "domainrag_extractive_042",
+          "difference": 0.13092975357145753
+        },
+        {
+          "id": "domainrag_extractive_043",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_044",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_045",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_046",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_047",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_050",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_051",
+          "difference": 0.02310781397553563
+        },
+        {
+          "id": "domainrag_extractive_052",
+          "difference": 0.13092975357145753
+        },
+        {
+          "id": "domainrag_extractive_053",
+          "difference": -0.13092975357145753
+        },
+        {
+          "id": "domainrag_extractive_054",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_055",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_057",
+          "difference": 0.5462156279510713
+        },
+        {
+          "id": "domainrag_extractive_060",
+          "difference": -0.36907024642854247
+        },
+        {
+          "id": "domainrag_extractive_061",
+          "difference": 0.06932344192660694
+        },
+        {
+          "id": "domainrag_extractive_062",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_063",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_064",
+          "difference": -0.13092975357145753
+        },
+        {
+          "id": "domainrag_extractive_065",
+          "difference": 0.33788452792052903
+        },
+        {
+          "id": "domainrag_extractive_066",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_071",
+          "difference": -1.0
+        },
+        {
+          "id": "domainrag_extractive_078",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_079",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_081",
+          "difference": -0.12302341547618079
+        },
+        {
+          "id": "domainrag_extractive_083",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_084",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_085",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_087",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_090",
+          "difference": 0.0
+        }
+      ],
+      "scope": "Descriptive only. Three measurements per query are averaged first; questions are not independently human-adjudicated and original holdout was already exposed."
+    },
+    {
+      "left": "qwen_admissions",
+      "right": "bge_control",
+      "metric": "all_evidence_hit_at_5",
+      "unique_questions": 53,
+      "mean_difference": -0.07547169811320754,
+      "query_paired_bootstrap_95_interval": [
+        -0.18238993710691823,
+        0.025157232704402517
+      ],
+      "improved_questions": 3,
+      "worse_questions": 7,
+      "unchanged_questions": 43,
+      "per_query": [
+        {
+          "id": "domainrag_extractive_002",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_007",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_008",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_009",
+          "difference": 1.0
+        },
+        {
+          "id": "domainrag_extractive_010",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_011",
+          "difference": -1.0
+        },
+        {
+          "id": "domainrag_extractive_013",
+          "difference": -1.0
+        },
+        {
+          "id": "domainrag_extractive_014",
+          "difference": -1.0
+        },
+        {
+          "id": "domainrag_extractive_016",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_017",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_018",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_022",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_023",
+          "difference": -1.0
+        },
+        {
+          "id": "domainrag_extractive_024",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_026",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_027",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_028",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_035",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_036",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_037",
+          "difference": 1.0
+        },
+        {
+          "id": "domainrag_extractive_038",
+          "difference": -0.33333333333333337
+        },
+        {
+          "id": "domainrag_extractive_039",
+          "difference": -1.0
+        },
+        {
+          "id": "domainrag_extractive_040",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_041",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_042",
+          "difference": 0.33333333333333337
+        },
+        {
+          "id": "domainrag_extractive_043",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_044",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_045",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_046",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_047",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_050",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_051",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_052",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_053",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_054",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_055",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_057",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_060",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_061",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_062",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_063",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_064",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_065",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_066",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_071",
+          "difference": -1.0
+        },
+        {
+          "id": "domainrag_extractive_078",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_079",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_081",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_083",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_084",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_085",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_087",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_090",
+          "difference": 0.0
+        }
+      ],
+      "scope": "Descriptive only. Three measurements per query are averaged first; questions are not independently human-adjudicated and original holdout was already exposed."
+    },
+    {
+      "left": "qwen_admissions",
+      "right": "bge_control",
+      "metric": "mrr_at_5",
+      "unique_questions": 53,
+      "mean_difference": -0.06540880503144654,
+      "query_paired_bootstrap_95_interval": [
+        -0.15880503144654087,
+        0.03008385744234801
+      ],
+      "improved_questions": 11,
+      "worse_questions": 20,
+      "unchanged_questions": 22,
+      "per_query": [
+        {
+          "id": "domainrag_extractive_002",
+          "difference": 0.5
+        },
+        {
+          "id": "domainrag_extractive_007",
+          "difference": -0.5
+        },
+        {
+          "id": "domainrag_extractive_008",
+          "difference": -0.29999999999999993
+        },
+        {
+          "id": "domainrag_extractive_009",
+          "difference": 0.25
+        },
+        {
+          "id": "domainrag_extractive_010",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_011",
+          "difference": -1.0
+        },
+        {
+          "id": "domainrag_extractive_013",
+          "difference": -0.3333333333333333
+        },
+        {
+          "id": "domainrag_extractive_014",
+          "difference": -0.3333333333333333
+        },
+        {
+          "id": "domainrag_extractive_016",
+          "difference": 0.5
+        },
+        {
+          "id": "domainrag_extractive_017",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_018",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_022",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_023",
+          "difference": -0.20000000000000004
+        },
+        {
+          "id": "domainrag_extractive_024",
+          "difference": 0.5
+        },
+        {
+          "id": "domainrag_extractive_026",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_027",
+          "difference": -0.5
+        },
+        {
+          "id": "domainrag_extractive_028",
+          "difference": 0.33333333333333337
+        },
+        {
+          "id": "domainrag_extractive_035",
+          "difference": -0.7222222222222223
+        },
+        {
+          "id": "domainrag_extractive_036",
+          "difference": -0.5
+        },
+        {
+          "id": "domainrag_extractive_037",
+          "difference": 0.20000000000000004
+        },
+        {
+          "id": "domainrag_extractive_038",
+          "difference": -0.11666666666666667
+        },
+        {
+          "id": "domainrag_extractive_039",
+          "difference": -0.3333333333333333
+        },
+        {
+          "id": "domainrag_extractive_040",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_041",
+          "difference": 0.6666666666666667
+        },
+        {
+          "id": "domainrag_extractive_042",
+          "difference": 0.3666666666666667
+        },
+        {
+          "id": "domainrag_extractive_043",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_044",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_045",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_046",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_047",
+          "difference": -0.16666666666666669
+        },
+        {
+          "id": "domainrag_extractive_050",
+          "difference": -0.13333333333333328
+        },
+        {
+          "id": "domainrag_extractive_051",
+          "difference": 0.10555555555555549
+        },
+        {
+          "id": "domainrag_extractive_052",
+          "difference": -0.5
+        },
+        {
+          "id": "domainrag_extractive_053",
+          "difference": -0.6666666666666667
+        },
+        {
+          "id": "domainrag_extractive_054",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_055",
+          "difference": -0.5
+        },
+        {
+          "id": "domainrag_extractive_057",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_060",
+          "difference": -0.5
+        },
+        {
+          "id": "domainrag_extractive_061",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_062",
+          "difference": 0.5
+        },
+        {
+          "id": "domainrag_extractive_063",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_064",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_065",
+          "difference": -0.33333333333333337
+        },
+        {
+          "id": "domainrag_extractive_066",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_071",
+          "difference": -0.3333333333333333
+        },
+        {
+          "id": "domainrag_extractive_078",
+          "difference": 0.75
+        },
+        {
+          "id": "domainrag_extractive_079",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_081",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_083",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_084",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_085",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_087",
+          "difference": -0.16666666666666669
+        },
+        {
+          "id": "domainrag_extractive_090",
+          "difference": 0.0
+        }
+      ],
+      "scope": "Descriptive only. Three measurements per query are averaged first; questions are not independently human-adjudicated and original holdout was already exposed."
+    },
+    {
+      "left": "qwen_admissions",
+      "right": "bge_control",
+      "metric": "ndcg_at_5_binary_annotations",
+      "unique_questions": 53,
+      "mean_difference": -0.0681725885427445,
+      "query_paired_bootstrap_95_interval": [
+        -0.15308591436241054,
+        0.01596910104738915
+      ],
+      "improved_questions": 11,
+      "worse_questions": 20,
+      "unchanged_questions": 22,
+      "per_query": [
+        {
+          "id": "domainrag_extractive_002",
+          "difference": 0.36907024642854247
+        },
+        {
+          "id": "domainrag_extractive_007",
+          "difference": -0.36907024642854247
+        },
+        {
+          "id": "domainrag_extractive_008",
+          "difference": -0.2440769463369159
+        },
+        {
+          "id": "domainrag_extractive_009",
+          "difference": 0.43067655807339306
+        },
+        {
+          "id": "domainrag_extractive_010",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_011",
+          "difference": -1.0
+        },
+        {
+          "id": "domainrag_extractive_013",
+          "difference": -0.5
+        },
+        {
+          "id": "domainrag_extractive_014",
+          "difference": -0.5
+        },
+        {
+          "id": "domainrag_extractive_016",
+          "difference": 0.36907024642854247
+        },
+        {
+          "id": "domainrag_extractive_017",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_018",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_022",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_023",
+          "difference": -0.38685280723454163
+        },
+        {
+          "id": "domainrag_extractive_024",
+          "difference": 0.36907024642854247
+        },
+        {
+          "id": "domainrag_extractive_026",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_027",
+          "difference": -0.36907024642854247
+        },
+        {
+          "id": "domainrag_extractive_028",
+          "difference": 0.24604683095236168
+        },
+        {
+          "id": "domainrag_extractive_035",
+          "difference": -0.5462156279510713
+        },
+        {
+          "id": "domainrag_extractive_036",
+          "difference": -0.36907024642854247
+        },
+        {
+          "id": "domainrag_extractive_037",
+          "difference": 0.38685280723454163
+        },
+        {
+          "id": "domainrag_extractive_038",
+          "difference": -0.17277468658369866
+        },
+        {
+          "id": "domainrag_extractive_039",
+          "difference": -0.5
+        },
+        {
+          "id": "domainrag_extractive_040",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_041",
+          "difference": 0.5
+        },
+        {
+          "id": "domainrag_extractive_042",
+          "difference": 0.37302788208176313
+        },
+        {
+          "id": "domainrag_extractive_043",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_044",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_045",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_046",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_047",
+          "difference": -0.13092975357145753
+        },
+        {
+          "id": "domainrag_extractive_050",
+          "difference": -0.11314719276545837
+        },
+        {
+          "id": "domainrag_extractive_051",
+          "difference": 0.09003937878992274
+        },
+        {
+          "id": "domainrag_extractive_052",
+          "difference": -0.36907024642854247
+        },
+        {
+          "id": "domainrag_extractive_053",
+          "difference": -0.5
+        },
+        {
+          "id": "domainrag_extractive_054",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_055",
+          "difference": -0.36907024642854247
+        },
+        {
+          "id": "domainrag_extractive_057",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_060",
+          "difference": -0.36907024642854247
+        },
+        {
+          "id": "domainrag_extractive_061",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_062",
+          "difference": 0.36907024642854247
+        },
+        {
+          "id": "domainrag_extractive_063",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_064",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_065",
+          "difference": -0.24604683095236168
+        },
+        {
+          "id": "domainrag_extractive_066",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_071",
+          "difference": -0.5
+        },
+        {
+          "id": "domainrag_extractive_078",
+          "difference": 0.5693234419266069
+        },
+        {
+          "id": "domainrag_extractive_079",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_081",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_083",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_084",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_085",
+          "difference": 0.0
+        },
+        {
+          "id": "domainrag_extractive_087",
+          "difference": -0.13092975357145753
+        },
+        {
+          "id": "domainrag_extractive_090",
+          "difference": 0.0
+        }
+      ],
+      "scope": "Descriptive only. Three measurements per query are averaged first; questions are not independently human-adjudicated and original holdout was already exposed."
+    }
+  ]
+}

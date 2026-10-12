@@ -1,0 +1,755 @@
+{
+  "passed": true,
+  "project": "rag-domain-study/admissions",
+  "original_files_unchanged": true,
+  "verified_original_hash_paths": [
+    "data\\domainrag_text_corpus.jsonl",
+    "data\\basic_qa_mapped.jsonl",
+    "artifacts\\indexes\\dense\\vectors.npy",
+    "artifacts\\indexes\\dense\\manifest.json",
+    "artifacts\\indexes\\bm25\\manifest.json",
+    "app\\retrieval.py",
+    "app\\reranking.py",
+    "app\\hybrid.py",
+    "app\\dense.py",
+    "app\\evaluation.py"
+  ],
+  "all_90_raw_channel_rankings_replayed_from_original_indexes_and_saved_query_vectors": true,
+  "development_rows": 525,
+  "test_rows": 495,
+  "all_combinations_complete": true,
+  "pool_texts_and_fusion_recomputed_from_original_corpus": true,
+  "payload_fingerprints_match_query_documents_instruction": true,
+  "development_selection_recomputed_and_frozen": true,
+  "all_summary_metrics_recomputed": true,
+  "holdout_generation_evaluated": false,
+  "development_answer_probe_requests": 18,
+  "model_failures": [
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    },
+    {
+      "status": 429,
+      "attempt": 1
+    },
+    {
+      "status": 429,
+      "attempt": 2
+    }
+  ],
+  "holdout_delta_points": -3.7735849056603765,
+  "holdout_improved_questions": 0,
+  "holdout_worse_questions": 3,
+  "selection": {
+    "variants": {
+      "bge_baseline": {
+        "pool": "baseline30",
+        "model": "BAAI/bge-reranker-v2-m3",
+        "instruction": null
+      },
+      "bge_expand100": {
+        "pool": "expand100",
+        "model": "BAAI/bge-reranker-v2-m3",
+        "instruction": null
+      },
+      "qwen_broad": {
+        "pool": "baseline30",
+        "model": "Qwen/Qwen3-Reranker-0.6B",
+        "instruction": "Retrieve passages that directly answer the user's question about Renmin University of China. The question may concern admissions, college introductions, programs, tuition, history, partnerships, or graduate outcomes. Match any explicitly specified year, college, program, and category. Prioritize passages containing the requested fact; do not assume constraints that the question does not state."
+      }
+    },
+    "winner": {
+      "variant": "bge_expand100",
+      "alpha": 0.25,
+      "measurements": 105,
+      "questions": 35,
+      "evidence_recall_at_5": 0.5904761904761905,
+      "evidence_recall_at_10": 0.8,
+      "all_evidence_hit_at_5": 0.5904761904761905,
+      "mrr_at_5": 0.3547619047619048,
+      "mrr_at_30": 0.38534547030777466,
+      "ndcg_at_5_binary_annotations": 0.41293674962709975,
+      "candidate_recall": 0.9714285714285714,
+      "candidate_count": 100.0,
+      "rerank_p50_ms": 1292.0939999967231,
+      "rerank_p95_ms": 2520.7849399987026
+    },
+    "best_qwen": {
+      "variant": "qwen_broad",
+      "alpha": 0.0,
+      "measurements": 105,
+      "questions": 35,
+      "evidence_recall_at_5": 0.5238095238095238,
+      "evidence_recall_at_10": 0.7142857142857143,
+      "all_evidence_hit_at_5": 0.5238095238095238,
+      "mrr_at_5": 0.28365079365079365,
+      "mrr_at_30": 0.31853844568130274,
+      "ndcg_at_5_binary_annotations": 0.3429244859545041,
+      "candidate_recall": 0.8,
+      "candidate_count": 30.0,
+      "rerank_p50_ms": 510.0514000005205,
+      "rerank_p95_ms": 552.6816400029929
+    },
+    "selected_post_alpha": 0.25,
+    "dev_rows_sha256": "f1e3857fee3b7929501cf19f76728ac5b4f1a3a6135373ce5e76cd76e36bf4e7",
+    "selection_rule": "Development rerank Hit@5 desc, MRR@5 desc, smaller candidate count, smaller alpha, variant name.",
+    "selected_before_test_requests": true
+  }
+}

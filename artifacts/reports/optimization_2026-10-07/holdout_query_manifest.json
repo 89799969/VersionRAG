@@ -1,0 +1,227 @@
+{
+  "encoder": {
+    "provider": "SiliconFlow API",
+    "base_url": "https://api.siliconflow.cn/v1",
+    "model": "BAAI/bge-m3",
+    "model_revision": "not exposed by API",
+    "dimension": 1024,
+    "normalization": "L2",
+    "query_instruction": "",
+    "max_input_utf8_bytes": 8000,
+    "document_preprocessing": "join-whitespace-between-Chinese-characters-v1"
+  },
+  "queries": [
+    {
+      "id": "domainrag_extractive_002",
+      "question": "中国人民大学2018年高水平艺术团招生计划甲类的降分政策是降多少？"
+    },
+    {
+      "id": "domainrag_extractive_007",
+      "question": "中国人民大学2016年“圆梦计划”招生计划招收多少人？"
+    },
+    {
+      "id": "domainrag_extractive_008",
+      "question": "国家专项计划招生的定向招收对象包括哪些地区的学生？"
+    },
+    {
+      "id": "domainrag_extractive_009",
+      "question": "国家专项计划和“圆梦计划”录取的新生是否可以自行决定入学时是否迁转户口？"
+    },
+    {
+      "id": "domainrag_extractive_010",
+      "question": "中国人民大学学生可以申请的助学项目有哪些？"
+    },
+    {
+      "id": "domainrag_extractive_011",
+      "question": "国家专项计划录取的学生是否可以转专业？"
+    },
+    {
+      "id": "domainrag_extractive_013",
+      "question": "中国人民大学获得北京市第十七届哲学社会科学优秀成果奖几项？"
+    },
+    {
+      "id": "domainrag_extractive_014",
+      "question": "中国人民大学新发展阶段中国社会学学科建设研讨会何时举行？"
+    },
+    {
+      "id": "domainrag_extractive_016",
+      "question": "中国人民大学在哪一届中宣部出版局的评选中推荐了4篇文章并入选？"
+    },
+    {
+      "id": "domainrag_extractive_017",
+      "question": "中国自主的知识体系大学联盟成员单位有多少家？"
+    },
+    {
+      "id": "domainrag_extractive_018",
+      "question": "中国人民大学在2023年世界大学联盟发布的年度科研发展基金中获得几项立项？"
+    },
+    {
+      "id": "domainrag_extractive_022",
+      "question": "中国人民大学金融工程专业的就业方向有哪些？"
+    },
+    {
+      "id": "domainrag_extractive_023",
+      "question": "哲学院有哪些专业？"
+    },
+    {
+      "id": "domainrag_extractive_024",
+      "question": "哲学院的国际交流有哪些合作大学？"
+    },
+    {
+      "id": "domainrag_extractive_026",
+      "question": "艺术学院的本科专业有哪些方向？"
+    },
+    {
+      "id": "domainrag_extractive_027",
+      "question": "信息学院是否实施双选认证制度？"
+    },
+    {
+      "id": "domainrag_extractive_028",
+      "question": "信息学院是否鼓励学生参加国际研学项目和活动？"
+    },
+    {
+      "id": "domainrag_extractive_035",
+      "question": "中法学院2012级本科生在TEF/TCF法语水平测试中有几名同学达到A2级别？"
+    },
+    {
+      "id": "domainrag_extractive_036",
+      "question": "中国人民大学化学系王亚培教授研究团队在哪个领域取得了重要技术突破？"
+    },
+    {
+      "id": "domainrag_extractive_037",
+      "question": "人大文学院的古典学实验班是从那些专业进行学生选拔的？"
+    },
+    {
+      "id": "domainrag_extractive_038",
+      "question": "人大文学院的国际写作中心吸引了哪些创作新秀求学？"
+    },
+    {
+      "id": "domainrag_extractive_039",
+      "question": "人大文学院本科毕业生就业情况主要集中在哪些领域？"
+    },
+    {
+      "id": "domainrag_extractive_040",
+      "question": "中国人民大学艺术学院成立于哪一年？"
+    },
+    {
+      "id": "domainrag_extractive_041",
+      "question": "中国人民大学艺术类招生专业测试报名费是多少？"
+    },
+    {
+      "id": "domainrag_extractive_042",
+      "question": "中国人民大学2023年艺术类（音乐表演）专业招生报名截止时间是？"
+    },
+    {
+      "id": "domainrag_extractive_043",
+      "question": "中国人民大学法学学科的哪位教授在中国法学会民法典编纂项目中担任了领导小组成员、秘书长？"
+    },
+    {
+      "id": "domainrag_extractive_044",
+      "question": "哪个学校的法学学科是法学院校中参与参与民法典编纂人数最多的 ？"
+    },
+    {
+      "id": "domainrag_extractive_045",
+      "question": "在中国人民大学召开的第二届健康中国建设学术年会的主题是什么？"
+    },
+    {
+      "id": "domainrag_extractive_046",
+      "question": "在中国人民大学召开的第二届健康中国建设学术年会中，于学军提出要做好几个坚持？"
+    },
+    {
+      "id": "domainrag_extractive_047",
+      "question": "中国人民大学本科生招生网提供的职业测评服务包括哪些测评？"
+    },
+    {
+      "id": "domainrag_extractive_050",
+      "question": "中国人民大学在北京市第十七届哲学社会科学优秀成果奖中排名第几？"
+    },
+    {
+      "id": "domainrag_extractive_051",
+      "question": "中国人民大学在北京市第十七届哲学社会科学优秀成果奖中有多少项成果入选？"
+    },
+    {
+      "id": "domainrag_extractive_052",
+      "question": "中国人民大学在2024年的国家社科基金年度项目和青年项目立项总结中共有多少立项？"
+    },
+    {
+      "id": "domainrag_extractive_053",
+      "question": "中国人民大学在2023年度国家自然科学基金中获得多少项资助？"
+    },
+    {
+      "id": "domainrag_extractive_054",
+      "question": "中国人民大学在2023年度世界大学联盟科研发展基金中获得多少项研究申请立项？"
+    },
+    {
+      "id": "domainrag_extractive_055",
+      "question": "人大国学馆占地面积多少平方米？"
+    },
+    {
+      "id": "domainrag_extractive_057",
+      "question": "乌云毕力格教授的现任职务是什么？"
+    },
+    {
+      "id": "domainrag_extractive_060",
+      "question": "人民大学国学院最活跃的兴趣小组叫什么？"
+    },
+    {
+      "id": "domainrag_extractive_061",
+      "question": "人民大学国学院副院长杨庆中认为国学的意义在于什么？"
+    },
+    {
+      "id": "domainrag_extractive_062",
+      "question": "国学院特聘教授薛天纬开设的古诗文写作课主要讲授哪些诗体？"
+    },
+    {
+      "id": "domainrag_extractive_063",
+      "question": "中国人民大学数学学院于何年成立？"
+    },
+    {
+      "id": "domainrag_extractive_064",
+      "question": "中国人民大学数学与应用数学专业目前设有几个方向？"
+    },
+    {
+      "id": "domainrag_extractive_065",
+      "question": "中国人民大学西班牙语专业只招收高考科目为哪些语种的考生？"
+    },
+    {
+      "id": "domainrag_extractive_066",
+      "question": "中法学院所在的中国人民大学苏州校区位于哪里？"
+    },
+    {
+      "id": "domainrag_extractive_071",
+      "question": "政治学与行政学本科毕业生有多少比例的学生选择就业？"
+    },
+    {
+      "id": "domainrag_extractive_078",
+      "question": "中国人民大学校友邬沧萍中学毕业后上的是哪个大学？"
+    },
+    {
+      "id": "domainrag_extractive_079",
+      "question": "中国人民大学2018年有多少个入选“双一流”建设学科？"
+    },
+    {
+      "id": "domainrag_extractive_081",
+      "question": "谁是中国人民大学历史上的新中国新型高等教育的开拓者？"
+    },
+    {
+      "id": "domainrag_extractive_083",
+      "question": "2019年中国人民大学英语保送生招生计划人数是多少？"
+    },
+    {
+      "id": "domainrag_extractive_084",
+      "question": "2023年中国人民大学获评A的学科有多少个？"
+    },
+    {
+      "id": "domainrag_extractive_085",
+      "question": "2023年中国人民大学获评A+的学科有多少个？"
+    },
+    {
+      "id": "domainrag_extractive_087",
+      "question": "2023年中国人民大学国际关系学院党委书记是谁？"
+    },
+    {
+      "id": "domainrag_extractive_090",
+      "question": "2024年中国人民大学社会与人口学院的院长是谁？"
+    }
+  ]
+}

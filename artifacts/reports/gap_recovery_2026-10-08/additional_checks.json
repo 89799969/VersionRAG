@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "valid_answer_records": 204,
+  "maximum_context_chars": 2588,
+  "requests": 163,
+  "reference_isolation": true
+}

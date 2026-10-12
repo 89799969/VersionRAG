@@ -1,0 +1,12 @@
+# Preserve the byte hashes recorded in the frozen data and experiment manifests.
+app/** -text
+scripts/** -text
+tests/** -text
+data/** -text
+DomainRAG/** -text
+artifacts/reports/** -text
+*.npy -text
+*.jpg -text
+*.png -text
+*.cmd text eol=crlf
+*.ps1 text eol=lf

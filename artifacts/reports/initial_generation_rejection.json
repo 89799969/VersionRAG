@@ -1,0 +1,8 @@
+{
+  "sample_id": "domainrag_extractive_033",
+  "method": "hybrid_rerank",
+  "real_api_called": true,
+  "observed_error": "Model cited a passage outside the supplied context.",
+  "guard_result": "Rejected; not returned as a successful answer",
+  "note": "Observed during the first development answer comparison. Added an explicit allowed-citation-ID list to the prompt; strict validation retained. Original invalid response was not saved, so its answer semantics are unknown."
+}

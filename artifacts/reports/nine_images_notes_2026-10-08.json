@@ -1,0 +1,21 @@
+{
+  "status": "saved_and_verified",
+  "date": "2026-10-08",
+  "notes": 9,
+  "original_review_entries_preserved": 6,
+  "files": {
+    "04-RAG与知识库/为什么要按问题选择检索路径.md": "f6c5285e4ad9a2487ea1d52199e5a120ec196beaf29fcf502539674aea7c8323",
+    "04-RAG与知识库/两个资料分别检索和多跳检索有什么区别.md": "6b5b9cad30691b10fae5fcd32f380ff303939b88ca09a00a9eb80b55b7511e95",
+    "04-RAG与知识库/查询改写怎样保留原问题的约束.md": "af75e0a29d014a70332890208d130cd426bf00f2e2219ef44206187ad303e405",
+    "04-RAG与知识库/引用真实为什么仍可能没有回答依据.md": "2d9f59a48be45b759a629892688f4d62f2513e99f57bcf078049fdb29843472f",
+    "06-可靠性与安全/补检怎样保留旧证据并控制次数.md": "a05121adedc089ec93e82c4b2b4257ed0b0d08a6bf2605549c19f63243f8690a",
+    "05-Agent核心/什么时候需要工具调用和状态编排.md": "5c03260d87e774271ed82b21741193d9cdd5101f71e0132836ded916e1f6139d",
+    "04-RAG与知识库/怎样按需求选择向量检索存储方案.md": "251aa38ccbe617a4f0175554daec41aedff725683a21083fc8a749c0f2d82dbb",
+    "07-评测与可观测/怎样证明一次检索改动有效.md": "127f04f341b2296a048132a5a099185adeeb095b3ff24f684f1bc2ecb26ade9f",
+    "07-评测与可观测/怎样用请求追踪定位证据丢失.md": "3d76106941edcb10119de7119951208bc3eff9d9d6fe3a11334f7fb8b2272d9b",
+    "开始.md": "58d553fe4f89c10af580de184b7fd0e4147c851b74a16dcee97e619629fc7f0f",
+    ".review.json": "17be488c7965eacd15b6f1bdbec54f9d253e61bea26926b0b5f653fe157f63d5"
+  },
+  "library": "D:\\note",
+  "scope": "Screenshot knowledge extraction; no model calls, engineering changes or mastery claims"
+}

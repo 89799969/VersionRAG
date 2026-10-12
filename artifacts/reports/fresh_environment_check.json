@@ -1,0 +1,25 @@
+{
+  "fresh_minimal_install": true,
+  "python": "3.12",
+  "tests_passed": 26,
+  "warnings": 1,
+  "corpus_documents": 14406,
+  "fresh_bm25_build": true,
+  "health": {
+    "status": "ok",
+    "retrieval_methods": [
+      "bm25"
+    ]
+  },
+  "retrieve_status": 200,
+  "home_status": 200,
+  "real_env_absent": true,
+  "generation_code_sha256": "f55a14d17a52565ac57361889898633d261526cc9149ba3933bd77690dea627f",
+  "optional_packages_present": {
+    "onnxruntime": false,
+    "torch": false,
+    "transformers": false,
+    "tokenizers": false
+  },
+  "scope": "Final source copied from bundle into clean dependency environment: 26 tests and API startup/retrieve pass. BM25 corpus index built in this environment. No remote Dense rebuilding or live generation in clean copy."
+}

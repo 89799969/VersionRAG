@@ -1,0 +1,26 @@
+{
+  "real_api_called": true,
+  "encoder": {
+    "provider": "SiliconFlow API",
+    "base_url": "https://api.siliconflow.cn/v1",
+    "model": "BAAI/bge-m3",
+    "model_revision": "not exposed by API",
+    "dimension": 1024,
+    "normalization": "L2",
+    "query_instruction": "",
+    "max_input_utf8_bytes": 8000,
+    "document_preprocessing": "join-whitespace-between-Chinese-characters-v1"
+  },
+  "shape": [
+    2,
+    1024
+  ],
+  "finite": true,
+  "normalized_lengths": [
+    1.0,
+    1.0
+  ],
+  "truncated_inputs": 0,
+  "latency_ms": 397.5143999996362,
+  "scope": "service integration probe; not retrieval quality evaluation"
+}

@@ -1,0 +1,28 @@
+{
+  "real_api_called": true,
+  "model": "BAAI/bge-reranker-v2-m3",
+  "results": [
+    {
+      "id": "demo-language",
+      "contents": "中法学院采用汉语、法语、英语三语教学。",
+      "rank": 1,
+      "score": 0.9996175765991211,
+      "retrieval_score": 0.02,
+      "original_rank": 2,
+      "rerank_model": "BAAI/bge-reranker-v2-m3",
+      "rerank_input_truncated": false
+    },
+    {
+      "id": "demo-subject",
+      "contents": "物理与化学专业招生信息。",
+      "rank": 2,
+      "score": 1.6560725271119736e-05,
+      "retrieval_score": 0.03,
+      "original_rank": 1,
+      "rerank_model": "BAAI/bge-reranker-v2-m3",
+      "rerank_input_truncated": false
+    }
+  ],
+  "latency_ms": 266.0937999999078,
+  "scope": "integration probe using constructed candidates, not full retrieval evaluation"
+}

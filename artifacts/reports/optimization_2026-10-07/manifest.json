@@ -1,0 +1,60 @@
+{
+  "project": "rag-domain-study/admissions",
+  "hashes": {
+    "data\\domainrag_text_corpus.jsonl": "6b08f337ee4066af05d99bcf5bc29afca56f7e05df8b0feed5030dc34bfd52d9",
+    "data\\basic_qa_mapped.jsonl": "7e8cca569448885ddba55716ba22a73d9ebcfd239cb4132354fc31b079c1c81e",
+    "artifacts\\indexes\\dense\\vectors.npy": "a6329210213f306fdeab8b8ba07c86d4c390a6264ba038263c80997ef2e2cdc3",
+    "artifacts\\indexes\\dense\\manifest.json": "8f55fbec519d98d33c9b9bc303d5b00c2c36580c6641b86271db1bc9355b25b3",
+    "artifacts\\indexes\\bm25\\manifest.json": "1c85a703195a85c6c6d9da719c375b79d0ea9ad5ed3beb5d796f7429300c564d",
+    "app\\retrieval.py": "46bb4435c15caf1558a017acb18f092fd55027a9a4c107022772b83343ec79aa",
+    "app\\reranking.py": "122528fde3957c236589808c9fe2e559bfa955ab1af6e4450466331de175a3e9",
+    "app\\hybrid.py": "bc8a0a6e7533b2b99b34d19b7f8af98ac78cbdf6d231c7660bd26c362b05e634",
+    "app\\dense.py": "57390010042ca0ec6f05ea000240169ce0f983e26c87a8f32e4a57f9d1e6f6c8",
+    "app\\evaluation.py": "934b3b8ddc3fbd61ae060adceb0b3628ef1cafd20e702775954650342d35a612"
+  },
+  "script_sha256": "e8bdaa047583923374943c22c9b79c05dba9a9fd384139f7f92151f6a8c5bc88",
+  "retrieval_trials": {
+    "baseline30": {
+      "channel_k": 30,
+      "pool_k": 30,
+      "bm25_weight": 1.0
+    },
+    "expand60": {
+      "channel_k": 60,
+      "pool_k": 60,
+      "bm25_weight": 1.0
+    },
+    "expand100": {
+      "channel_k": 100,
+      "pool_k": 100,
+      "bm25_weight": 1.0
+    },
+    "keyword60": {
+      "channel_k": 60,
+      "pool_k": 60,
+      "bm25_weight": 2.0
+    },
+    "dense60": {
+      "channel_k": 60,
+      "pool_k": 60,
+      "bm25_weight": 0.5
+    },
+    "keyword30": {
+      "channel_k": 30,
+      "pool_k": 30,
+      "bm25_weight": 2.0
+    }
+  },
+  "broad_instruction": "Retrieve passages that directly answer the user's question about Renmin University of China. The question may concern admissions, college introductions, programs, tuition, history, partnerships, or graduate outcomes. Match any explicitly specified year, college, program, and category. Prioritize passages containing the requested fact; do not assume constraints that the question does not state.",
+  "post_rank_trials": [
+    0.0,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "rounds": 3,
+  "shortlist_selection": "Development candidate ceiling desc, retrieval MRR@5 desc, smaller pool first; select two nonbaseline pools.",
+  "final_selection": "Development rerank Hit@5 desc, MRR@5 desc, smaller candidate count, smaller alpha, variant name.",
+  "timing": "Pure rerank request latency; offline cached retrieval is separate; no generation.",
+  "scope": "Original holdout already exposed. Follow-up exploratory tuning, not untouched generalization measurement."
+}

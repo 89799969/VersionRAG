@@ -1,0 +1,32 @@
+{
+  "service_calls": [
+    {
+      "host": "api.deepseek.com",
+      "path": "/chat/completions",
+      "status": 200,
+      "calls": 78
+    },
+    {
+      "host": "api.siliconflow.cn",
+      "path": "/v1/embeddings",
+      "status": 200,
+      "calls": 18
+    },
+    {
+      "host": "api.siliconflow.cn",
+      "path": "/v1/rerank",
+      "status": 200,
+      "calls": 50
+    }
+  ],
+  "saved_successful_actual_model_usage": {
+    "prompt_tokens": 170934,
+    "completion_tokens": 38821,
+    "total_tokens": 209755
+  },
+  "gap_plans": 14,
+  "gap_fallbacks": 6,
+  "judge_hash_reuses": 143,
+  "scope": "successful saved calls only; no currency price inferred; embedding/rerank usage not in model token total",
+  "preflight": "separate sandbox_preflight report retains five connection failures with no HTTP response"
+}

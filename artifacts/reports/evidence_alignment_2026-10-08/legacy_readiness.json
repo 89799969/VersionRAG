@@ -1,0 +1,18 @@
+{
+  "scope": "readiness audit only; no new retrieval score or label migration",
+  "corpus_chunks": 14406,
+  "chunks_with_source_start_end": 0,
+  "historical_question_count": 53,
+  "historical_required_group_count": 53,
+  "groups_with_reference_text": 53,
+  "all_questions_single_group_single_id": true,
+  "corpus_sha256": "6b08f337ee4066af05d99bcf5bc29afca56f7e05df8b0feed5030dc34bfd52d9",
+  "labels_sha256": "7e8cca569448885ddba55716ba22a73d9ebcfd239cb4132354fc31b079c1c81e",
+  "historical_report_sha256": "b0083524f974b253c3fe0b3ce3fb713d1b3ce256af2dccee5c614cf431aa153c",
+  "historical_hit_rate": 0.8301886792452831,
+  "remaining_work": [
+    "verify canonical source text and coordinate system for legacy corpus",
+    "project existing quotes; review ambiguous and broad labels",
+    "freeze label version; rescore old and new retrieval with same span metric"
+  ]
+}

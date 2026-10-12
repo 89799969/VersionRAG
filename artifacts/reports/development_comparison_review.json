@@ -1,0 +1,1615 @@
+{
+  "split": "dev",
+  "questions": 35,
+  "top_k": 5,
+  "summaries": [
+    {
+      "method": "bm25",
+      "split": "dev",
+      "questions": 35,
+      "top_k": 5,
+      "question_ids": [
+        "domainrag_extractive_003",
+        "domainrag_extractive_004",
+        "domainrag_extractive_005",
+        "domainrag_extractive_006",
+        "domainrag_extractive_012",
+        "domainrag_extractive_015",
+        "domainrag_extractive_019",
+        "domainrag_extractive_020",
+        "domainrag_extractive_021",
+        "domainrag_extractive_025",
+        "domainrag_extractive_029",
+        "domainrag_extractive_030",
+        "domainrag_extractive_031",
+        "domainrag_extractive_032",
+        "domainrag_extractive_033",
+        "domainrag_extractive_034",
+        "domainrag_extractive_048",
+        "domainrag_extractive_049",
+        "domainrag_extractive_056",
+        "domainrag_extractive_058",
+        "domainrag_extractive_059",
+        "domainrag_extractive_067",
+        "domainrag_extractive_068",
+        "domainrag_extractive_069",
+        "domainrag_extractive_070",
+        "domainrag_extractive_072",
+        "domainrag_extractive_073",
+        "domainrag_extractive_074",
+        "domainrag_extractive_075",
+        "domainrag_extractive_076",
+        "domainrag_extractive_077",
+        "domainrag_extractive_080",
+        "domainrag_extractive_082",
+        "domainrag_extractive_088",
+        "domainrag_extractive_089"
+      ],
+      "qa_sha256": "7e8cca569448885ddba55716ba22a73d9ebcfd239cb4132354fc31b079c1c81e",
+      "evidence_group_recall_at_k": 0.42857142857142855,
+      "all_evidence_hit_rate_at_k": 0.42857142857142855,
+      "mrr_at_k": 0.3238095238095238,
+      "latency_median_ms": 0.2756000003500958,
+      "timing_scope": "retrieval includes query encoding API for dense/hybrid; excludes index build/startup",
+      "scope": "annotated evidence metrics, not answer accuracy; equivalent evidence may be unannotated"
+    },
+    {
+      "method": "dense",
+      "split": "dev",
+      "questions": 35,
+      "top_k": 5,
+      "question_ids": [
+        "domainrag_extractive_003",
+        "domainrag_extractive_004",
+        "domainrag_extractive_005",
+        "domainrag_extractive_006",
+        "domainrag_extractive_012",
+        "domainrag_extractive_015",
+        "domainrag_extractive_019",
+        "domainrag_extractive_020",
+        "domainrag_extractive_021",
+        "domainrag_extractive_025",
+        "domainrag_extractive_029",
+        "domainrag_extractive_030",
+        "domainrag_extractive_031",
+        "domainrag_extractive_032",
+        "domainrag_extractive_033",
+        "domainrag_extractive_034",
+        "domainrag_extractive_048",
+        "domainrag_extractive_049",
+        "domainrag_extractive_056",
+        "domainrag_extractive_058",
+        "domainrag_extractive_059",
+        "domainrag_extractive_067",
+        "domainrag_extractive_068",
+        "domainrag_extractive_069",
+        "domainrag_extractive_070",
+        "domainrag_extractive_072",
+        "domainrag_extractive_073",
+        "domainrag_extractive_074",
+        "domainrag_extractive_075",
+        "domainrag_extractive_076",
+        "domainrag_extractive_077",
+        "domainrag_extractive_080",
+        "domainrag_extractive_082",
+        "domainrag_extractive_088",
+        "domainrag_extractive_089"
+      ],
+      "qa_sha256": "7e8cca569448885ddba55716ba22a73d9ebcfd239cb4132354fc31b079c1c81e",
+      "evidence_group_recall_at_k": 0.4,
+      "all_evidence_hit_rate_at_k": 0.4,
+      "mrr_at_k": 0.22952380952380952,
+      "latency_median_ms": 294.8863999999958,
+      "timing_scope": "retrieval includes query encoding API for dense/hybrid; excludes index build/startup",
+      "scope": "annotated evidence metrics, not answer accuracy; equivalent evidence may be unannotated"
+    },
+    {
+      "method": "hybrid",
+      "split": "dev",
+      "questions": 35,
+      "top_k": 5,
+      "question_ids": [
+        "domainrag_extractive_003",
+        "domainrag_extractive_004",
+        "domainrag_extractive_005",
+        "domainrag_extractive_006",
+        "domainrag_extractive_012",
+        "domainrag_extractive_015",
+        "domainrag_extractive_019",
+        "domainrag_extractive_020",
+        "domainrag_extractive_021",
+        "domainrag_extractive_025",
+        "domainrag_extractive_029",
+        "domainrag_extractive_030",
+        "domainrag_extractive_031",
+        "domainrag_extractive_032",
+        "domainrag_extractive_033",
+        "domainrag_extractive_034",
+        "domainrag_extractive_048",
+        "domainrag_extractive_049",
+        "domainrag_extractive_056",
+        "domainrag_extractive_058",
+        "domainrag_extractive_059",
+        "domainrag_extractive_067",
+        "domainrag_extractive_068",
+        "domainrag_extractive_069",
+        "domainrag_extractive_070",
+        "domainrag_extractive_072",
+        "domainrag_extractive_073",
+        "domainrag_extractive_074",
+        "domainrag_extractive_075",
+        "domainrag_extractive_076",
+        "domainrag_extractive_077",
+        "domainrag_extractive_080",
+        "domainrag_extractive_082",
+        "domainrag_extractive_088",
+        "domainrag_extractive_089"
+      ],
+      "qa_sha256": "7e8cca569448885ddba55716ba22a73d9ebcfd239cb4132354fc31b079c1c81e",
+      "evidence_group_recall_at_k": 0.45714285714285713,
+      "all_evidence_hit_rate_at_k": 0.45714285714285713,
+      "mrr_at_k": 0.3119047619047619,
+      "latency_median_ms": 296.2991000003967,
+      "timing_scope": "retrieval includes query encoding API for dense/hybrid; excludes index build/startup",
+      "scope": "annotated evidence metrics, not answer accuracy; equivalent evidence may be unannotated"
+    },
+    {
+      "method": "hybrid_rerank",
+      "split": "dev",
+      "questions": 35,
+      "top_k": 5,
+      "question_ids": [
+        "domainrag_extractive_003",
+        "domainrag_extractive_004",
+        "domainrag_extractive_005",
+        "domainrag_extractive_006",
+        "domainrag_extractive_012",
+        "domainrag_extractive_015",
+        "domainrag_extractive_019",
+        "domainrag_extractive_020",
+        "domainrag_extractive_021",
+        "domainrag_extractive_025",
+        "domainrag_extractive_029",
+        "domainrag_extractive_030",
+        "domainrag_extractive_031",
+        "domainrag_extractive_032",
+        "domainrag_extractive_033",
+        "domainrag_extractive_034",
+        "domainrag_extractive_048",
+        "domainrag_extractive_049",
+        "domainrag_extractive_056",
+        "domainrag_extractive_058",
+        "domainrag_extractive_059",
+        "domainrag_extractive_067",
+        "domainrag_extractive_068",
+        "domainrag_extractive_069",
+        "domainrag_extractive_070",
+        "domainrag_extractive_072",
+        "domainrag_extractive_073",
+        "domainrag_extractive_074",
+        "domainrag_extractive_075",
+        "domainrag_extractive_076",
+        "domainrag_extractive_077",
+        "domainrag_extractive_080",
+        "domainrag_extractive_082",
+        "domainrag_extractive_088",
+        "domainrag_extractive_089"
+      ],
+      "qa_sha256": "7e8cca569448885ddba55716ba22a73d9ebcfd239cb4132354fc31b079c1c81e",
+      "evidence_group_recall_at_k": 0.5714285714285714,
+      "all_evidence_hit_rate_at_k": 0.5714285714285714,
+      "mrr_at_k": 0.37238095238095237,
+      "latency_median_ms": 958.368700000392,
+      "timing_scope": "retrieval includes query encoding API for dense/hybrid; excludes index build/startup",
+      "scope": "annotated evidence metrics, not answer accuracy; equivalent evidence may be unannotated"
+    }
+  ],
+  "gained_annotated_hits": 7,
+  "lost_annotated_hits": 2,
+  "paired_cases": [
+    {
+      "id": "domainrag_extractive_003",
+      "question": "在教育部开展的五次全国一级学科评估中，中国人民大学新闻传播学科被评为什么等级？",
+      "bm25_hit": true,
+      "rerank_hit": true,
+      "mrr_delta": 0.75,
+      "bm25_ids": [
+        "1072",
+        "12445",
+        "12875",
+        "1073",
+        "12437"
+      ],
+      "rerank_ids": [
+        "1073",
+        "12438",
+        "12437",
+        "13390",
+        "12444"
+      ],
+      "rerank_original_ranks": [
+        6,
+        10,
+        19,
+        14,
+        9
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "1073"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_004",
+      "question": "人大文学院的“古典学实验班”创办于哪一年？",
+      "bm25_hit": true,
+      "rerank_hit": false,
+      "mrr_delta": -0.5,
+      "bm25_ids": [
+        "7839",
+        "1099",
+        "8489",
+        "1640",
+        "1098"
+      ],
+      "rerank_ids": [
+        "8490",
+        "1640",
+        "7839",
+        "1098",
+        "8489"
+      ],
+      "rerank_original_ranks": [
+        3,
+        4,
+        2,
+        8,
+        7
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "1099"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_005",
+      "question": "人大文学院建立了哪个国内第一个中心？",
+      "bm25_hit": false,
+      "rerank_hit": false,
+      "mrr_delta": 0.0,
+      "bm25_ids": [
+        "8490",
+        "7840",
+        "1641",
+        "1101",
+        "1642"
+      ],
+      "rerank_ids": [
+        "8490",
+        "8491",
+        "7841",
+        "1642",
+        "1101"
+      ],
+      "rerank_original_ranks": [
+        1,
+        8,
+        15,
+        5,
+        6
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "1100"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_006",
+      "question": "人大文学院举办的五届“世界汉学大会”开始时间是？",
+      "bm25_hit": false,
+      "rerank_hit": true,
+      "mrr_delta": 0.2,
+      "bm25_ids": [
+        "10657",
+        "1339",
+        "7843",
+        "1338",
+        "1643"
+      ],
+      "rerank_ids": [
+        "1642",
+        "7843",
+        "1643",
+        "7842",
+        "1102"
+      ],
+      "rerank_original_ranks": [
+        7,
+        3,
+        8,
+        16,
+        12
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "1102"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_012",
+      "question": "人大图书馆的人大文库藏有多少藏有人大学者和校友著作 、研究生论文？",
+      "bm25_hit": true,
+      "rerank_hit": true,
+      "mrr_delta": -0.5,
+      "bm25_ids": [
+        "5483",
+        "2006",
+        "1207",
+        "5482",
+        "1206"
+      ],
+      "rerank_ids": [
+        "2006",
+        "5483",
+        "1207",
+        "1206",
+        "5482"
+      ],
+      "rerank_original_ranks": [
+        1,
+        2,
+        5,
+        3,
+        4
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "5483"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_015",
+      "question": "中国人民大学何时首次举办本科生招生录取现场开放日？",
+      "bm25_hit": true,
+      "rerank_hit": true,
+      "mrr_delta": 0.0,
+      "bm25_ids": [
+        "6132",
+        "3123",
+        "7170",
+        "7013",
+        "4575"
+      ],
+      "rerank_ids": [
+        "6132",
+        "7754",
+        "7752",
+        "7753",
+        "13038"
+      ],
+      "rerank_original_ranks": [
+        1,
+        25,
+        8,
+        18,
+        14
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "6132"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_019",
+      "question": "中法学院的办学理念是什么？",
+      "bm25_hit": false,
+      "rerank_hit": false,
+      "mrr_delta": 0.0,
+      "bm25_ids": [
+        "680",
+        "10215",
+        "774",
+        "8056",
+        "11561"
+      ],
+      "rerank_ids": [
+        "6443",
+        "2537",
+        "13351",
+        "2538",
+        "8693"
+      ],
+      "rerank_original_ranks": [
+        21,
+        19,
+        15,
+        10,
+        23
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "7905"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_020",
+      "question": "中法学院的办学愿景是什么？",
+      "bm25_hit": false,
+      "rerank_hit": false,
+      "mrr_delta": 0.0,
+      "bm25_ids": [
+        "6033",
+        "6442",
+        "8693",
+        "13351",
+        "11832"
+      ],
+      "rerank_ids": [
+        "6443",
+        "2537",
+        "13351",
+        "11467",
+        "3432"
+      ],
+      "rerank_original_ranks": [
+        12,
+        5,
+        3,
+        20,
+        22
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "7906"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_021",
+      "question": "中国人民大学2021年高水平运动队招生报名需要提供哪些材料？",
+      "bm25_hit": false,
+      "rerank_hit": false,
+      "mrr_delta": 0.0,
+      "bm25_ids": [
+        "2489",
+        "5131",
+        "5132",
+        "2490",
+        "2492"
+      ],
+      "rerank_ids": [
+        "5132",
+        "2490",
+        "2489",
+        "5131",
+        "2492"
+      ],
+      "rerank_original_ranks": [
+        2,
+        1,
+        4,
+        5,
+        3
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "5134"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_025",
+      "question": "历史学专业的新兴前沿与交叉方向有哪些？",
+      "bm25_hit": true,
+      "rerank_hit": true,
+      "mrr_delta": 0.0,
+      "bm25_ids": [
+        "8802",
+        "4101",
+        "8801",
+        "4100",
+        "4102"
+      ],
+      "rerank_ids": [
+        "8802",
+        "4102",
+        "4101",
+        "8801",
+        "4100"
+      ],
+      "rerank_original_ranks": [
+        1,
+        2,
+        3,
+        4,
+        7
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "8802"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_029",
+      "question": "财政金融学院有多少门国家级精品课程？",
+      "bm25_hit": true,
+      "rerank_hit": true,
+      "mrr_delta": -0.75,
+      "bm25_ids": [
+        "5570",
+        "13401",
+        "13402",
+        "5571",
+        "5569"
+      ],
+      "rerank_ids": [
+        "13402",
+        "5571",
+        "13401",
+        "5570",
+        "13398"
+      ],
+      "rerank_original_ranks": [
+        1,
+        2,
+        4,
+        3,
+        8
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "5570"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_030",
+      "question": "财政金融学院有哪两个专业大类？",
+      "bm25_hit": true,
+      "rerank_hit": true,
+      "mrr_delta": -0.25,
+      "bm25_ids": [
+        "13397",
+        "5566",
+        "5567",
+        "4035",
+        "4467"
+      ],
+      "rerank_ids": [
+        "5567",
+        "13398",
+        "13397",
+        "5566",
+        "14004"
+      ],
+      "rerank_original_ranks": [
+        1,
+        4,
+        2,
+        3,
+        7
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "5566"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_031",
+      "question": "2018年港澳台侨联招计划招收多少人？",
+      "bm25_hit": true,
+      "rerank_hit": true,
+      "mrr_delta": -0.5,
+      "bm25_ids": [
+        "5576",
+        "5577",
+        "14157",
+        "1173",
+        "14156"
+      ],
+      "rerank_ids": [
+        "5577",
+        "5576",
+        "14156",
+        "4505",
+        "13796"
+      ],
+      "rerank_original_ranks": [
+        2,
+        1,
+        4,
+        5,
+        9
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "5576"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_032",
+      "question": "中国人民大学2018年招收的社会学类专业有哪些？",
+      "bm25_hit": false,
+      "rerank_hit": true,
+      "mrr_delta": 1.0,
+      "bm25_ids": [
+        "5579",
+        "13043",
+        "4502",
+        "4498",
+        "13039"
+      ],
+      "rerank_ids": [
+        "5580",
+        "5579",
+        "13043",
+        "4502",
+        "13039"
+      ],
+      "rerank_original_ranks": [
+        1,
+        2,
+        3,
+        6,
+        10
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "5580"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_033",
+      "question": "中国人民大学2016年高水平艺术团招生报名截止日期是什么时候？",
+      "bm25_hit": false,
+      "rerank_hit": true,
+      "mrr_delta": 1.0,
+      "bm25_ids": [
+        "259",
+        "84",
+        "14059",
+        "7595",
+        "85"
+      ],
+      "rerank_ids": [
+        "183",
+        "13922",
+        "13923",
+        "184",
+        "185"
+      ],
+      "rerank_original_ranks": [
+        17,
+        4,
+        3,
+        1,
+        7
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "183"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_034",
+      "question": "申请2014年“圆梦计划”的中学需满足什么条件？",
+      "bm25_hit": true,
+      "rerank_hit": false,
+      "mrr_delta": -1.0,
+      "bm25_ids": [
+        "258",
+        "13453",
+        "7624",
+        "7560",
+        "3742"
+      ],
+      "rerank_ids": [
+        "13456",
+        "13453",
+        "7625",
+        "7561",
+        "13454"
+      ],
+      "rerank_original_ranks": [
+        5,
+        1,
+        8,
+        9,
+        7
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "258"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_048",
+      "question": "人民大学图书馆新馆于哪一年投入使用？",
+      "bm25_hit": true,
+      "rerank_hit": true,
+      "mrr_delta": -0.75,
+      "bm25_ids": [
+        "5482",
+        "1207",
+        "5481",
+        "1206",
+        "1208"
+      ],
+      "rerank_ids": [
+        "1206",
+        "5481",
+        "1207",
+        "5482",
+        "2006"
+      ],
+      "rerank_original_ranks": [
+        2,
+        3,
+        4,
+        1,
+        9
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "5482"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_049",
+      "question": "人民大学图书馆新馆采用了哪些智能化信息管理系统？",
+      "bm25_hit": true,
+      "rerank_hit": true,
+      "mrr_delta": 0.75,
+      "bm25_ids": [
+        "5482",
+        "1207",
+        "1208",
+        "5483",
+        "5481"
+      ],
+      "rerank_ids": [
+        "5483",
+        "1208",
+        "1207",
+        "5481",
+        "1206"
+      ],
+      "rerank_original_ranks": [
+        4,
+        1,
+        3,
+        6,
+        5
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "5483"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_056",
+      "question": "2013年全国高考平均录取率是多少？",
+      "bm25_hit": true,
+      "rerank_hit": true,
+      "mrr_delta": 0.16666666666666669,
+      "bm25_ids": [
+        "7445",
+        "2725",
+        "2724",
+        "7444",
+        "2780"
+      ],
+      "rerank_ids": [
+        "7445",
+        "2724",
+        "7444",
+        "2725",
+        "2781"
+      ],
+      "rerank_original_ranks": [
+        2,
+        3,
+        5,
+        1,
+        11
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "2724"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_058",
+      "question": "中国人民大学哪些学科在2017年被评为A+？",
+      "bm25_hit": false,
+      "rerank_hit": false,
+      "mrr_delta": 0.0,
+      "bm25_ids": [
+        "3922",
+        "3921",
+        "3923",
+        "12873",
+        "1818"
+      ],
+      "rerank_ids": [
+        "438",
+        "10754",
+        "8438",
+        "9176",
+        "9715"
+      ],
+      "rerank_original_ranks": [
+        8,
+        5,
+        2,
+        14,
+        12
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "437"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_059",
+      "question": "中国人民大学与多少个国家的高校建立了伙伴关系？",
+      "bm25_hit": false,
+      "rerank_hit": false,
+      "mrr_delta": 0.0,
+      "bm25_ids": [
+        "13019",
+        "1345",
+        "440",
+        "2806",
+        "10755"
+      ],
+      "rerank_ids": [
+        "13019",
+        "1345",
+        "440",
+        "2807",
+        "10755"
+      ],
+      "rerank_original_ranks": [
+        2,
+        4,
+        5,
+        21,
+        7
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "439"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_067",
+      "question": "汪建熙是哪个系的毕业生？",
+      "bm25_hit": false,
+      "rerank_hit": true,
+      "mrr_delta": 0.3333333333333333,
+      "bm25_ids": [
+        "9485",
+        "4846",
+        "9484",
+        "4845",
+        "9486"
+      ],
+      "rerank_ids": [
+        "9484",
+        "4845",
+        "979",
+        "993",
+        "980"
+      ],
+      "rerank_original_ranks": [
+        3,
+        2,
+        29,
+        26,
+        18
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "979"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_068",
+      "question": "王永昌是哪个专业的研究生？",
+      "bm25_hit": false,
+      "rerank_hit": false,
+      "mrr_delta": 0.0,
+      "bm25_ids": [
+        "4485",
+        "981",
+        "990",
+        "994",
+        "985"
+      ],
+      "rerank_ids": [
+        "4485",
+        "990",
+        "981",
+        "993",
+        "984"
+      ],
+      "rerank_original_ranks": [
+        1,
+        2,
+        3,
+        17,
+        16
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "980"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_069",
+      "question": "中国人民大学的知名校友王永昌是哪年加入中国共产党的？",
+      "bm25_hit": false,
+      "rerank_hit": true,
+      "mrr_delta": 0.5,
+      "bm25_ids": [
+        "981",
+        "990",
+        "994",
+        "985",
+        "989"
+      ],
+      "rerank_ids": [
+        "990",
+        "984",
+        "981",
+        "989",
+        "994"
+      ],
+      "rerank_original_ranks": [
+        2,
+        8,
+        1,
+        6,
+        4
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "984"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_070",
+      "question": "现任北京市海淀区人民法院党组成员、副院长是中国人民大学的哪位知名校友？",
+      "bm25_hit": false,
+      "rerank_hit": true,
+      "mrr_delta": 0.5,
+      "bm25_ids": [
+        "979",
+        "982",
+        "991",
+        "992",
+        "983"
+      ],
+      "rerank_ids": [
+        "979",
+        "988",
+        "987",
+        "992",
+        "982"
+      ],
+      "rerank_original_ranks": [
+        1,
+        3,
+        7,
+        4,
+        2
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "988"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_072",
+      "question": "人大文学院的全职教师包括哪位80后青年作家？",
+      "bm25_hit": true,
+      "rerank_hit": true,
+      "mrr_delta": 0.5,
+      "bm25_ids": [
+        "7840",
+        "1100",
+        "8490",
+        "1640",
+        "1641"
+      ],
+      "rerank_ids": [
+        "1100",
+        "8490",
+        "1641",
+        "1640",
+        "7840"
+      ],
+      "rerank_original_ranks": [
+        1,
+        2,
+        4,
+        6,
+        3
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "1100"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_073",
+      "question": "人大文学院的“古代文本文化国际研究中心”由哪位教授领衔？",
+      "bm25_hit": true,
+      "rerank_hit": true,
+      "mrr_delta": -0.75,
+      "bm25_ids": [
+        "1101",
+        "1642",
+        "8491",
+        "1643",
+        "7842"
+      ],
+      "rerank_ids": [
+        "7842",
+        "1643",
+        "8491",
+        "1101",
+        "1102"
+      ],
+      "rerank_original_ranks": [
+        6,
+        8,
+        3,
+        2,
+        5
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "1101"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_074",
+      "question": "中国人民大学马克思主义学院是全国最早开设马克思主义理论本科专业的学院吗？",
+      "bm25_hit": true,
+      "rerank_hit": true,
+      "mrr_delta": 0.0,
+      "bm25_ids": [
+        "4548",
+        "13330",
+        "4547",
+        "13329",
+        "9055"
+      ],
+      "rerank_ids": [
+        "4548",
+        "13330",
+        "4547",
+        "2655",
+        "9056"
+      ],
+      "rerank_original_ranks": [
+        1,
+        2,
+        3,
+        5,
+        7
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "4548"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_075",
+      "question": "中国人民大学中法学院是由哪些大学共建的中外合作办学机构？",
+      "bm25_hit": false,
+      "rerank_hit": false,
+      "mrr_delta": 0.0,
+      "bm25_ids": [
+        "4421",
+        "12565",
+        "10715",
+        "11971",
+        "4197"
+      ],
+      "rerank_ids": [
+        "12565",
+        "11971",
+        "4421",
+        "10576",
+        "10715"
+      ],
+      "rerank_original_ranks": [
+        3,
+        7,
+        1,
+        21,
+        5
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "4576"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_076",
+      "question": "中国人民大学2022年澳门保送生招生的人文社会科学专业排名中，A+学科的数量是多少？",
+      "bm25_hit": false,
+      "rerank_hit": true,
+      "mrr_delta": 1.0,
+      "bm25_ids": [
+        "7321",
+        "2470",
+        "112",
+        "5179",
+        "4597"
+      ],
+      "rerank_ids": [
+        "4598",
+        "7322",
+        "4597",
+        "7321",
+        "3635"
+      ],
+      "rerank_original_ranks": [
+        7,
+        2,
+        4,
+        1,
+        16
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "4598"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_077",
+      "question": "中国人民大学校长李文海在1991年6月获得了什么称号？",
+      "bm25_hit": false,
+      "rerank_hit": false,
+      "mrr_delta": 0.0,
+      "bm25_ids": [
+        "4396",
+        "12252",
+        "12251",
+        "4395",
+        "12230"
+      ],
+      "rerank_ids": [
+        "4395",
+        "12251",
+        "4396",
+        "12252",
+        "12230"
+      ],
+      "rerank_original_ranks": [
+        4,
+        3,
+        2,
+        1,
+        5
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "4373"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_080",
+      "question": "中国人民大学外语类专业2022年学年的学费是多少？",
+      "bm25_hit": false,
+      "rerank_hit": false,
+      "mrr_delta": 0.0,
+      "bm25_ids": [
+        "7738",
+        "578",
+        "2097",
+        "2098",
+        "7330"
+      ],
+      "rerank_ids": [
+        "1744",
+        "2097",
+        "2098",
+        "578",
+        "7738"
+      ],
+      "rerank_original_ranks": [
+        10,
+        1,
+        12,
+        3,
+        2
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "4585"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_082",
+      "question": "2022年中国人民大学获评A+的学科有多少个？",
+      "bm25_hit": false,
+      "rerank_hit": false,
+      "mrr_delta": 0.0,
+      "bm25_ids": [
+        "7321",
+        "7386",
+        "9000",
+        "4597",
+        "7322"
+      ],
+      "rerank_ids": [
+        "209",
+        "11336",
+        "8104",
+        "8616",
+        "9715"
+      ],
+      "rerank_original_ranks": [
+        29,
+        7,
+        14,
+        16,
+        12
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "437"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_088",
+      "question": "2022年人大有多少个校际交换项目？",
+      "bm25_hit": false,
+      "rerank_hit": false,
+      "mrr_delta": 0.0,
+      "bm25_ids": [
+        "248",
+        "10512",
+        "8933",
+        "12540",
+        "7822"
+      ],
+      "rerank_ids": [
+        "248",
+        "10039",
+        "12115",
+        "12630",
+        "9345"
+      ],
+      "rerank_original_ranks": [
+        17,
+        26,
+        28,
+        27,
+        25
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "1255"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_089",
+      "question": "2021年中国人民大学中法学院TFS4的测试平均分是多少？",
+      "bm25_hit": false,
+      "rerank_hit": false,
+      "mrr_delta": 0.0,
+      "bm25_ids": [
+        "5677",
+        "12691",
+        "9025",
+        "7410",
+        "10065"
+      ],
+      "rerank_ids": [
+        "11473",
+        "9650",
+        "9921",
+        "3438",
+        "880"
+      ],
+      "rerank_original_ranks": [
+        21,
+        24,
+        19,
+        27,
+        26
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "534"
+        ]
+      ]
+    }
+  ],
+  "selected_gain": {
+    "id": "domainrag_extractive_032",
+    "question": "中国人民大学2018年招收的社会学类专业有哪些？",
+    "bm25_hit": false,
+    "rerank_hit": true,
+    "mrr_delta": 1.0,
+    "bm25_ids": [
+      "5579",
+      "13043",
+      "4502",
+      "4498",
+      "13039"
+    ],
+    "rerank_ids": [
+      "5580",
+      "5579",
+      "13043",
+      "4502",
+      "13039"
+    ],
+    "rerank_original_ranks": [
+      1,
+      2,
+      3,
+      6,
+      10
+    ],
+    "acceptable_evidence_ids": [
+      [
+        "5580"
+      ]
+    ]
+  },
+  "selected_loss": {
+    "id": "domainrag_extractive_034",
+    "question": "申请2014年“圆梦计划”的中学需满足什么条件？",
+    "bm25_hit": true,
+    "rerank_hit": false,
+    "mrr_delta": -1.0,
+    "bm25_ids": [
+      "258",
+      "13453",
+      "7624",
+      "7560",
+      "3742"
+    ],
+    "rerank_ids": [
+      "13456",
+      "13453",
+      "7625",
+      "7561",
+      "13454"
+    ],
+    "rerank_original_ranks": [
+      5,
+      1,
+      8,
+      9,
+      7
+    ],
+    "acceptable_evidence_ids": [
+      [
+        "258"
+      ]
+    ]
+  },
+  "rerank_stage_gains": [
+    {
+      "id": "domainrag_extractive_003",
+      "question": "在教育部开展的五次全国一级学科评估中，中国人民大学新闻传播学科被评为什么等级？",
+      "hybrid_ids": [
+        "12445",
+        "12875",
+        "2569",
+        "1072",
+        "12883"
+      ],
+      "rerank_ids": [
+        "1073",
+        "12438",
+        "12437",
+        "13390",
+        "12444"
+      ],
+      "original_ranks": [
+        6,
+        10,
+        19,
+        14,
+        9
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "1073"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_006",
+      "question": "人大文学院举办的五届“世界汉学大会”开始时间是？",
+      "hybrid_ids": [
+        "10657",
+        "1339",
+        "7843",
+        "1103",
+        "8493"
+      ],
+      "rerank_ids": [
+        "1642",
+        "7843",
+        "1643",
+        "7842",
+        "1102"
+      ],
+      "original_ranks": [
+        7,
+        3,
+        8,
+        16,
+        12
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "1102"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_033",
+      "question": "中国人民大学2016年高水平艺术团招生报名截止日期是什么时候？",
+      "hybrid_ids": [
+        "184",
+        "14059",
+        "13923",
+        "13922",
+        "195"
+      ],
+      "rerank_ids": [
+        "183",
+        "13922",
+        "13923",
+        "184",
+        "185"
+      ],
+      "original_ranks": [
+        17,
+        4,
+        3,
+        1,
+        7
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "183"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_067",
+      "question": "汪建熙是哪个系的毕业生？",
+      "hybrid_ids": [
+        "9485",
+        "4845",
+        "9484",
+        "4846",
+        "9486"
+      ],
+      "rerank_ids": [
+        "9484",
+        "4845",
+        "979",
+        "993",
+        "980"
+      ],
+      "original_ranks": [
+        3,
+        2,
+        29,
+        26,
+        18
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "979"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_069",
+      "question": "中国人民大学的知名校友王永昌是哪年加入中国共产党的？",
+      "hybrid_ids": [
+        "981",
+        "990",
+        "4485",
+        "994",
+        "985"
+      ],
+      "rerank_ids": [
+        "990",
+        "984",
+        "981",
+        "989",
+        "994"
+      ],
+      "original_ranks": [
+        2,
+        8,
+        1,
+        6,
+        4
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "984"
+        ]
+      ]
+    },
+    {
+      "id": "domainrag_extractive_076",
+      "question": "中国人民大学2022年澳门保送生招生的人文社会科学专业排名中，A+学科的数量是多少？",
+      "hybrid_ids": [
+        "7321",
+        "7322",
+        "112",
+        "4597",
+        "113"
+      ],
+      "rerank_ids": [
+        "4598",
+        "7322",
+        "4597",
+        "7321",
+        "3635"
+      ],
+      "original_ranks": [
+        7,
+        2,
+        4,
+        1,
+        16
+      ],
+      "acceptable_evidence_ids": [
+        [
+          "4598"
+        ]
+      ]
+    }
+  ],
+  "scope": "single development run; not answer accuracy, not untouched holdout, not significant-effect proof"
+}

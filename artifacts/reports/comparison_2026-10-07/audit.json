@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "retrieval_records": 135,
+  "answer_records": 180,
+  "eligible_questions": 31,
+  "split_questions": {
+    "holdout": 18,
+    "diagnostic": 22,
+    "dev": 5
+  },
+  "total_chunks": 14406,
+  "unique_contents": 9809,
+  "duplicate_copies": 4597,
+  "corpus_sha256": "6b08f337ee4066af05d99bcf5bc29afca56f7e05df8b0feed5030dc34bfd52d9",
+  "qa_sha256": "22b2397a0ccae715ce991a4cb3b4c33fcb731cff97a5dfa2441ed10ca91f36fd",
+  "checks": [
+    "Original corpus/labels unchanged",
+    "Frozen retrieval code and documented dev-only generation revision",
+    "Complete trial matrix",
+    "Exact original passage bodies",
+    "Pre-TopK scope and candidate provenance",
+    "Both evidence metric definitions independently recomputed",
+    "Quote spans and entity assignments",
+    "Saved context character budget",
+    "At most one supplemental retrieval batch and one revision"
+  ],
+  "scope": "Offline artifact audit, not semantic proof, human accuracy, or production performance"
+}

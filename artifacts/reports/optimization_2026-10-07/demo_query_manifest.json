@@ -1,0 +1,23 @@
+{
+  "encoder": {
+    "provider": "SiliconFlow API",
+    "base_url": "https://api.siliconflow.cn/v1",
+    "model": "BAAI/bge-m3",
+    "model_revision": "not exposed by API",
+    "dimension": 1024,
+    "normalization": "L2",
+    "query_instruction": "",
+    "max_input_utf8_bytes": 8000,
+    "document_preprocessing": "join-whitespace-between-Chinese-characters-v1"
+  },
+  "queries": [
+    {
+      "id": "domainrag_extractive_001",
+      "question": "中国人民大学中法学院用哪三个语言进行教学？"
+    },
+    {
+      "id": "domainrag_extractive_086",
+      "question": "2014年中国人民大学中法学院的院长是谁？"
+    }
+  ]
+}

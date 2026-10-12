@@ -1,0 +1,434 @@
+{
+  "corpus_passages": 14406,
+  "unique_exact_contents": 9809,
+  "redundant_copies": 4597,
+  "redundant_copy_fraction": 0.3191031514646675,
+  "duplicate_groups": 448,
+  "split_counts": {
+    "dev": {
+      "questions": 35,
+      "sources": 20
+    },
+    "holdout": {
+      "questions": 53,
+      "sources": 30
+    },
+    "demo": {
+      "questions": 2,
+      "sources": 1
+    }
+  },
+  "case066_identical_body_ids": [
+    "529",
+    "686",
+    "780",
+    "875",
+    "1703",
+    "2584",
+    "3433",
+    "3773",
+    "3967",
+    "5088",
+    "5319",
+    "6630",
+    "7404",
+    "7638",
+    "7684",
+    "7907",
+    "8062",
+    "8342",
+    "8558",
+    "9019",
+    "9085",
+    "9124",
+    "9645",
+    "9787",
+    "9916",
+    "10059",
+    "10120",
+    "10160",
+    "10221",
+    "10434",
+    "10543",
+    "10681",
+    "10900",
+    "11468",
+    "11567",
+    "12646",
+    "12685",
+    "14079",
+    "14308"
+  ],
+  "diagnostic_scope": "All original files and scores preserved. Duplicate-aware scores only expand annotation IDs by exact contents equality; not a model improvement or independently adjudicated semantic Gold.",
+  "diagnostic_scores": [
+    {
+      "phase": "dev",
+      "variant": "bge_baseline",
+      "alpha": 0.0,
+      "measurements": 105,
+      "original_hit5": 0.5523809523809524,
+      "exact_duplicate_diagnostic_hit5": 0.6095238095238096,
+      "mean_unique_texts_top5": 4.571428571428571,
+      "measurements_with_duplicate_text_top5": 21
+    },
+    {
+      "phase": "dev",
+      "variant": "bge_baseline",
+      "alpha": 0.25,
+      "measurements": 105,
+      "original_hit5": 0.580952380952381,
+      "exact_duplicate_diagnostic_hit5": 0.638095238095238,
+      "mean_unique_texts_top5": 4.6,
+      "measurements_with_duplicate_text_top5": 21
+    },
+    {
+      "phase": "dev",
+      "variant": "bge_expand100",
+      "alpha": 0.0,
+      "measurements": 105,
+      "original_hit5": 0.5619047619047619,
+      "exact_duplicate_diagnostic_hit5": 0.6476190476190476,
+      "mean_unique_texts_top5": 4.628571428571429,
+      "measurements_with_duplicate_text_top5": 15
+    },
+    {
+      "phase": "dev",
+      "variant": "bge_expand100",
+      "alpha": 0.25,
+      "measurements": 105,
+      "original_hit5": 0.5904761904761905,
+      "exact_duplicate_diagnostic_hit5": 0.6761904761904762,
+      "mean_unique_texts_top5": 4.628571428571429,
+      "measurements_with_duplicate_text_top5": 15
+    },
+    {
+      "phase": "dev",
+      "variant": "bge_keyword60",
+      "alpha": 0.0,
+      "measurements": 105,
+      "original_hit5": 0.5333333333333333,
+      "exact_duplicate_diagnostic_hit5": 0.5904761904761905,
+      "mean_unique_texts_top5": 4.628571428571429,
+      "measurements_with_duplicate_text_top5": 12
+    },
+    {
+      "phase": "dev",
+      "variant": "bge_keyword60",
+      "alpha": 0.25,
+      "measurements": 105,
+      "original_hit5": 0.5142857142857142,
+      "exact_duplicate_diagnostic_hit5": 0.5714285714285714,
+      "mean_unique_texts_top5": 4.647619047619048,
+      "measurements_with_duplicate_text_top5": 12
+    },
+    {
+      "phase": "dev",
+      "variant": "qwen_broad",
+      "alpha": 0.0,
+      "measurements": 105,
+      "original_hit5": 0.5238095238095238,
+      "exact_duplicate_diagnostic_hit5": 0.5714285714285714,
+      "mean_unique_texts_top5": 4.438095238095238,
+      "measurements_with_duplicate_text_top5": 23
+    },
+    {
+      "phase": "dev",
+      "variant": "qwen_broad",
+      "alpha": 0.25,
+      "measurements": 105,
+      "original_hit5": 0.49523809523809526,
+      "exact_duplicate_diagnostic_hit5": 0.5333333333333333,
+      "mean_unique_texts_top5": 4.438095238095238,
+      "measurements_with_duplicate_text_top5": 24
+    },
+    {
+      "phase": "dev",
+      "variant": "qwen_unspecified",
+      "alpha": 0.0,
+      "measurements": 105,
+      "original_hit5": 0.4,
+      "exact_duplicate_diagnostic_hit5": 0.4,
+      "mean_unique_texts_top5": 4.695238095238095,
+      "measurements_with_duplicate_text_top5": 15
+    },
+    {
+      "phase": "dev",
+      "variant": "qwen_unspecified",
+      "alpha": 0.25,
+      "measurements": 105,
+      "original_hit5": 0.4,
+      "exact_duplicate_diagnostic_hit5": 0.4,
+      "mean_unique_texts_top5": 4.704761904761905,
+      "measurements_with_duplicate_text_top5": 15
+    },
+    {
+      "phase": "test",
+      "variant": "bge_baseline",
+      "alpha": 0.0,
+      "measurements": 159,
+      "original_hit5": 0.8490566037735849,
+      "exact_duplicate_diagnostic_hit5": 0.8616352201257862,
+      "mean_unique_texts_top5": 4.861635220125786,
+      "measurements_with_duplicate_text_top5": 15
+    },
+    {
+      "phase": "test",
+      "variant": "bge_baseline",
+      "alpha": 0.25,
+      "measurements": 159,
+      "original_hit5": 0.8176100628930818,
+      "exact_duplicate_diagnostic_hit5": 0.8301886792452831,
+      "mean_unique_texts_top5": 4.8427672955974845,
+      "measurements_with_duplicate_text_top5": 18
+    },
+    {
+      "phase": "test",
+      "variant": "bge_expand100",
+      "alpha": 0.0,
+      "measurements": 159,
+      "original_hit5": 0.8301886792452831,
+      "exact_duplicate_diagnostic_hit5": 0.8490566037735849,
+      "mean_unique_texts_top5": 4.8427672955974845,
+      "measurements_with_duplicate_text_top5": 18
+    },
+    {
+      "phase": "test",
+      "variant": "bge_expand100",
+      "alpha": 0.25,
+      "measurements": 159,
+      "original_hit5": 0.8113207547169812,
+      "exact_duplicate_diagnostic_hit5": 0.8301886792452831,
+      "mean_unique_texts_top5": 4.823899371069182,
+      "measurements_with_duplicate_text_top5": 21
+    },
+    {
+      "phase": "test",
+      "variant": "qwen_broad",
+      "alpha": 0.0,
+      "measurements": 159,
+      "original_hit5": 0.7672955974842768,
+      "exact_duplicate_diagnostic_hit5": 0.7735849056603774,
+      "mean_unique_texts_top5": 4.8427672955974845,
+      "measurements_with_duplicate_text_top5": 15
+    },
+    {
+      "phase": "test",
+      "variant": "qwen_broad",
+      "alpha": 0.25,
+      "measurements": 159,
+      "original_hit5": 0.7358490566037735,
+      "exact_duplicate_diagnostic_hit5": 0.7421383647798742,
+      "mean_unique_texts_top5": 4.8427672955974845,
+      "measurements_with_duplicate_text_top5": 15
+    }
+  ],
+  "newly_recovered_annotation_candidates": {
+    "dev": [
+      {
+        "id": "domainrag_extractive_020",
+        "question": "中法学院的办学愿景是什么？",
+        "ranks": [
+          {
+            "round": 1,
+            "rerank": 27,
+            "after_blend": 27
+          },
+          {
+            "round": 2,
+            "rerank": 25,
+            "after_blend": 26
+          },
+          {
+            "round": 3,
+            "rerank": 28,
+            "after_blend": 29
+          }
+        ]
+      },
+      {
+        "id": "domainrag_extractive_058",
+        "question": "中国人民大学哪些学科在2017年被评为A+？",
+        "ranks": [
+          {
+            "round": 1,
+            "rerank": 70,
+            "after_blend": 77
+          },
+          {
+            "round": 2,
+            "rerank": 70,
+            "after_blend": 77
+          },
+          {
+            "round": 3,
+            "rerank": 71,
+            "after_blend": 77
+          }
+        ]
+      },
+      {
+        "id": "domainrag_extractive_075",
+        "question": "中国人民大学中法学院是由哪些大学共建的中外合作办学机构？",
+        "ranks": [
+          {
+            "round": 1,
+            "rerank": 95,
+            "after_blend": 100
+          },
+          {
+            "round": 2,
+            "rerank": 95,
+            "after_blend": 100
+          },
+          {
+            "round": 3,
+            "rerank": 95,
+            "after_blend": 100
+          }
+        ]
+      },
+      {
+        "id": "domainrag_extractive_080",
+        "question": "中国人民大学外语类专业2022年学年的学费是多少？",
+        "ranks": [
+          {
+            "round": 1,
+            "rerank": 6,
+            "after_blend": 8
+          },
+          {
+            "round": 2,
+            "rerank": 6,
+            "after_blend": 8
+          },
+          {
+            "round": 3,
+            "rerank": 6,
+            "after_blend": 8
+          }
+        ]
+      },
+      {
+        "id": "domainrag_extractive_088",
+        "question": "2022年人大有多少个校际交换项目？",
+        "ranks": [
+          {
+            "round": 1,
+            "rerank": 18,
+            "after_blend": 18
+          },
+          {
+            "round": 2,
+            "rerank": 21,
+            "after_blend": 22
+          },
+          {
+            "round": 3,
+            "rerank": 43,
+            "after_blend": 70
+          }
+        ]
+      },
+      {
+        "id": "domainrag_extractive_089",
+        "question": "2021年中国人民大学中法学院TFS4的测试平均分是多少？",
+        "ranks": [
+          {
+            "round": 1,
+            "rerank": 13,
+            "after_blend": 13
+          },
+          {
+            "round": 2,
+            "rerank": 19,
+            "after_blend": 19
+          },
+          {
+            "round": 3,
+            "rerank": 17,
+            "after_blend": 17
+          }
+        ]
+      }
+    ],
+    "test": []
+  },
+  "regression_stage_ranks": [
+    {
+      "id": "domainrag_extractive_023",
+      "round": 1,
+      "baseline_rerank": 5,
+      "expanded_rerank": 5,
+      "expanded_after_blend": 6,
+      "original_fusion_rank": 11
+    },
+    {
+      "id": "domainrag_extractive_023",
+      "round": 2,
+      "baseline_rerank": 5,
+      "expanded_rerank": 5,
+      "expanded_after_blend": 6,
+      "original_fusion_rank": 11
+    },
+    {
+      "id": "domainrag_extractive_023",
+      "round": 3,
+      "baseline_rerank": 5,
+      "expanded_rerank": 5,
+      "expanded_after_blend": 6,
+      "original_fusion_rank": 11
+    },
+    {
+      "id": "domainrag_extractive_037",
+      "round": 1,
+      "baseline_rerank": 5,
+      "expanded_rerank": 6,
+      "expanded_after_blend": 6,
+      "original_fusion_rank": 7
+    },
+    {
+      "id": "domainrag_extractive_037",
+      "round": 2,
+      "baseline_rerank": 6,
+      "expanded_rerank": 6,
+      "expanded_after_blend": 6,
+      "original_fusion_rank": 7
+    },
+    {
+      "id": "domainrag_extractive_037",
+      "round": 3,
+      "baseline_rerank": 5,
+      "expanded_rerank": 6,
+      "expanded_after_blend": 6,
+      "original_fusion_rank": 7
+    },
+    {
+      "id": "domainrag_extractive_066",
+      "round": 1,
+      "baseline_rerank": 12,
+      "expanded_rerank": 9,
+      "expanded_after_blend": 9,
+      "original_fusion_rank": 18
+    },
+    {
+      "id": "domainrag_extractive_066",
+      "round": 2,
+      "baseline_rerank": 30,
+      "expanded_rerank": 23,
+      "expanded_after_blend": 23,
+      "original_fusion_rank": 18
+    },
+    {
+      "id": "domainrag_extractive_066",
+      "round": 3,
+      "baseline_rerank": 5,
+      "expanded_rerank": 7,
+      "expanded_after_blend": 8,
+      "original_fusion_rank": 18
+    }
+  ],
+  "original_hashes": {
+    "D:\\interview\\rag-domain-study\\data\\domainrag_text_corpus.jsonl": "6b08f337ee4066af05d99bcf5bc29afca56f7e05df8b0feed5030dc34bfd52d9",
+    "D:\\interview\\rag-domain-study\\data\\basic_qa_mapped.jsonl": "7e8cca569448885ddba55716ba22a73d9ebcfd239cb4132354fc31b079c1c81e"
+  }
+}
