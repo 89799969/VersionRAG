@@ -1,13 +1,35 @@
+import json
 import threading
 import time
 
+import httpx
 import numpy as np
 import pytest
 from fastapi.testclient import TestClient
 
 from app.api import create_app
+from app.embedding_api import EmbeddingSettings
 from app.generation import assemble_context
 from app.knowledge import EmptyRetriever, KnowledgeError, KnowledgeService, split_document
+from app.reranking import APIReranker
+
+
+@pytest.fixture(autouse=True)
+def offline_rerank_service(monkeypatch):
+    """Lifecycle tests use an explicit mock reranker, never the developer's .env."""
+    def respond(request):
+        assert request.url.path == "/v1/rerank"
+        payload = json.loads(request.content)
+        count = min(payload["top_n"], len(payload["documents"]))
+        return httpx.Response(200, json={"results": [
+            {"index": index, "relevance_score": 1.0 / (index + 1)}
+            for index in range(count)
+        ]})
+
+    def factory():
+        return APIReranker(EmbeddingSettings("offline-test-key"), httpx.MockTransport(respond))
+
+    monkeypatch.setattr("app.reranking.APIReranker", factory)
 
 
 class Encoder:
@@ -71,6 +93,21 @@ def test_incremental_cache_metadata_change_and_corrupt_cache(tmp_path):
     with service.connection() as db:
         db.execute("UPDATE embedding_cache SET vector=?", (b"corrupt",))
     assert build(service)["stats"]["encoded_unique_texts"] == 1
+
+
+def test_lifecycle_and_nonempty_rerank_need_no_external_credentials(tmp_path, monkeypatch):
+    def forbid_settings_load(cls):
+        raise AssertionError("Offline lifecycle tests must not read model credentials")
+
+    monkeypatch.setattr(EmbeddingSettings, "load", classmethod(forbid_settings_load))
+    monkeypatch.delenv("SILICONFLOW_API_KEY", raising=False)
+    service = KnowledgeService(tmp_path, Encoder())
+    service.upsert("offline", "申请通知", "报名截止日期为2月5日。")
+    ready = build(service)
+    snapshot = service.pin()
+    assert snapshot.version == ready["version"]
+    hits = snapshot.engines["hybrid_rerank"].search("报名截止日期", top_k=5)
+    assert len(hits) == 1 and "2月5日" in hits[0]["contents"]
 
 
 def test_immutable_job_and_bounded_queue_do_not_publish_stale_draft(tmp_path):
