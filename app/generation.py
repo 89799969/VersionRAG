@@ -12,6 +12,7 @@ from dotenv import load_dotenv
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
 from app.retrieval import ROOT
+from app.telemetry import annotate, prompt_signature, tracked_post
 
 
 class GenerationError(Exception):
@@ -101,27 +102,33 @@ def filter_event_time_evidence(question: str, hits: list[dict]) -> tuple[list[di
 
 
 def generate(question: str, hits: list[dict], settings: Settings | None = None,
-             transport: httpx.BaseTransport | None = None) -> dict:
+             transport: httpx.BaseTransport | None = None, *,
+             context_max_chars: int = 16000, max_output_tokens: int = 1200,
+             temperature: float = 0.0) -> dict:
+    if not 1 <= max_output_tokens <= 8192 or not 0 <= temperature <= 2:
+        raise ValueError("Invalid generation budget")
     usable_hits, excluded = filter_event_time_evidence(question, hits)
-    context, evidence = assemble_context(usable_hits)
+    context, evidence = assemble_context(usable_hits, context_max_chars)
     if not evidence:
         return {"answer": "现有文章列表不能证明事件发生时间，需要对应报道正文。" if excluded else "未检索到可用证据，暂时无法回答。",
                 "citations": [], "insufficient_evidence": True, "evidence": [], "model_called": False,
                 "excluded_listing_ids": excluded}
     settings = settings or Settings.load()
+    annotate(prompt_sha256=prompt_signature(SYSTEM_PROMPT), model=settings.model)
     body = {
         "model": settings.model,
         "messages": [{"role": "system", "content": SYSTEM_PROMPT},
                      {"role": "user", "content": f"问题：{question}\n允许引用的片段ID："
                       f"{','.join(item['passage_id'] for item in evidence)}\n检索资料：{context}"}],
         "response_format": {"type": "json_object"},
-        "max_tokens": 1200,
+        "max_tokens": max_output_tokens,
+        "temperature": temperature,
         "stream": False,
         "thinking": {"type": "disabled"},
     }
     try:
         with httpx.Client(timeout=settings.timeout, transport=transport, trust_env=False) as client:
-            response = client.post(settings.base_url + "/chat/completions", json=body,
+            response = tracked_post(client, settings.base_url + "/chat/completions", stage='generation', model=settings.model, json=body,
                                    headers={"Authorization": f"Bearer {settings.api_key}"})
             response.raise_for_status()
             payload = response.json()

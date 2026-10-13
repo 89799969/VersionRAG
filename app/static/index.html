@@ -8,7 +8,7 @@ body{font:16px/1.7 system-ui,sans-serif;background:#f4f6fa;color:#182431;margin:
 <p><a href="/manage">管理资料与版本 →</a></p>
 <p class="meta">资料来自历史数据快照，适合项目学习与评测。涉及现行招生政策时请查询学校官方公告。</p>
 <section><label for="question">你的问题</label><textarea id="question" maxlength="1500">中国人民大学2016年高水平艺术团招生报名截止日期是什么时候？</textarea>
-<div class="controls"><select id="method" aria-label="检索方法"><option value="bm25">词匹配 · BM25</option><option value="dense">向量检索 · Dense</option><option value="hybrid">混合检索 · RRF</option><option value="hybrid_rerank" selected>混合检索 + 重排</option></select><button id="retrieve">只看资料</button><button id="ask">生成回答</button></div><p id="status" role="status"></p></section>
+<div class="controls"><select id="method" aria-label="检索方法"><option value="bm25">词匹配 · BM25</option><option value="dense">向量检索 · Dense</option><option value="hybrid">混合检索 · RRF</option><option value="hybrid_rerank" selected>混合检索 + 重排</option><option value="bm25_rerank">词匹配 + 同模型重排</option></select><button id="retrieve">只看资料</button><button id="ask">生成回答</button></div><p id="status" role="status"></p></section>
 <section id="result" hidden><h2 id="result-title">回答</h2><pre id="answer"></pre><p class="meta" id="trace"></p><div id="evidence"></div></section>
 <p class="meta">“只看资料”调用检索服务；“生成回答”还会调用你配置的 DeepSeek。引用编号合法，需要结合原文判断是否支持答案。</p>
 </main>

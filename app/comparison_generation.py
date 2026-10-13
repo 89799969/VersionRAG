@@ -13,6 +13,7 @@ from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
 from app.comparison import ComparisonPlan, balanced_hits, compact
 from app.generation import GenerationError, Settings, assemble_context
+from app.telemetry import annotate, prompt_signature, sum_generation_usage, tracked_post
 
 
 class Quote(BaseModel):
@@ -117,13 +118,14 @@ def generate_comparison(plan: ComparisonPlan, hits: list[dict], *, settings: Set
         return {"aspects": [a.model_dump() for a in aspects], "comparisons": [], "evidence": [], "usage": {},
                 "model_called": False, "model": None}
     settings = settings or Settings.load()
+    annotate(prompt_sha256=prompt_signature(PROMPT), model=settings.model)
     body = {"model": settings.model, "messages": [{"role": "system", "content": PROMPT},
         {"role": "user", "content": f"原问题：{plan.question}\n两个专业：{json.dumps(plan.entities, ensure_ascii=False)}\n允许引用的片段编号字符串：{json.dumps([e['passage_id'] for e in evidence])}\n检索资料：{context}"}],
         "response_format": {"type": "json_object"}, "max_tokens": 2200,
         "stream": False, "thinking": {"type": "disabled"}}
     try:
         with httpx.Client(timeout=settings.timeout, transport=transport, trust_env=False) as client:
-            response = client.post(settings.base_url + "/chat/completions", json=body,
+            response = tracked_post(client, settings.base_url + "/chat/completions", stage='generation', model=settings.model, json=body,
                                    headers={"Authorization": f"Bearer {settings.api_key}"})
             response.raise_for_status()
             payload = response.json()
@@ -198,7 +200,7 @@ def finish_draft(result: dict) -> dict:
 
 
 def bounded_answer(retriever, plan: ComparisonPlan, *, top_k=5, source_id=None,
-                   recover=True, generator=generate_comparison):
+                   recover=False, generator=generate_comparison):
     hits, trace = retriever.retrieve(plan, top_k=top_k, source_id=source_id)
     started = time.perf_counter()
     first = generator(plan, hits)
@@ -231,5 +233,4 @@ def bounded_answer(retriever, plan: ComparisonPlan, *, top_k=5, source_id=None,
     trace["generation_attempts"] = attempts
     trace["final_ids"] = [str(h["id"]) for h in hits]
     return {**finish_draft(result), "trace": trace,
-            "total_usage": {key: sum(a["usage"].get(key, 0) for a in attempts)
-                            for key in ("prompt_tokens", "completion_tokens", "total_tokens")}}
+            "total_usage": sum_generation_usage(attempts)}

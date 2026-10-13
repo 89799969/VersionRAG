@@ -220,7 +220,7 @@ def test_http_update_delete_rollback_and_request_pin_through_generation(tmp_path
         payload["text"] = "教学测试：报名截止日期为2月8日。"
         client.put("/knowledge/documents", json=payload)
         second = wait_job(client, client.post("/knowledge/jobs", json={}).json()["id"])
-        for method in ("bm25", "dense", "hybrid"):
+        for method in ("bm25", "dense", "hybrid", "bm25_rerank"):
             result = client.post("/retrieve", json={"question": "报名截止日期", "method": method}).json()
             assert result["knowledge_version"] == second["version"]
             assert "2月8日" in result["hits"][0]["contents"]
@@ -234,7 +234,7 @@ def test_http_update_delete_rollback_and_request_pin_through_generation(tmp_path
         assert "2月5日" in client.post("/ask", json={"question": "报名截止日期"}).json()["answer"]
         client.delete("/knowledge/documents/teaching-demo")
         deletion = wait_job(client, client.post("/knowledge/jobs", json={}).json()["id"])
-        for method in ("bm25", "dense", "hybrid", "hybrid_rerank"):
+        for method in ("bm25", "dense", "hybrid", "hybrid_rerank", "bm25_rerank"):
             empty = client.post("/retrieve", json={"question": "报名截止日期", "method": method}).json()
             assert empty["hits"] == [] and empty["knowledge_version"] == deletion["version"]
         assert client.post("/ask", json={"question": "报名截止日期"}).json()["insufficient_evidence"]

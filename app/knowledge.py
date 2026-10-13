@@ -291,13 +291,12 @@ class KnowledgeService:
             raise KnowledgeError("Version document count mismatch.")
         dense.load()
         if not bm25.documents:
+            from app.methods import METHOD_NAMES
             empty = EmptyRetriever()
-            return Snapshot(version, {name: empty for name in ("bm25", "dense", "hybrid", "hybrid_rerank")})
+            return Snapshot(version, {name: empty for name in METHOD_NAMES})
         bm25.load()
-        hybrid = HybridRetriever(bm25, dense)
-        from app.reranking import RerankRetriever
-        return Snapshot(version, {"bm25": bm25, "dense": dense, "hybrid": hybrid,
-                                  "hybrid_rerank": RerankRetriever(hybrid)})
+        from app.methods import build_engines
+        return Snapshot(version, build_engines(bm25, dense))
 
     def pin(self):
         with self.connection() as db:

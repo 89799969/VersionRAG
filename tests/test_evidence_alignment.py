@@ -56,13 +56,35 @@ def test_changed_or_deleted_source_blocks_scoring_instead_of_dropping_question()
     for documents, chunks, reason in [
         ({"d": "费用八千元。"}, [chunk("a", 0, 6, "费用八千元。")], "source_text_changed"),
         ({}, [], "source_missing"),
-        ({"d": old_text}, [], "source_range_not_indexed"),
     ]:
         result = EvidenceSnapshot("v", documents, chunks).score(
             [[anchor]], [], 5, retrieval_version="v")
         assert result["status"] == "needs_review"
         assert result["all_evidence_hit"] is None
         assert result["mapping_issues"][0]["reason"] == reason
+
+
+def test_valid_source_missing_from_index_is_a_miss_not_an_unscorable_label():
+    text = "费用六千元。"
+    anchor = anchor_quote("fee", "d", text, text)
+    result = EvidenceSnapshot("v", {"d": text}, []).score(
+        [[anchor]], [], 5, retrieval_version="v")
+    assert result["status"] == "ok" and result["all_evidence_hit"] is False
+    assert result["index_gap_count"] == 1 and result["blocked_group_indices"] == []
+    assert result["mapping_issues"][0]["reason"] == "source_range_not_indexed"
+
+
+def test_valid_alternative_survives_missing_equivalent_source_without_hiding_issue():
+    text = "费用六千元。"
+    valid = anchor_quote("fee", "d", text, text)
+    missing = anchor_quote("fee-copy", "deleted", text, text)
+    snapshot = EvidenceSnapshot("v", {"d": text}, [chunk("a", 0, len(text), text)])
+    result = snapshot.score([[valid, missing]], ["a"], 5, retrieval_version="v")
+    assert result["status"] == "ok" and result["all_evidence_hit"] is True
+    assert result["valid_anchor_counts"] == [1]
+    assert result["mapping_issues"][0]["reason"] == "source_missing"
+    blocked = snapshot.score([[missing], [valid]], ["a"], 5, retrieval_version="v")
+    assert blocked["status"] == "needs_review" and blocked["blocked_group_indices"] == [0]
 
 
 def test_no_cross_document_coverage_and_reused_ids_are_version_checked():

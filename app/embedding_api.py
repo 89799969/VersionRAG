@@ -11,6 +11,7 @@ import numpy as np
 from dotenv import load_dotenv
 
 from app.retrieval import ROOT
+from app.telemetry import tracked_post
 
 
 class EmbeddingError(Exception):
@@ -65,7 +66,8 @@ class APIEncoder:
         with httpx.Client(timeout=self.settings.timeout, transport=self.transport, trust_env=False) as client:
             for attempt in range(3):
                 try:
-                    response = client.post("https://api.siliconflow.cn/v1/embeddings",
+                    response = tracked_post(client, "https://api.siliconflow.cn/v1/embeddings",
+                                           stage='embedding', model=self.settings.model,
                                            headers={"Authorization": f"Bearer {self.settings.api_key}"},
                                            json={"model": self.settings.model, "input": inputs,
                                                  "encoding_format": "float"})

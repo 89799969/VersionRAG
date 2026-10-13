@@ -7,6 +7,7 @@ import time
 import httpx
 
 from app.embedding_api import EmbeddingError, EmbeddingSettings
+from app.telemetry import tracked_post
 
 
 class RerankError(EmbeddingError):
@@ -18,8 +19,15 @@ class APIReranker:
 
     def __init__(self, settings: EmbeddingSettings | None = None,
                  transport: httpx.BaseTransport | None = None):
-        self.settings = settings or EmbeddingSettings.load()
+        self._settings = settings
         self.transport = transport
+
+    @property
+    def settings(self):
+        # Optional reranking must not make keyword-only startup need credentials.
+        if self._settings is None:
+            self._settings = EmbeddingSettings.load()
+        return self._settings
 
     def rerank(self, question: str, candidates: list[dict], top_k: int = 5) -> list[dict]:
         if not 1 <= top_k <= 100:
@@ -41,7 +49,7 @@ class APIReranker:
         with httpx.Client(timeout=self.settings.timeout, transport=self.transport, trust_env=False) as client:
             for attempt in range(3):
                 try:
-                    response = client.post("https://api.siliconflow.cn/v1/rerank", json=body,
+                    response = tracked_post(client, "https://api.siliconflow.cn/v1/rerank", stage='rerank', model=self.model, json=body,
                                            headers={"Authorization": f"Bearer {self.settings.api_key}"})
                 except httpx.TimeoutException:
                     raise RerankError("Rerank request timed out.") from None

@@ -12,6 +12,10 @@ artifacts/release-check/
 artifacts/release-check-clean/
 artifacts/release-venv/
 artifacts/knowledge/
+artifacts/resume-evidence/
+# Private execution handoff and progress notes; not public project source.
+改造执行记录_20261013.md
+方案可行性与缺口核对_20261013.md
 artifacts/gap-test-temp-*/
 artifacts/pytest-*/
 *.log

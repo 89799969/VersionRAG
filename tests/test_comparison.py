@@ -176,11 +176,14 @@ def test_recovery_has_one_round_and_preserves_partial_answers():
         # Still incomplete after recovery: preserve partial answer and stop.
         return {"aspects": [aspect(plan.entities[0], DOCS[0]), aspect(plan.entities[1])],
                 "evidence": [], "usage": {"prompt_tokens": 10}, "model_called": False}
-    result = bounded_answer(Retriever(), plan, generator=generator)
+    result = bounded_answer(Retriever(), plan, recover=True, generator=generator)
     assert len(calls) == 2 and calls[1]["only_entities"] == [plan.entities[1]]
     assert len(result["trace"]["generation_attempts"]) == 2
     assert result["insufficient_evidence"] and "政治学理论" in result["answer"]
     assert result["total_usage"]["prompt_tokens"] == 20
+    calls.clear()
+    default = bounded_answer(Retriever(), plan, generator=generator)
+    assert len(calls) == 1 and default['trace']['recovery_triggered'] is False
 
 
 def test_unchanged_recovery_context_does_not_call_generator_again():
@@ -191,14 +194,15 @@ def test_unchanged_recovery_context_does_not_call_generator_again():
         generations.append(hits)
         return {"aspects": [aspect(plan.entities[0]), aspect(plan.entities[1])], "evidence": [],
                 "usage": {}, "model_called": False}
-    result = bounded_answer(retriever, plan, generator=generator)
+    result = bounded_answer(retriever, plan, recover=True, generator=generator)
     assert len(generations) == 1 and not result["trace"]["recovery_context_changed"]
 
 
 def test_http_comparison_pins_one_version_and_returns_trace_without_model_network():
     from types import SimpleNamespace
     from fastapi.testclient import TestClient
-    from app.api import create_app
+    from app.api import create_app, ComparisonRequest
+    assert ComparisonRequest(question=QUESTION).recover is False
     hybrid = FakeHybrid()
     hybrid.bm25 = SimpleNamespace(documents=DOCS)
     engine = SimpleNamespace(retriever=hybrid, reranker=FakeReranker(), candidate_k=30)

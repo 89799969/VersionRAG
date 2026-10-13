@@ -12,7 +12,10 @@ from fastapi.responses import FileResponse
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 from app.generation import GenerationError, generate
+from app.knowledge import digest
+from app.methods import RetrievalMethod, build_engines
 from app.retrieval import ROOT, ChineseBM25
+from app.telemetry import JsonlTraceSink, RequestTrace, annotate, code_signature, emit_safely, phase, trace_context
 
 logger = logging.getLogger("rag.api")
 
@@ -22,7 +25,7 @@ class QueryRequest(BaseModel):
     question: str = Field(min_length=1, max_length=1500)
     top_k: int = Field(default=5, ge=1, le=20)
     source_id: str | None = Field(default=None, min_length=1, max_length=100)
-    method: Literal["bm25", "dense", "hybrid", "hybrid_rerank"] = "bm25"
+    method: RetrievalMethod = "bm25"
 
     @field_validator("question")
     @classmethod
@@ -35,7 +38,7 @@ class QueryRequest(BaseModel):
 class ComparisonRequest(QueryRequest):
     method: Literal["hybrid_rerank"] = "hybrid_rerank"
     top_k: int = Field(default=5, ge=2, le=20)
-    recover: bool = True
+    recover: bool = False
 
 
 class Hit(BaseModel):
@@ -72,7 +75,9 @@ class AnswerResponse(BaseModel):
 
 
 def create_app(retrievers: dict | None = None, generator=generate, knowledge=None,
-               comparison_generator=None) -> FastAPI:
+               comparison_generator=None, trace_sink=None) -> FastAPI:
+    sink = trace_sink if trace_sink is not None else JsonlTraceSink(ROOT / '.cache/request-telemetry.jsonl')
+    implementation_version = code_signature(ROOT / 'app')
     @asynccontextmanager
     async def lifespan(app):
         # Injected legacy retrieval tests need no disk-backed knowledge service.
@@ -88,16 +93,12 @@ def create_app(retrievers: dict | None = None, generator=generate, knowledge=Non
             if not engines and (service is None or service.pin() is None):
                 bm25 = ChineseBM25()
                 bm25.load()
-                engines["bm25"] = bm25
+                dense = None
                 from app.dense import DENSE_INDEX, DenseRetriever
                 if (DENSE_INDEX / "manifest.json").exists():
                     dense = DenseRetriever()
                     dense.load()
-                    engines["dense"] = dense
-                    from app.hybrid import HybridRetriever
-                    engines["hybrid"] = HybridRetriever(bm25, dense)
-                    from app.reranking import RerankRetriever
-                    engines["hybrid_rerank"] = RerankRetriever(engines["hybrid"])
+                engines.update(build_engines(bm25, dense))
             app.state.engines = engines
             yield
         finally:
@@ -128,12 +129,28 @@ def create_app(retrievers: dict | None = None, generator=generate, knowledge=Non
     @app.middleware("http")
     async def trace(request: Request, call_next):
         request.state.request_id = str(uuid4())
-        start = time.perf_counter()
-        response = await call_next(request)
-        response.headers["X-Request-ID"] = request.state.request_id
-        logger.info("request_id=%s status=%d elapsed_ms=%.1f", request.state.request_id,
-                    response.status_code, (time.perf_counter() - start) * 1000)
-        return response
+        endpoint = request.url.path if request.url.path in {'/retrieve', '/ask', '/ask-comparison', '/health'} else 'other'
+        ledger = RequestTrace(request.state.request_id, request.headers.get('X-Task-ID'), endpoint)
+        ledger.update(implementation_version=implementation_version)
+        status, error_type = 500, None
+        with trace_context(ledger):
+            try:
+                response = await call_next(request)
+                status = response.status_code
+                response.headers['X-Request-ID'] = ledger.request_id
+                response.headers['X-Task-ID'] = ledger.task_id
+                if status >= 400:
+                    annotate(outcome='http_failure')
+                    error_type = 'HTTPError'
+                return response
+            except BaseException as error:
+                error_type = type(error).__name__
+                annotate(outcome='unhandled_error')
+                raise
+            finally:
+                record = ledger.finish(status, error_type)
+                emit_safely(sink, record)
+                logger.info('request_id=%s status=%d elapsed_ms=%.1f', ledger.request_id, status, record['elapsed_ms'])
 
     def resolve_engine(body: QueryRequest):
         service = app.state.knowledge
@@ -143,26 +160,31 @@ def create_app(retrievers: dict | None = None, generator=generate, knowledge=Non
         except (KnowledgeError, ValueError, OSError, KeyError):
             raise HTTPException(503, "Active knowledge version could not be loaded.") from None
         version = snapshot.version if snapshot else "baseline-static"
+        annotate(method=body.method, knowledge_version=version)
         engine = (snapshot.engines if snapshot else app.state.engines).get(body.method)
         if engine is None:
             raise HTTPException(503, "Requested retrieval index is not available; build it first.")
+        underlying = getattr(engine, 'retriever', engine)
+        annotate(candidate_k=getattr(engine, 'candidate_k', None), final_top_k=body.top_k,
+                 rrf_constant=getattr(underlying, 'rrf_constant', None))
         return engine, version
 
     def retrieve(body: QueryRequest):
         engine, version = resolve_engine(body)
         start = time.perf_counter()
         try:
-            hits = engine.search(body.question, body.top_k, body.source_id)
+            with phase('retrieval'):
+                hits = engine.search(body.question, body.top_k, body.source_id)
         except Exception as exc:
             from app.embedding_api import EmbeddingError
             if isinstance(exc, EmbeddingError):
                 raise HTTPException(502, str(exc)) from None
             raise
         # Normalize IDs at the boundary; corpus data remains unchanged.
-        from app.knowledge import digest
         hits = [{**hit, "id": str(hit["id"]), "metadata": {
             **hit["metadata"], "knowledge_version": version,
             "content_sha256": digest(hit["contents"])}} for hit in hits]
+        annotate(evidence_ids=[hit['id'] for hit in hits], evidence_sha256=[hit['metadata']['content_sha256'] for hit in hits])
         return hits, (time.perf_counter() - start) * 1000, version
 
     @app.get("/health")
@@ -176,6 +198,7 @@ def create_app(retrievers: dict | None = None, generator=generate, knowledge=Non
     @app.post("/retrieve", response_model=RetrievalResponse)
     def retrieve_route(body: QueryRequest, request: Request):
         hits, elapsed, version = retrieve(body)
+        annotate(outcome='retrieved')
         return {"request_id": request.state.request_id, "method": body.method,
                 "knowledge_version": version, "hits": hits, "retrieval_ms": elapsed}
 
@@ -183,13 +206,19 @@ def create_app(retrievers: dict | None = None, generator=generate, knowledge=Non
     def ask_route(body: QueryRequest, request: Request):
         hits, elapsed, version = retrieve(body)
         try:
-            answer = generator(body.question, hits)
+            with phase('generation_and_validation'):
+                answer = generator(body.question, hits)
         except GenerationError as exc:
             message = str(exc)
             status = 504 if "timed out" in message else 503 if "not configured" in message else 502
             raise HTTPException(status, message) from None
         for evidence in answer.get("evidence", []):
             evidence["knowledge_version"] = version
+        insufficient = answer.get('insufficient_evidence') is True
+        annotate(outcome='insufficient_evidence' if insufficient else 'answered_unreviewed',
+                 refusal_reason='generator_reports_insufficient' if insufficient else None,
+                 evidence_ids=[str(e['passage_id']) for e in answer.get('evidence', [])],
+                 evidence_sha256=[digest(e['content']) for e in answer.get('evidence', [])])
         return {"request_id": request.state.request_id, "method": body.method,
                 "retrieval_ms": elapsed, **answer, "knowledge_version": version}
 
@@ -208,15 +237,18 @@ def create_app(retrievers: dict | None = None, generator=generate, knowledge=Non
         plan = retriever.planner.plan(body.question)
         try:
             if plan is None:
-                hits = engine.search(body.question, body.top_k, body.source_id)
-                result = generator(body.question, hits)
+                with phase('retrieval'):
+                    hits = engine.search(body.question, body.top_k, body.source_id)
+                with phase('generation_and_validation'):
+                    result = generator(body.question, hits)
                 result["trace"] = {"policy": "standard-fallback",
                     "reason": "No unambiguous two-title comparison in the question.",
                     "final_ids": [str(h["id"]) for h in hits]}
             else:
-                result = bounded_answer(retriever, plan, top_k=body.top_k,
-                    source_id=body.source_id, recover=body.recover,
-                    generator=comparison_generator or generate_comparison)
+                with phase('comparison_with_recovery'):
+                    result = bounded_answer(retriever, plan, top_k=body.top_k,
+                        source_id=body.source_id, recover=body.recover,
+                        generator=comparison_generator or generate_comparison)
         except EmbeddingError as exc:
             raise HTTPException(502, str(exc)) from None
         except GenerationError as exc:
@@ -226,6 +258,11 @@ def create_app(retrievers: dict | None = None, generator=generate, knowledge=Non
                                 "total_ms": (time.perf_counter() - started) * 1000})
         for evidence in result.get("evidence", []):
             evidence["knowledge_version"] = version
+        insufficient = result.get('insufficient_evidence') is True
+        annotate(outcome='insufficient_evidence' if insufficient else 'answered_unreviewed',
+                 refusal_reason='comparison_reports_insufficient' if insufficient else None,
+                 evidence_ids=[str(e['passage_id']) for e in result.get('evidence', [])],
+                 evidence_sha256=[digest(e['content']) for e in result.get('evidence', [])])
         logger.info("request_id=%s comparison_policy=%s version=%s recovery=%s elapsed_ms=%.1f",
             request.state.request_id, result["trace"]["policy"], version,
             result["trace"].get("recovery_triggered", False), result["trace"]["total_ms"])

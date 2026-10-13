@@ -11,7 +11,7 @@ import json
 from dataclasses import asdict, dataclass
 
 
-METRIC_VERSION = "source-span-union-v1"
+METRIC_VERSION = "source-span-union-v2"
 
 
 def text_hash(text: str) -> str:
@@ -90,7 +90,8 @@ class EvidenceSnapshot:
             return "source_missing"
         if self._hashes[anchor.document_id] != anchor.document_sha256:
             return "source_text_changed"
-        if (not 0 <= anchor.start < anchor.end <= len(text)
+        if (type(anchor.start) is not int or type(anchor.end) is not int
+                or not 0 <= anchor.start < anchor.end <= len(text)
                 or text[anchor.start:anchor.end] != anchor.quote):
             return "invalid_anchor"
         return None
@@ -118,7 +119,7 @@ class EvidenceSnapshot:
                                       and chunk.start < anchor.end and chunk.end > anchor.start]
         covered = not issue and self._covered(anchor, candidates)
         return {"evidence_id": anchor.evidence_id,
-                "status": "mapped" if covered else "needs_review",
+                "status": "needs_review" if issue else ("mapped" if covered else "index_gap"),
                 "reason": issue or (None if covered else "source_range_not_indexed"),
                 "overlapping_chunk_ids": sorted(chunk.chunk_id for chunk in candidates)}
 
@@ -127,7 +128,8 @@ class EvidenceSnapshot:
         """AND across facts, OR across equivalent anchors within each fact.
 
         A quote split between two chunks is covered only by their interval union.
-        Mapping issues block scoring instead of silently shrinking a denominator.
+        Invalid source labels block a required group only when no valid alternative
+        survives. Valid source evidence omitted by the index is a retrieval miss.
         """
         if retrieval_version != self.version:
             raise ValueError("Retrieval and evidence snapshot versions differ.")
@@ -138,14 +140,20 @@ class EvidenceSnapshot:
             raise ValueError("Retrieved chunk is missing from the pinned snapshot.")
         mappings = [self.map_anchor(anchor) for group in groups for anchor in group]
         issues = [mapping for mapping in mappings if mapping["status"] != "mapped"]
+        valid_groups = [[anchor for anchor in group if self._anchor_issue(anchor) is None]
+                        for group in groups]
+        blocked_groups = [i for i, group in enumerate(valid_groups) if not group]
         result = {"metric_version": METRIC_VERSION, "knowledge_version": self.version,
                   "snapshot_sha256": self.sha256, "required_group_count": len(groups),
-                  "retrieved_ids": ranked, "mapping_issues": issues}
-        if issues:
+                  "retrieved_ids": ranked, "mapping_issues": issues,
+                  "blocked_group_indices": blocked_groups,
+                  "valid_anchor_counts": [len(group) for group in valid_groups],
+                  "index_gap_count": sum(m["status"] == "index_gap" for m in mappings)}
+        if blocked_groups:
             return {**result, "status": "needs_review", "group_hits": None,
                     "evidence_group_recall": None, "all_evidence_hit": None}
         selected = [self._chunks[chunk_id] for chunk_id in ranked]
-        hits = [any(self._covered(anchor, selected) for anchor in group) for group in groups]
+        hits = [any(self._covered(anchor, selected) for anchor in group) for group in valid_groups]
         return {**result, "status": "ok", "group_hits": hits,
                 "evidence_group_recall": sum(hits) / len(hits),
                 "all_evidence_hit": all(hits)}
