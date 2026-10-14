@@ -66,7 +66,7 @@ class RequestTrace:
     def update(self, **values):
         allowed = {'method', 'knowledge_version', 'prompt_sha256', 'model', 'outcome',
                    'refusal_reason', 'evidence_ids', 'evidence_sha256', 'implementation_version',
-                   'candidate_k', 'final_top_k', 'rrf_constant'}
+                   'candidate_k', 'final_top_k', 'rrf_constant', 'question_sha256', 'answer_sha256'}
         if set(values) - allowed:
             raise ValueError('Unapproved telemetry field')
         with self.lock:
@@ -104,6 +104,14 @@ def annotate(**values):
 
 def prompt_signature(prompt):
     return hashlib.sha256(prompt.encode('utf-8')).hexdigest()
+
+
+def answer_signature(record):
+    """Bind a review to the returned answer/citations/actual evidence, not its ID alone."""
+    payload = {key: record.get(key) for key in ('answer', 'citations', 'insufficient_evidence',
+                                               'evidence', 'knowledge_version')}
+    return hashlib.sha256(json.dumps(payload, ensure_ascii=False, sort_keys=True,
+                                     separators=(',', ':')).encode('utf-8')).hexdigest()
 
 
 def code_signature(directory):

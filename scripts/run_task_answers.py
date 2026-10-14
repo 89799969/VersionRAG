@@ -21,6 +21,7 @@ from app.methods import METHOD_NAMES
 from app.retrieval import CORPUS, ROOT, read_jsonl, sha256
 from app.review_workflow import prepare_blind_review, record_hash
 from app.telemetry import JsonlTraceSink, RequestTrace, prompt_signature, trace_context, usage_totals
+from app.telemetry import answer_signature
 
 
 def save_rows(path, rows):
@@ -122,12 +123,15 @@ def main():
             for trial in planned:
                 trace = RequestTrace(task_id=task_ids[trial['case_id']], endpoint='benchmark-answer-generation')
                 trace.update(method=trial['method'], knowledge_version=snapshot.version,
-                             prompt_sha256=generation_config['prompt_sha256'], model=settings.model)
+                             prompt_sha256=generation_config['prompt_sha256'], model=settings.model,
+                             question_sha256=prompt_signature(trial['question']))
                 with trace_context(trace):
                     result = execute_trial(trial, indexed[(trial['case_id'], trial['method'])], snapshot,
                                  lambda question, hits, **kw: generate(question, hits, settings=settings, **kw), budget)
                 trace.update(outcome=result['execution_status'], evidence_ids=[e['passage_id'] for e in result['evidence']],
                              evidence_sha256=record_hash(result['evidence']))
+                if result['execution_status'] == 'ok':
+                    trace.update(answer_sha256=answer_signature(result))
                 record = trace.finish()
                 sink(record)
                 result.update(request_id=record['request_id'], task_id=record['task_id'],

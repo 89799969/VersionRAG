@@ -16,6 +16,7 @@ from app.knowledge import digest
 from app.methods import RetrievalMethod, build_engines
 from app.retrieval import ROOT, ChineseBM25
 from app.telemetry import JsonlTraceSink, RequestTrace, annotate, code_signature, emit_safely, phase, trace_context
+from app.telemetry import answer_signature, prompt_signature
 
 logger = logging.getLogger("rag.api")
 
@@ -160,7 +161,7 @@ def create_app(retrievers: dict | None = None, generator=generate, knowledge=Non
         except (KnowledgeError, ValueError, OSError, KeyError):
             raise HTTPException(503, "Active knowledge version could not be loaded.") from None
         version = snapshot.version if snapshot else "baseline-static"
-        annotate(method=body.method, knowledge_version=version)
+        annotate(method=body.method, knowledge_version=version, question_sha256=prompt_signature(body.question))
         engine = (snapshot.engines if snapshot else app.state.engines).get(body.method)
         if engine is None:
             raise HTTPException(503, "Requested retrieval index is not available; build it first.")
@@ -219,8 +220,10 @@ def create_app(retrievers: dict | None = None, generator=generate, knowledge=Non
                  refusal_reason='generator_reports_insufficient' if insufficient else None,
                  evidence_ids=[str(e['passage_id']) for e in answer.get('evidence', [])],
                  evidence_sha256=[digest(e['content']) for e in answer.get('evidence', [])])
-        return {"request_id": request.state.request_id, "method": body.method,
-                "retrieval_ms": elapsed, **answer, "knowledge_version": version}
+        payload = {"request_id": request.state.request_id, "method": body.method,
+                   "retrieval_ms": elapsed, **answer, "knowledge_version": version}
+        annotate(answer_sha256=answer_signature(payload))
+        return payload
 
     @app.post("/ask-comparison")
     def compare_route(body: ComparisonRequest, request: Request):
@@ -263,6 +266,8 @@ def create_app(retrievers: dict | None = None, generator=generate, knowledge=Non
                  refusal_reason='comparison_reports_insufficient' if insufficient else None,
                  evidence_ids=[str(e['passage_id']) for e in result.get('evidence', [])],
                  evidence_sha256=[digest(e['content']) for e in result.get('evidence', [])])
+        result['knowledge_version'] = version
+        annotate(answer_sha256=answer_signature(result))
         logger.info("request_id=%s comparison_policy=%s version=%s recovery=%s elapsed_ms=%.1f",
             request.state.request_id, result["trace"]["policy"], version,
             result["trace"].get("recovery_triggered", False), result["trace"]["total_ms"])
